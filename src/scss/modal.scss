@@ -1,0 +1,41 @@
+@import './partials/params.scss';
+@import './partials/mixins.scss';
+
+
+
+.modal-dialog {
+  width: 621px;
+  max-width: 100%;
+}
+.modal-body {
+  padding: 20px;
+  height: 400px;
+  overflow-y: auto;
+}
+.modal-backdrop {
+  background: rgba(48, 79, 111, 1);
+}
+.modal-backdrop.in {
+  opacity: .3;
+}
+.modal-content {
+  box-shadow: none;
+  border: none;
+}
+
+button.close {
+  top: 15px;
+  right: 15px;
+  opacity: 1 !important;
+  z-index: 999;
+  position: absolute;
+  font-size: 35px;
+
+}
+
+.modal-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
