@@ -1,247 +1,285 @@
+
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-    <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/animate.min.css" />
-    <link rel="stylesheet" href="css/style.bundle.css" />
-    <title>PROMO</title>
-  </head>
-  <body>
-    <main>
-      <section class="bg">
-        <div class="bgimg">
-          <div class="container">
-            <div class="prheader">
-              <div class="prlogo">
-                <div class="logowrapper">
-                  <div class="logowrapper__img"><img src="img/logo.svg" alt="" /></div>
-                  <div class="logowrapper__text">
-                    <div class="logowrapper__text1">Камчатские</div>
-                    <div class="logowrapper__text2">морепродукты</div>
-                  </div>
-                </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/style.bundle.css" />
+  <title>MAIN</title>
+</head>
+
+<body>
+<header id="header" class="header">
+  <div class="header__topline">
+    <div class="container">
+      <div class="headertop">
+        <div class="headertop__left">
+          <div class="headertop__leftitems">
+            <a href="#" class="deliverylink">
+              <span class="deliverylink__icon">
+                <img src="img/LocationPin.svg" alt="">
+              </span>
+              <span class="deliverylink__text">Доставка и самовывоз</span>
+            </a><!-- /.deliverylink -->
+            <div class="badge badge__green">
+              <div class="badge__icon">
+                <img src="img/InTransit.svg" alt="">
               </div>
-              <div class="prlinks"><a href="#terms" data-toggle="modal">Правила розыгрыша</a></div>
-              <div class="prbuttons">
-                <a href="#auth" data-toggle="modal" class="btnborder">Войти</a>
-                <a href="#auth" class="btnmain" data-toggle="modal">Загрузить чек</a>
+              <div class="badge__text">Доставим сегодня</div>
+            </div><!-- /.badge badge__green -->
+          </div><!-- /.headertop__leftitems -->
+        </div><!-- /.headertop__left -->
+        <div class="headertop__right">
+          <div class="headertop__rightitems">
+            <div class="topmenu">
+              <div class="topmenu__wrapper">
+                <div class="topmenu__items">
+                  <ul>
+                    <li><a href="">О компании</a></li>
+                    <li><a href="">Доставка и оплата</a></li>
+                    <li><a href="">Как заказать</a></li>
+                    <li><a href="">Контакты</a></li>
+                  </ul>
+                </div><!-- /.topmenu__items -->
+              </div><!-- /.topmenu__wrapper -->
+            </div><!-- /.topmenu -->
+          </div><!-- /.headertop__rightitems -->
+        </div><!-- /.headertop__right -->
+      </div><!-- /.headertop -->
+      <div class="headermain">
+        <div class="headermain__left">
+          <div class="headermain__logo"><a href="#" class='logo'><img src="img/logo.png" alt=""></a></div>
+          <div class="headermain__descr"><span>Доставляем по Москве и Одинцовскому ГО</span></div>
+          <div class="headermain__menu">
+            <button class='mainmenubtn'>
+              <img src="img/burger.svg" alt="">
+              <span>Каталог товаров</span>
+            </button>
+          </div><!-- /.headermain__menu -->
+          <div class="headermain__search">
+            <form action="">
+              <div class="searchinput">
+                <button type="submit"><img src="img/Search.svg" alt=""></button>
+                <input type="text" placeholder='Я ищу...'>
               </div>
-            </div>
-            <div class="prmain">
-              <div class="prcol1">
-                <div class="prcol1__items">
-                  <div class="prcol1__caption">Также в розыгрыше</div>
-                  <div class="prcol1__item">
-                    <div class="prcol1__image">
-                      <div class="prcol1__img"><img src="img/img2.png" alt="" /></div>
-                    </div>
-                    <div class="prcol1__text">Подарочные наборы с нашей продукцией</div>
-                  </div>
-                  <div class="prcol1__item">
-                    <div class="prcol1__image">
-                      <div class="prcol1__img"><img src="img/img3.png" alt="" /></div>
-                    </div>
-                    <div class="prcol1__text">5&nbsp;сертификатов <small>на 3 000 руб.</small></div>
-                  </div>
-                </div>
-              </div>
-              <div class="prcol2">
-                <div class="prlinks"><a href="#terms" data-toggle="modal">Правила розыгрыша</a></div>
-                <div class="prcol2__caption">
-                  <div class="prcol2__text1">Iphone 14</div>
-                  <div class="prcol2__text2">Главный приз</div>
-                </div>
-                <div class="prcol2__image"><img src="img/img1.png" alt="" /></div>
-                <div class="prcol2__content">
-                  <div class="prcol2__title">Совершайте покупки от 2000 руб и участвуйте в розыгрыше!</div>
-                  <div class="prcol2__button"><a href="#auth" data-toggle="modal" class="btnbig">Загрузить чек</a></div>
-                  <div class="prcol2__datetitle">Дата проведения розыгрыша</div>
-                  <div class="prcol2___date">25 декабря!</div>
-                </div>
-              </div>
-              <div class="prcol3">
-                <div class="prcol3__steps">
-                  <div class="prsteps">
-                    <div class="prsteps__item">
-                      <div class="prsteps__number">
-                        <div class="prsteps__img"><img src="img/1.png" alt="" /></div>
-                      </div>
-                      <div class="prsteps__content">
-                        <div class="prsteps__title">Купите</div>
-                        <div class="prsteps__text">Нашу продукцию в розничных магазинах!</div>
-                      </div>
-                    </div>
-                    <div class="prsteps__item">
-                      <div class="prsteps__number">
-                        <div class="prsteps__img"><img src="img/2.png" alt="" /></div>
-                      </div>
-                      <div class="prsteps__content">
-                        <div class="prsteps__title">Зарегистрируйте</div>
-                        <div class="prsteps__text">
-                          Чек на <a href="//promo.maridel.ru" target="_blank">promo.maridel.ru</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="prsteps__item">
-                      <div class="prsteps__number">
-                        <div class="prsteps__img"><img src="img/3.png" alt="" /></div>
-                      </div>
-                      <div class="prsteps__content">
-                        <div class="prsteps__title">Выигрывайте призы</div>
-                        <div class="prsteps__text">
-                          Iphone 14, подарочные корзины с нашйе продукцией, подарочные сертификаты
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </form>
           </div>
-        </div>
-      </section>
-    </main>
-    <div class="modal fade" tabindex="-1" role="dialog" id="auth">
-      <div class="modal-dialog" role="document">
-        <div class="modalwrapper">
-          <div class="modal-content">
-            <div class="prheader">
-              <div class="prlogo">
-                <div class="logowrapper">
-                  <div class="logowrapper__img"><img src="img/logo.svg" alt="" /></div>
-                  <div class="logowrapper__text">
-                    <div class="logowrapper__text1">Камчатские</div>
-                    <div class="logowrapper__text2">морепродукты</div>
-                  </div>
-                </div>
+        </div><!-- /.headermain__left-->
+        <div class="headermain__right">
+          <div class="headermain__contacts">
+            <div class='contacts'>
+              <div class="contacts__phone">
+                <a href="">8 (800) 301-73-21</a>
               </div>
+              <div class="contacts__info">
+                <div class="contacts__status"></div>
+                <div class="contacts__text">Мы на связи с 9:00 до 21:00</div>
+              </div><!-- /.contacts__info -->
             </div>
-            <div class="modal-header">
-              <h5 class="modal-title">Авторизация</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true"><img src="img/closebutton.svg" alt="" /></span>
-              </button>
+          </div><!-- /.headermain__contacts -->
+          <div class="headermain__iconlinks">
+            <div class="iconlinks">
+              <div class="iconlinks__item">
+                <a href="#" class="iconlinks__link">
+                  <span class="iconlinks__icon">
+                    <img src="img/account.svg" alt="">
+                  </span>
+                  <span class="iconlinks__text">Войти</span>
+                </a>
+              </div>
+              <div class="iconlinks__item">
+                <a href="#" class="iconlinks__link">
+                  <span class="iconlinks__icon">
+                    <img src="img/Heart.svg" alt="">
+                  </span>
+                  <span class="iconlinks__text">Избранное</span>
+                </a>
+              </div>
+              <div class="iconlinks__item">
+                <a href="#" class="iconlinks__link">
+                  <span class="iconlinks__badge">5</span>
+                  <span class="iconlinks__icon">
+                    <img src="img/ShoppingCart.svg" alt="">
+                  </span>
+                  <span class="iconlinks__text">Корзина</span>
+                </a>
+              </div>
+            </div><!-- /.iconlinks -->
+          </div><!-- /.headermain__iconlinks -->
+        </div><!-- /.headermain__right -->
+      </div><!-- /.headermain -->
+      <div class="headermenu">
+        <div class="headermenu__wrapper">
+          <div class="headermenu__items">
+            <ul>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <img src="img/Fire.svg" alt="" class='headermenu__icon'>
+                  <span class='headermenu__title'>Акции</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <img src="img/Credit Card.svg" alt="" class='headermenu__icon'>
+                  <span class='headermenu__title'>Программа лояльности</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <img src="img/Dividends.svg" alt="" class='headermenu__icon'>
+                  <span class='headermenu__title'>Кешбек 10%</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <span class='headermenu__title'>Шашлыки</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <span class='headermenu__title'>Полуфабрикаты</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <span class='headermenu__title'>Мясные консервы</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <span class='headermenu__title'>Морепродукты</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <span class='headermenu__title'>Молочные продукты</span>
+                </a>
+              </li>
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link'>
+                  <span class='headermenu__title'>Фрукты, овощи</span>
+                </a>
+              </li>
+              <li class='headermenu__item headermenu__item_dropdown'>
+                <a href="#" class='headermenu__link '>
+                  <span class='headermenu__title'>Еще</span>
+                </a>
+              </li>
+            </ul>
+          </div><!-- /.headermenu__items -->
+        </div><!-- /.headermenu__wrapper -->
+      </div><!-- /.headermenu -->
+    </div><!-- /.container -->
+  </div><!-- /.header__topline -->
+</header><!-- /#header.header --> 
+<main>
+  
+</main>
+ 
+
+<div class="modal fade" tabindex="-1" role="dialog" id='auth'>
+  <div class="modal-dialog" role="document">
+    <div class="modalwrapper">
+    <div class="modal-content">
+      <div class="prheader">
+        <div class="prlogo">
+          <div class="logowrapper">
+            <div class="logowrapper__img">
+              <img src="img/logo.svg" alt="">
             </div>
-            <div class="modal-body">
-              <form action="">
-                <div class="modal-input"><input type="tel" placeholder="+7 (___) ___ __ __" /></div>
-                <div class="modal-input"><button class="btnmain">Отправить</button></div>
-              </form>
+            <div class="logowrapper__text">
+              <div class="logowrapper__text1">Камчатские</div>
+               <div class="logowrapper__text2">морепродукты</div>
             </div>
-          </div>
+          </div><!-- /.logowrapper -->
         </div>
+        
       </div>
-    </div>
-    <div class="modal fade" tabindex="-1" role="dialog" id="terms">
-      <div class="modal-dialog" role="document">
-        <div class="modalwrapper">
-          <div class="modal-content">
-            <div class="prheader">
-              <div class="prlogo">
-                <div class="logowrapper">
-                  <div class="logowrapper__img"><img src="img/logo.svg" alt="" /></div>
-                  <div class="logowrapper__text">
-                    <div class="logowrapper__text1">Камчатские</div>
-                    <div class="logowrapper__text2">морепродукты</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-header">
-              <h5 class="modal-title">Правила розыгрыша</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true"><img src="img/closebutton.svg" alt="" /></span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>
-                С другой стороны укрепление и развитие структуры требуют от нас анализа направлений прогрессивного
-                развития. Задача организации, в особенности же консультация с широким активом влечет за собой процесс
-                внедрения и модернизации существенных финансовых и административных условий.
-              </p>
-              <p>
-                Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять
-                важные задания по разработке дальнейших направлений развития. Таким образом консультация с широким
-                активом требуют от нас анализа систем массового участия.
-              </p>
-              <p>
-                Товарищи! укрепление и развитие структуры требуют от нас анализа соответствующий условий активизации.
-                Разнообразный и богатый опыт рамки и место обучения кадров в значительной степени обуславливает создание
-                направлений прогрессивного развития. Таким образом постоянное информационно-пропагандистское обеспечение
-                нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
-                Идейные соображения высшего порядка, а также консультация с широким активом в значительной степени
-                обуславливает создание систем массового участия.
-              </p>
-              <p>
-                Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу
-                (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.
-                Задача организации, в особенности же консультация с широким активом представляет собой интересный
-                эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.
-              </p>
-              <p>
-                Не следует, однако забывать, что новая модель организационной деятельности позволяет оценить значение
-                модели развития. Повседневная практика показывает, что укрепление и развитие структуры обеспечивает
-                широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                поставленных задач. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение
-                нашей деятельности позволяет выполнять важные задания по разработке систем массового участия.
-              </p>
-              <p>
-                Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение
-                нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                соответствует насущным потребностям. Разнообразный и богатый опыт постоянное
-                информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент
-                проверки новых предложений.
-              </p>
-              <p>
-                С другой стороны укрепление и развитие структуры требуют от нас анализа направлений прогрессивного
-                развития. Задача организации, в особенности же консультация с широким активом влечет за собой процесс
-                внедрения и модернизации существенных финансовых и административных условий.
-              </p>
-              <p>
-                Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять
-                важные задания по разработке дальнейших направлений развития. Таким образом консультация с широким
-                активом требуют от нас анализа систем массового участия.
-              </p>
-              <p>
-                Товарищи! укрепление и развитие структуры требуют от нас анализа соответствующий условий активизации.
-                Разнообразный и богатый опыт рамки и место обучения кадров в значительной степени обуславливает создание
-                направлений прогрессивного развития. Таким образом постоянное информационно-пропагандистское обеспечение
-                нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития.
-                Идейные соображения высшего порядка, а также консультация с широким активом в значительной степени
-                обуславливает создание систем массового участия.
-              </p>
-              <p>
-                Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу
-                (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.
-                Задача организации, в особенности же консультация с широким активом представляет собой интересный
-                эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.
-              </p>
-              <p>
-                Не следует, однако забывать, что новая модель организационной деятельности позволяет оценить значение
-                модели развития. Повседневная практика показывает, что укрепление и развитие структуры обеспечивает
-                широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении
-                поставленных задач. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение
-                нашей деятельности позволяет выполнять важные задания по разработке систем массового участия.
-              </p>
-              <p>
-                Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение
-                нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров,
-                соответствует насущным потребностям. Разнообразный и богатый опыт постоянное
-                информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент
-                проверки новых предложений.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="modal-header">
+        <h5 class="modal-title">Авторизация</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><img src="img/closebutton.svg" alt=""></span>
+        </button>
       </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="modal-input"><input type="tel" placeholder='+7 (___) ___ __ __'></div>
+          <div class="modal-input"><button class='btnmain'>Отправить</button></div>
+        </form>
+      </div>
+      </div>
+     
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/maskedinput.min.js"></script>
-    <script src="js/index.js"></script>
-  </body>
-</html>
+  </div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id='terms'>
+  <div class="modal-dialog" role="document">
+    <div class="modalwrapper">
+    <div class="modal-content">
+      <div class="prheader">
+        <div class="prlogo">
+          <div class="logowrapper">
+            <div class="logowrapper__img">
+              <img src="img/logo.svg" alt="">
+            </div>
+            <div class="logowrapper__text">
+              <div class="logowrapper__text1">Камчатские</div>
+               <div class="logowrapper__text2">морепродукты</div>
+            </div>
+          </div><!-- /.logowrapper -->
+        </div>
+        
+      </div>
+      <div class="modal-header">
+        <h5 class="modal-title">Правила розыгрыша</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><img src="img/closebutton.svg" alt=""></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>С другой стороны укрепление и развитие структуры требуют от нас анализа направлений прогрессивного развития. Задача организации, в особенности же консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.     </p>
+
+          <p> Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке дальнейших направлений развития. Таким образом консультация с широким активом требуют от нас анализа систем массового участия.     </p>
+          
+            <p> Товарищи! укрепление и развитие структуры требуют от нас анализа соответствующий условий активизации. Разнообразный и богатый опыт рамки и место обучения кадров в значительной степени обуславливает создание направлений прогрессивного развития. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом в значительной степени обуславливает создание систем массового участия.     </p>
+          
+              <p> Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же консультация с широким активом представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.     </p>
+          
+                <p> Не следует, однако забывать, что новая модель организационной деятельности позволяет оценить значение модели развития. Повседневная практика показывает, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке систем массового участия.     </p>
+          
+                  <p> Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки новых предложений.
+          
+          </p>
+        <p>С другой стороны укрепление и развитие структуры требуют от нас анализа направлений прогрессивного развития. Задача организации, в особенности же консультация с широким активом влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий.     </p>
+
+          <p> Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке дальнейших направлений развития. Таким образом консультация с широким активом требуют от нас анализа систем массового участия.     </p>
+          
+            <p> Товарищи! укрепление и развитие структуры требуют от нас анализа соответствующий условий активизации. Разнообразный и богатый опыт рамки и место обучения кадров в значительной степени обуславливает создание направлений прогрессивного развития. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Идейные соображения высшего порядка, а также консультация с широким активом в значительной степени обуславливает создание систем массового участия.     </p>
+          
+              <p> Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Задача организации, в особенности же консультация с широким активом представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач.     </p>
+          
+                <p> Не следует, однако забывать, что новая модель организационной деятельности позволяет оценить значение модели развития. Повседневная практика показывает, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные задания по разработке систем массового участия.     </p>
+          
+                  <p> Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки новых предложений.
+          
+          </p>
+
+      </div>
+    
+    </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/maskedinput.min.js"></script>
+<script src="js/index.js"></script>

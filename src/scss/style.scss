@@ -9,17 +9,17 @@
 
 body {
   min-width: 320px;
-  font-family: 'Inter';
+  font-family: 'Circe';
   font-style: normal;
   font-weight: normal;
   @include clear;
   scroll-behavior: smooth;
-
+  color: $main;
   overflow-x: hidden;
 }
 
 * {
-  font-family: 'Inter';
+  font-family: 'Circe';
   font-style: normal;
   box-sizing: border-box;
   outline: none !important;
@@ -30,7 +30,6 @@ main {
 }
 
 a {
-  color: $blue;
   transition: all 0.3s ease;
 }
 
@@ -45,7 +44,6 @@ img {
   width: initial;
   height: initial;
 }
-
 
 @media (min-width: 1023px) {
   .onlyMobile {
@@ -70,3 +68,355 @@ img {
   @include container;
 }
 
+
+.header {
+}
+.header__topline {
+}
+.headertop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headertop__left {
+}
+.headertop__leftitems {
+  display: flex;
+  align-items: center;
+}
+.headertop__leftitems > * {
+  margin-right: 22px;
+}
+.headertop__leftitems > *:last-child {
+  margin-right: 0;
+}
+.deliverylink {
+  display: block;
+  padding-right: 13px;
+  @include dropdown
+}
+.deliverylink__icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.deliverylink__text {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #25344F;
+  display: inline-block;
+  vertical-align: middle;
+}
+.badge {
+  white-space: nowrap;
+  border-radius: 6px;
+  padding: 3px 12px;
+  background: rgba(12, 186, 122, 0.15);
+}
+.badge__green {
+}
+.badge__icon {
+  margin-right: 9px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.badge__text {
+  display: inline-block;
+  vertical-align: middle;
+font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 130%;
+/* identical to box height, or 21px */
+
+
+color: #0CBA7A;
+}
+.headertop__right {
+}
+.headertop__rightitems {
+}
+.topmenu {
+  padding: 16px 0;
+  background: #fff;
+}
+.topmenu__wrapper {
+}
+.topmenu__items {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      margin-left: 30px;
+      &:first-child {
+        margin-left: 0;
+      }
+      a {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: $gray;
+
+        &:hover {
+          color: $main;
+        }
+      }
+    }
+  }
+}
+.topmenu__dropdown {
+   @include dropdown
+
+}
+.headermain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 9px 0;
+}
+.headermain__left {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 420px);
+  padding-right: 30px;
+}
+.headermain__logo {
+}
+.headermain__descr {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: $light;
+  margin-left: 18px;
+  max-width: 170px;
+}
+.headermain__menu {
+  margin-left: 23px;
+}
+.mainmenubtn {
+  width: 202px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;;
+  background: #04A3E9;
+  border-radius: 8px;
+  span {
+    font-family: 'FuturaDemiC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding-left: 13px;
+  }
+}
+.headermain__search {
+  margin-left: 11px;
+}
+.headermain__right {
+  display: flex;
+  align-items: center;
+  width: 420px;
+}
+.headermain__contacts {
+}
+.contacts {
+}
+.contacts__phone {
+  a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+     color: #25344F;
+  }
+  @include dropdown('../img/dropdown_big.svg')
+}
+.contacts__info {
+  display: flex;
+  align-items: center;
+  margin-top: 2px;
+}
+.contacts__status {
+  width: 4px;
+  height: 4px;
+  background: #13CC88;
+  outline: 3px solid rgba(19, 204, 136, 0.3) !important;
+  margin-right: 6px;
+  border-radius: 50%;
+}
+.contacts__text {
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+color: $gray;
+}
+.headermain__iconlinks {
+}
+.iconlinks__item {
+  margin-right: 9px;
+}
+.iconlinks {
+  display: flex;
+  align-items: center;
+  .iconlinks__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.iconlinks__link {
+  display: block;
+  width: 70px;
+  text-align: center;
+  position: relative;
+}
+.iconlinks__icon {
+}
+.iconlinks__text {
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+display: block;
+text-align: center;
+margin-top: 6px;
+color: #25344F;
+}
+.iconlinks__badge {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  font-style: normal;
+font-weight: 500;
+font-size: 12px;
+background: #FF1D1D;
+width: 16px;
+height: 16px;
+text-align: center;
+line-height: 18px;
+border-radius: 50%;
+color: #FFFFFF;
+}
+
+.searchinput {
+  background: #F3F3F7;
+  border-radius: 8px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  padding: 0 22px;
+  width: 100%;
+  input {
+    width: 100%;
+    background: #F3F3F7;
+    border: none;
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+width: 100%;
+  }
+  button {
+    border: none;
+    background: none;
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $gray;
+}
+
+.headermain__search {
+  margin-left: 11px;
+  width: 100%;
+  max-width: 425px;
+}
+
+.logo {
+  display: block;
+  width: 122px;
+}
+
+.headermenu__item_dropdown a {
+  @include dropdown('../img/ChevronDown-gray.svg');
+  color: $gray;
+}
+
+.headermenu {
+}
+.headermenu__wrapper {
+}
+.headermenu__items {
+  margin: 30px 0;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include clear
+  }
+}
+.headermenu__item {
+}
+.headermenu__link {
+  font-family: 'FuturaDemiC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #25344F;
+    padding: 10px 10px;
+    white-space: nowrap;
+}
+
+.headermenu__icon {
+  margin-right: 10px;
+}
+.headermenu__title {
+}
+.headermenu__item_dropdown {
+}

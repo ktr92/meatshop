@@ -1,2 +1,3 @@
-$(document).ready((function(){(new WOW).init(),$("input[type=tel]").mask("+7 (999) 999 99 99")}));
+/*! For license information please see bundle.js.LICENSE.txt */
+(()=>{var e={r:e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})}},t={};$(document).ready((function(){(new WOW).init(),$("input[type=tel]").mask("+7 (999) 999 99 99")})),(()=>{"use strict";e.r(t)})()})();
 //# sourceMappingURL=bundle.js.map

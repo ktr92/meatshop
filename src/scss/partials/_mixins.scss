@@ -11,6 +11,8 @@
 @mixin clear {
   padding: 0;
   margin: 0;
+  
+  list-style: none;
 }
 
 @mixin clear-list {
@@ -41,5 +43,23 @@
 @mixin extrasmall-screen() {
   @media only screen and (max-width: 410px) {
     @content;
+  }
+}
+
+
+@mixin dropdown($icon: '../img/ChevronDown.svg'){
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 13px;
+  &:after {
+    content: url($icon);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
   }
 }
