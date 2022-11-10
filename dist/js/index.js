@@ -1,1 +1,1 @@
-$(document).ready((function(){(new WOW).init(),$("input[type=tel]").mask("+7 (999) 999 99 99")}));
+$(document).ready((function(){$("input[type=tel]").mask("+7 (999) 999 99 99");const e=new Swiper(".mainswiperpreview",{spaceBetween:9,scrollbar:{el:".swiper-scrollbar",draggable:!0},slidesPerView:"auto",mousewheel:!0,direction:"vertical",freeMode:!0,watchSlidesProgress:!0});new Swiper(".mainswiper",{effect:"fade",fadeEffect:{crossFade:!0},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},thumbs:{swiper:e}})}));
