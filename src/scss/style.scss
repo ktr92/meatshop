@@ -500,6 +500,7 @@ width: 100%;
   opacity: 0.5;
   border-radius: 10px;
   border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .mainswiperpreview .swiper-slide-thumb-active {
@@ -519,9 +520,254 @@ width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+ 
 }
   .mainslider__wrapper {
     display: flex;
   }
 
+  margin-bottom: 55px;
+
 }
+
+.pageblock {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 42px;
+margin-bottom: 28px;
+
+color: #25344F;
+}
+.pageblock {
+}
+.indexcat {
+}
+.indexcat__items {
+  display: flex;
+  margin: -5px;
+  flex-wrap: wrap;
+}
+.indexcat__item {
+
+  padding: 5px;
+  width: 25%;
+}
+
+.indexcat__wrapper {
+  padding: 32px 40px;
+  position: relative;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: right bottom
+}
+.indexcat__content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.indexcat__header {
+}
+
+.indexcat__count {
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+
+color: #25344F;
+margin-top: 2px;
+}
+.indexcat__text {
+  font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 130%;
+/* or 18px */
+max-width: 307px;
+
+color: #25344F;
+}
+.indexcat__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.indexcat__title {
+  
+font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 26px;
+/* identical to box height */
+margin-bottom: 4px;
+display: flex;
+align-items: center;
+
+color: #25344F;
+}
+.indexcat__item_large {
+  width: 50%;
+  .indexcat__title {
+    font-family: 'FuturaDemiC';
+    font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 37px;
+  
+  
+  color: #25344F;
+  margin-bottom: 4px;
+  }
+}
+
+.hover-slider-indicator {
+  position: absolute;
+   right: 0; 
+  top: auto;
+    bottom: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hover-slider-indicator-dot {
+  background-color: #D9D9D9;
+  opacity: .75;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  margin-left: 6px;
+  margin-right: 0;
+}
+.hover-slider-indicator-dot.active {
+  background-color: #0084FE;
+  opacity: 1;
+}
+.productcard {
+  width: 278px;
+}
+.productcard__img {
+  position: relative;
+    width: 100%;
+    height: 168px;
+  img {
+   /*  height: 100%;
+    width: initial;
+    max-width: initial; */
+  }
+}
+
+.pageblock {
+}
+.productslider {
+}
+.blockheader {
+  margin-bottom: 33px;
+  > * {
+    margin-left: 25px;
+  }
+  a {
+    font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+display: block;
+margin-left: 25px;
+
+color: #04A3E9;
+  }
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+.flex {
+}
+.items-center {
+}
+.content-between {
+}
+.blockheader__left {
+  display: flex;
+  align-items: center;
+}
+.sliderarrows {
+}
+.sliderarrows__left {
+  cursor: pointer;
+}
+.sliderarrows__right {
+  margin-left: 15px;
+  cursor: pointer;
+}
+.productslider__wrapper {
+}
+.productslider__container {
+}
+.productslider__slider {
+}
+.productslider__slide {
+}
+.productslider__item {
+}
+.productcard {
+}
+.productcard__wrapper {
+  background: #FFFFFF;
+  box-shadow: 8px 8px 40px rgba(48, 54, 64, 0.1);
+  border-radius: 6px;
+  padding: 26px 24px;
+}
+.productcard__images {
+}
+.productcard__img {
+}
+.productcard__rating {
+}
+.productcard__count {
+}
+.productcard__title {
+}
+.productcard__buy {
+}
+.productcard__prices {
+}
+.productcard__topprice {
+}
+.productcard__oldprice {
+}
+.productcard__badge {
+}
+.productcard__mainprice {
+}
+.productcard__price {
+}
+.productcard__pricevalue {
+}
+.productcard__priceunit {
+}
+.productcard__button {
+}
+.productcard__addtocart {
+}
+.productcard__info {
+}
+.productcard__infoicon {
+}
+.productcard__infotext {
+}
+
