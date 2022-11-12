@@ -1,6 +1,10 @@
 $(document).ready(function () {
   //new WOW().init();
 
+  $('.cardrating').each(function () {
+    $(this).find('span.stars-active').css('width', $(this).text() * 11.2);
+});
+
   $("input[type=tel]").mask("+7 (999) 999 99 99");
 
   const swiper = new Swiper(".mainswiperpreview", {
@@ -29,4 +33,13 @@ $(document).ready(function () {
     },
   });
 
+
+  const blockslider = $(".blockslider__container").each(() => {
+      new Swiper($(this), {
+        navigation: {
+          nextEl: $(this).closest('.blockslider').find(".blockslider-button-next"),
+          prevEl: $(this).closest('.blockslider').find(".blockslider-button-prev"),
+        },
+      })
+    });
 });

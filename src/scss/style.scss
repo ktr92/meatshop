@@ -637,7 +637,7 @@ color: #25344F;
   position: absolute;
    right: 0; 
   top: auto;
-    bottom: -20px;
+    bottom: -13px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -733,41 +733,222 @@ color: #04A3E9;
   padding: 26px 24px;
 }
 .productcard__images {
+  padding: 6px 17px 6px 17px;
 }
 .productcard__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .productcard__rating {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+
+
+  color: #343C4B;
 }
 .productcard__count {
 }
 .productcard__title {
+  margin-bottom: 18px;
+  a {
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 100%;
+
+
+color: #25344F;
+  }
+
 }
 .productcard__buy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .productcard__prices {
 }
 .productcard__topprice {
+margin-bottom: 4px;
 }
 .productcard__oldprice {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'FuturaDemiC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 11px;
+  color: rgba(52, 60, 75, 0.5);
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 2px solid;
+    border-color: $red;
+    
+    -webkit-transform:rotate(-8deg);
+    -moz-transform:rotate(-8deg);
+    -ms-transform:rotate(-8deg);
+    -o-transform:rotate(-8deg);
+    transform:rotate(-8deg);
+  }
+  
 }
 .productcard__badge {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(../img/badge.svg);
+  width: 38px;
+height: 16px;
+font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+/* identical to box height, or 12px */
+padding-left: 10px;
+
+display: inline-flex;
+align-items: center;
+
+color: #343C4B;
 }
 .productcard__mainprice {
 }
 .productcard__price {
+
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+
+color: #ED1E26;
 }
-.productcard__pricevalue {
+.productcard__pricevalue {  
+  display: inline-block;
+  vertical-align: middle;
+font-size: 26px;
+line-height: 30px;
 }
-.productcard__priceunit {
+.productcard__priceunit {  
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 16px;
 }
 .productcard__button {
 }
-.productcard__addtocart {
-}
+
 .productcard__info {
+  margin-top: 20px;
 }
 .productcard__infoicon {
+  display: inline-block;
+  vertical-align: middle;
 }
 .productcard__infotext {
+  padding-left: 5px;
+  font-family: 'FuturaDemiC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  display: inline-block;
+  vertical-align: middle;
+  color: #0CBA7A;
 }
 
+.btn {
+  background: #04A3E9;
+  border-radius: 12px;
+  border: none;
+}
+.productcard__addtocart {
+  width: 48px;
+height: 48px;
+}
+
+.score {
+  display: block;
+  font-size: 14px;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+.score-wrap {
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  width: 58px;
+  text-align: left;
+  font-size: 10px;
+}
+
+.score .stars-active {
+  color: #FFD600;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.score .rat-stars-active {
+  color: #FFD600;
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.score .stars-inactive {
+  color: rgba(52, 60, 75, 0.4);
+  position: absolute;
+  top: 0px;
+  left: 0;
+  -webkit-text-stroke: initial;
+  vertical-align: middle;
+  /* overflow: hidden; */
+}
+
+.cardrating__value {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fa {
+  font-family: 'FontAwesome';
+}
+.productcard__rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.cardrating__value {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.cardrating__value span {
+
+  left: 0;
+  position: absolute;
+  text-indent: -2000px;
+}
