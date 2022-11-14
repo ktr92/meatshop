@@ -655,9 +655,9 @@ color: #25344F;
   background-color: #0084FE;
   opacity: 1;
 }
-.productcard {
+/* .productcard {
   width: 278px;
-}
+} */
 .productcard__img {
   position: relative;
     width: 100%;
@@ -675,9 +675,7 @@ color: #25344F;
 }
 .blockheader {
   margin-bottom: 33px;
-  > * {
-    margin-left: 25px;
-  }
+
   a {
     font-family: 'FuturaDemiC';
 font-style: normal;
@@ -726,12 +724,7 @@ color: #04A3E9;
 }
 .productcard {
 }
-.productcard__wrapper {
-  background: #FFFFFF;
-  box-shadow: 8px 8px 40px rgba(48, 54, 64, 0.1);
-  border-radius: 6px;
-  padding: 26px 24px;
-}
+
 .productcard__images {
   padding: 6px 17px 6px 17px;
 }
@@ -870,6 +863,10 @@ line-height: 30px;
   background: #04A3E9;
   border-radius: 12px;
   border: none;
+  text-align: center;
+  img {
+    margin: auto;
+  }
 }
 .productcard__addtocart {
   width: 48px;
@@ -951,4 +948,331 @@ height: 48px;
   left: 0;
   position: absolute;
   text-indent: -2000px;
+}
+
+.blockslider {
+  margin: 60px 0;
+}
+.blockslider__wrapper {
+  position: relative;
+
+}
+
+.blockslider__slider {
+}
+
+.blockslider__slide {
+
+}
+
+.blockslider__content {
+ 
+  a {
+    @include imagecenter(24.65%, width)
+  }
+  
+}
+.blockslider-button-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+.blockslider-button-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 2px;
+}
+
+.blockslider-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  text-align: center;
+  bottom: -15px;
+  position: relative;
+}
+.blockslider__container {
+  padding-bottom: 10px;
+}
+.swiper-button-disabled {
+  opacity: 0.3;
+}
+.swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  cursor: pointer;
+}
+.swiper-pagination-bullet-active {
+  background: $blue;
+}
+
+.productslider__slider {
+  width: calc(100% + 30px); //we need more width for the shadows on the edges
+  padding: 0 15px; //space for the shadows
+  margin-left: -15px; //put the div in its original position
+  overflow: hidden; //hide the overflow
+}
+
+.productslider .slick-list {
+  overflow: visible;
+}
+
+.productcard__wrapper {
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 26px 24px;
+}
+.productslider .slick-active .productcard__wrapper {
+ 
+  box-shadow: 8px 8px 40px rgba(48, 54, 64, 0.1);
+ 
+}
+.cardrating__item {
+  display: flex;
+  align-items: center;
+}
+.productcard__count {
+  margin-bottom: -4px;
+}
+.productslider__slide {
+  padding: 40px 7px;
+}
+.productslider{
+  .blockheader {
+    margin-bottom: 0;
+  }
+}
+
+
+.recipeslider {
+}
+
+.items-center {
+}
+.content-between {
+}
+.blockheader__left {
+}
+.sliderarrows {
+}
+.sliderarrows__left {
+}
+.sliderarrows__right {
+}
+.recipeslider__wrapper {
+}
+.recipeslider__container {
+}
+.recipeslider__slider {
+  margin: 0 -9px;
+}
+.recipeslider__slide {
+  padding: 0 9px;
+}
+.recipeslider__item {
+}
+.recipecard {
+}
+.recipecard__wrapper {
+}
+.recipecard__image {
+  margin-bottom: 16px;
+}
+.recipecard__img {
+  border-radius: 10px;
+  overflow: hidden;
+  
+  @include imagecenter(63.89%, height)
+
+}
+.recipecard__title {
+  margin-bottom: 14px;
+  a {
+    font-family: 'FuturaDemiC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    color: #25344F;
+  }
+}
+.recipecard__info {
+}
+.recipecard__params {
+  display: flex;
+  align-items: center;
+}
+.recipecard__param {
+  margin-right: 11px;
+}
+.recipecard__text {
+  color: rgba(37, 52, 79, 0.4);
+  font-family: 'FuturaDemiC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.recipecard__icon {
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pageblock {
+  margin: 60px 0;
+}
+
+.pageblocksl {
+  margin: 20px 0;
+}
+
+.fitchesline {
+  padding: 49px 0;
+  background: #F8F8FB;
+}
+.fitchesline__items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.fitchesline__item {
+  padding: 0 13px;
+  width: 20%;
+}
+.fitchescard {
+
+}
+.fitchescard__wrapper {
+}
+.fitchescard__image {
+  margin-bottom: 21px;
+  text-align: center;
+
+}
+.fitchescard__img {
+}
+.fitchescard__title {
+}
+.fitchescard__text {
+  font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 100%;
+
+text-align: center;
+
+color: #25344F;
+}
+
+
+.pageblock {
+}
+.aboutblock {
+}
+.aboutblock__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.aboutblock__left {
+  width: calc(100% - 700px);
+}
+.aboutblock__header {
+  margin-bottom: 38px;
+}
+.aboutblock__video {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.aboutblock__right {
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  width: 100%;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutblock__right {
+  width: 588px;
+  padding: 0;
+}
+.aboutblock__content {
+}
+.aboutblock__text {
+  p {
+
+    margin-bottom: 26px;
+
+  }
+}
+.bigtext {
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 100%;
+/* or 26px */
+color: #25344F;
+}
+.docblock {
+  display: flex;
+  align-items: center;
+}
+.docblock_sert {
+}
+.docblock__icon {
+  margin-right: 13px;
+}
+.docblock__icn {
+}
+.docblock__main {
+}
+.docblock__title {
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 100%;
+
+
+color: #25344F;
+}
+.docblock__text {
+  font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 130%;
+/* or 18px */
+
+
+color: rgba(37, 52, 79, 0.7);
+}
+
+.aboutblock__img {
+  margin-bottom: 18px;
+}
+
+
+@include large-screen {
+  .headermenu {
+    width: 100%;
+    overflow: auto;
+  }
 }

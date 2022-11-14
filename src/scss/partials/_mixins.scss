@@ -63,3 +63,31 @@
     transform: translate(0, -50%);
   }
 }
+
+
+@mixin imagecenter ($padding: 24.62%, $fill: width) {
+  display: block;
+  height: 0;
+  padding-top: $padding;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    
+    left: -9999px;
+    right: -9999px;
+    top: -9999px;
+    bottom: -9999px;
+    margin: auto;
+
+    @if $fill == width {
+      width: 100%;
+      max-height: initial;
+    }
+    @else {
+      height: 100%;
+      max-width: initial;
+    }
+  }  
+}
