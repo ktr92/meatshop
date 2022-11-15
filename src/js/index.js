@@ -1,6 +1,9 @@
 $(document).ready(function () {
   //new WOW().init();
 
+  $('.mainmenu__level_2').css('height', $('.mainmenuLevelOne').outerHeight(true))
+  $('.mainmenuLevelTwo').css('height', $('.mainmenuLevelOne').outerHeight(true))
+
   $('.cardrating').each(function () {
     $(this).find('span.stars-active').css('width', $(this).text() * 11.2);
 });
