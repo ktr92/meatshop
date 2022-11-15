@@ -36,6 +36,7 @@ $(document).ready(function () {
     $(this).slick({
     dots: false,
     arrows: true,
+    infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
     swipe: false,
@@ -46,16 +47,14 @@ $(document).ready(function () {
         breakpoint: 1530,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
+          slidesToScroll: 1,
         }
       },
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2
+          slidesToScroll: 1
         }
       },
       {
@@ -74,6 +73,7 @@ $(document).ready(function () {
     arrows: true,
     slidesToShow: 4,
     slidesToScroll: 1,
+    infinite: true,
     swipe: false,
     nextArrow: $(this).closest('.recipeslider').find('.sliderarrows__right'),
     prevArrow: $(this).closest('.recipeslider').find('.sliderarrows__left'),
@@ -82,22 +82,55 @@ $(document).ready(function () {
         breakpoint: 1530,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToScroll: 1
         }
       },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  })
+})
+  $('.imgslider__slider').each(function() {
+    $(this).slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    infinite: true,
+    swipe: false,
+    nextArrow: $(this).closest('.imgslider').find('.beyond-button-next'),
+    prevArrow: $(this).closest('.imgslider').find('.beyond-button-prev'),
+    responsive: [
+      {
+        breakpoint: 1530,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 1
         }
       }
