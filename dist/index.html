@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/slick.min.css">
   <link rel="stylesheet" href="css/slick-theme.min.css">
+  <link rel="stylesheet" href="css/jquery.dmenu.css">
   <link rel="stylesheet" href="css/style.bundle.css" />
   <title>MAIN</title>
 </head>
@@ -22,6 +23,27 @@
   <div class="header__topline">
     <div class="container">
       <div class="headercontainer">
+        <div class="mobilepanel">
+          <div class="mobilepanel__logo"><a href="#" class='logo'><img src="img/logo.png" alt=""></a></div>
+          <div class="mobilepanel__leftitems">
+            <a href="#" class="deliverylink">
+              <span class="deliverylink__icon">
+                <img src="img/LocationPin.svg" alt="">
+              </span>
+              <span class="deliverylink__text">Доставка и самовывоз</span>
+            </a><!-- /.deliverylink -->
+            <div class="badge badge__green">
+              <div class="badge__icon">
+                <img src="img/InTransit.svg" alt="">
+              </div>
+              <div class="badge__text">Доставим сегодня</div>
+            </div>
+            <!-- /.badge badge__green -->
+          </div>
+          <div class="mobilepanel__menubutton">
+            <button><img src="img/mobilebutton.svg" alt=""></button>
+          </div><!-- /.mobilepanel__menubutton -->
+        </div><!-- /.mobilepanel -->
         <div class="headertop">
           <div class="headertop__left">
             <div class="headertop__leftitems">
@@ -275,8 +297,9 @@
           <div class="headermain__descr"><span>Доставляем по Москве и Одинцовскому ГО</span></div>
           <div class="headermain__menu">
             <button class='mainmenubtn'>
-            <img src="img/burger.svg" alt="">
-            <span>Каталог товаров</span>
+              <img class="burgericon" src="img/burger.svg" alt="">
+              <img class="closeicon" src="img/closemenu.svg" alt="">
+              <span>Каталог товаров</span>
             </button>
           </div>
           <!-- /.headermain__menu -->
@@ -341,9 +364,11 @@
       <!-- /.headermain -->
     </div>
     <!-- /.headercontainer -->
+   
       <div class="headermenu">
         <div class="headermenu__wrapper">
-          <div class="headermenu__items">
+          
+          <div class="headermenu__items" id='dmenu'>
             <ul>
               <li class='headermenu__item'>
                 <a href="#" class='headermenu__link'>
@@ -393,16 +418,61 @@
                 <span class='headermenu__title'>Фрукты, овощи</span>
                 </a>
               </li>
-              <li class='headermenu__item headermenu__item_dropdown'>
+              <li class='headermenu__item'>
                 <a href="#" class='headermenu__link '>
-                <span class='headermenu__title'>Еще</span>
+                <span class='headermenu__title'>Пункт</span>
                 </a>
+              </li>
+              
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link '>
+                <span class='headermenu__title'>Пункт</span>
+                </a>
+              </li>
+              
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link '>
+                <span class='headermenu__title'>Пункт</span>
+                </a>
+              </li>
+              
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link '>
+                <span class='headermenu__title'>Пункт</span>
+                </a>
+              </li>
+              
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link '>
+                <span class='headermenu__title'>Пункт</span>
+                </a>
+              </li>
+              
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link '>
+                <span class='headermenu__title'>Пункт</span>
+                </a>
+              </li>
+              
+              <li class='headermenu__item'>
+                <a href="#" class='headermenu__link '>
+                <span class='headermenu__title'>Пункт</span>
+                </a>
+              </li>
+              
+              <li class="SubmenuMega SubmenuFullwidth IconOnly">
+                <ul>
+                </ul>
               </li>
             </ul>
           </div>
           <!-- /.headermenu__items -->
+         
         </div>
         <!-- /.headermenu__wrapper -->
+        <div class="arrowmenu">
+          <img src="img/arrowmenu.svg" alt="">
+      </div>
       </div>
       <!-- /.headermenu -->
     </div>
@@ -428,6 +498,9 @@
             <div class="swiper-slide">
               <a href="#"><img src="img/slide4.jpg" /></a>
             </div>
+            <div class="swiper-slide">
+              <a href="#"><img src="img/slide1.jpg" /></a>
+            </div>            
           </div>
         </div>
         <div thumbsSlider="" class="swiper mainswiperpreview">
@@ -445,9 +518,17 @@
             <div class="swiper-slide">
               <img src="img/slide4.jpg" />
             </div>
+            <div class="swiper-slide">
+              <img src="img/slide1.jpg" />
+            </div>
+           
           </div>
+
         </div>
+
       </div>
+      <div class="mainslider-pagination"></div>
+
       <!-- /.mainslider__wrapper -->
     </div>
     <!-- /.container -->
@@ -1920,7 +2001,7 @@
                 <div class="fitchescard__img"><img src="img/fitchescard1.png" alt=""></div>
               </div><!-- /.fitchescard__image -->
               <div class="fitchescard__title">
-                <div class="fitchescard__text">Самая свежая продукция
+                <div class="fitchescard__text">Самая свежая продукция <br>
                   прямо с завода</div>
               </div><!-- /.fitchescard__title -->
             </div><!-- /.fitchescard__wrapper -->
@@ -1933,7 +2014,7 @@
                 <div class="fitchescard__img"><img src="img/fitchescard2.png" alt=""></div>
               </div><!-- /.fitchescard__image -->
               <div class="fitchescard__title">
-                <div class="fitchescard__text">Широкий ассортимент 
+                <div class="fitchescard__text">Широкий ассортимент <br>
                   на любой вкус</div>
               </div><!-- /.fitchescard__title -->
             </div><!-- /.fitchescard__wrapper -->
@@ -1946,7 +2027,7 @@
                 <div class="fitchescard__img"><img src="img/fitchescard3.png" alt=""></div>
               </div><!-- /.fitchescard__image -->
               <div class="fitchescard__title">
-                <div class="fitchescard__text">Скидки участникам 
+                <div class="fitchescard__text">Скидки участникам  
                   программы лояльности</div>
               </div><!-- /.fitchescard__title -->
             </div><!-- /.fitchescard__wrapper -->
@@ -1959,7 +2040,7 @@
                 <div class="fitchescard__img"><img src="img/fitchescard4.png" alt=""></div>
               </div><!-- /.fitchescard__image -->
               <div class="fitchescard__title">
-                <div class="fitchescard__text">Доставка 
+                <div class="fitchescard__text">Доставка  <br>
                   день в день</div>
               </div><!-- /.fitchescard__title -->
             </div><!-- /.fitchescard__wrapper -->
@@ -1992,7 +2073,7 @@
           
           <div class="aboutblock__video">
             <div class="video-container">
-              <iframe width="" height="" src="https://www.youtube.com/embed/FAWjZPzKRSM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!--   <iframe width="" height="" src="https://www.youtube.com/embed/FAWjZPzKRSM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div><!-- /.video-container -->
           </div><!-- /.aboutblock__video -->
         </div><!-- /.aboutblock__left -->
@@ -2355,4 +2436,5 @@
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/hover-slider.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery.dmenu.js"></script>
 <script src="js/index.js"></script>

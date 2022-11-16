@@ -4,6 +4,71 @@ $(document).ready(function () {
   $('.mainmenu__level_2').css('height', $('.mainmenuLevelOne').outerHeight(true))
   $('.mainmenuLevelTwo').css('height', $('.mainmenuLevelOne').outerHeight(true))
  */
+
+  
+  $(function() {
+    if (window.innerWidth > 1023) {
+      $(window).resize();
+    }
+  });
+  
+  if ($( window ).width() > 1023) {
+      $('#dmenu').dmenu({
+        menu 	: {
+          align			: 'left'
+        },
+        item	: {
+          bg				: false,
+          border 			: false,
+          subindicator	: true,
+
+          fit			: [
+            {
+              items 		: null,
+              fitter 		: 'icon-hide',
+              order		: 'all'
+            },
+            {
+              items 		: null,
+              fitter 		: 'icon-only',
+              order		: 'all'
+            },
+            {
+              items 		: ':not(.dm-item_align-right)',
+              fitter 		: 'submenu',
+              order		: 'rtl'
+            },
+            {
+              items 		: ':not(.dm-item_align-right)',
+              fitter 		: 'hide',
+              order		: 'rtl'
+            }
+          ]
+        },
+        submenu	: {
+          arrow			: false,
+          border			: false,
+          shadow			: true
+        },
+        subitem	: {
+          bg				: true,
+          border			: false
+        }
+
+      });
+    } else {
+      $('.arrowmenu').click(function () {
+        $( ".headermenu__wrapper" ).animate({
+          scrollLeft: '+=126px'
+        });
+      });
+    }
+  
+  
+    $('.mainmenubtn').on('click', function(e) {
+      $(this).toggleClass('active')
+      $('.mainmenu').toggleClass('active')
+    })
   $('.cardrating').each(function () {
     $(this).find('span.stars-active').css('width', $(this).text() * 11.2);
 });
@@ -21,6 +86,7 @@ $(document).ready(function () {
     direction: 'vertical',
     freeMode: true,
     watchSlidesProgress: true,
+   
   });
   const swiper2 = new Swiper(".mainswiper", {
     effect: 'fade',
@@ -34,6 +100,11 @@ $(document).ready(function () {
     thumbs: {
       swiper: swiper,
     },
+    pagination: {
+      el: ".mainslider-pagination",
+      clickable: true
+    },  
+    
   });
   $('.productslider__slider').each(function() {
     $(this).slick({
