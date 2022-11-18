@@ -204,7 +204,7 @@ $(document).ready(function () {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1
         }
       }
@@ -225,10 +225,12 @@ $(document).ready(function () {
         },
       })
 
-    if (window.innerWidth < 1199) {
+    if ($(window).width() < 1199) {
       $('.productcard__images_mobile .productcard__img').slick({
         dots: true,
-        arrows: false
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
       })
     }  
 
