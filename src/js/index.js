@@ -65,7 +65,7 @@ $(document).ready(function () {
     }
   
   
-    $('.mainmenubtn').on('click', function(e) {
+    $('button.mainmenubtn').on('click', function(e) {
       $(this).toggleClass('active')
       $('.mainmenu').toggleClass('active')
     })
@@ -124,20 +124,14 @@ $(document).ready(function () {
           slidesToScroll: 1,
         }
       },
+    
       {
-        breakpoint: 1200,
+        breakpoint: 1023,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
+          variableWidth: true
         }
       },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
+     
     ]
   })
 })
@@ -183,7 +177,6 @@ $(document).ready(function () {
     slidesToShow: 6,
     slidesToScroll: 1,
     infinite: true,
-    swipe: false,
     nextArrow: $(this).closest('.imgslider').find('.beyond-button-next'),
     prevArrow: $(this).closest('.imgslider').find('.beyond-button-prev'),
     responsive: [
@@ -195,7 +188,7 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1
@@ -204,7 +197,8 @@ $(document).ready(function () {
       {
         breakpoint: 767,
         settings: {
-          slidesToShow: 2,
+          dots: true,
+          slidesToShow: 3,
           slidesToScroll: 1
         }
       }
@@ -225,7 +219,7 @@ $(document).ready(function () {
         },
       })
 
-    if ($(window).width() < 1199) {
+    if ($(window).width() < 1024) {
       $('.productcard__images_mobile .productcard__img').slick({
         dots: true,
         arrows: false,
