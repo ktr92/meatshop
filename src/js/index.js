@@ -229,3 +229,16 @@ $(document).ready(function () {
     }  
 
 });
+
+ 
+(function($) {
+  $(function() {
+  
+    $('.js-tabsheader').on('click', 'li:not(.active)', function() {
+      $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.js-tabs').find('div.js-tabscontent').removeClass('active').eq($(this).index()).addClass('active');
+    });
+  
+  });
+  })(jQuery);
