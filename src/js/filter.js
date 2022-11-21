@@ -1,6 +1,12 @@
 window.onload = function () {
+  
+  $('.filter__header-js').on('click', function () {
+    $(this).parent().toggleClass('filter__item_open');
+    $(this).siblings('.filter__form').slideToggle();
+  });
 
   if ($("#sliderprice1").length) {
+    
 
     $('input#maxCost1').on('focusin', function () {
       $(this).val("");
@@ -32,7 +38,7 @@ window.onload = function () {
         min: +jQuery("input#limitMin1").val(),
         max: +jQuery("input#limitMax1").val(),
         values: [+jQuery("input#limitMin1").val(), +jQuery("input#limitMax1").val()],
-        range: "min",
+        range: true,
         stop: function (event, ui) {
           jQuery("input#minCost1").val(jQuery("#sliderprice1").slider("values", 0));
           jQuery("input#maxCost1").val(jQuery("#sliderprice1").slider("values", 1));
