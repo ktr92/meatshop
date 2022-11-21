@@ -123,35 +123,48 @@
 </footer>
 
 
-<div class="modal fade" tabindex="-1" role="dialog" id='auth'>
+<div class="modal fade" tabindex="-1" role="dialog" id='popup_delivery'>
   <div class="modal-dialog" role="document">
     <div class="modalwrapper">
-    <div class="modal-content">
-      <div class="prheader">
-        <div class="prlogo">
-          <div class="logowrapper">
-            <div class="logowrapper__img">
-              <img src="img/logo.svg" alt="">
-            </div>
-            <div class="logowrapper__text">
-              <div class="logowrapper__text1">Камчатские</div>
-               <div class="logowrapper__text2">морепродукты</div>
-            </div>
-          </div><!-- /.logowrapper -->
-        </div>
-        
-      </div>
       <div class="modal-header">
-        <h5 class="modal-title">Авторизация</h5>
+        <div class="modal-title">Укажите адрес доставки</div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><img src="img/closebutton.svg" alt=""></span>
         </button>
       </div>
       <div class="modal-body">
-        <form action="">
-          <div class="modal-input"><input type="tel" placeholder='+7 (___) ___ __ __'></div>
-          <div class="modal-input"><button class='btnmain'>Отправить</button></div>
-        </form>
+        <div class="deliverytabs">
+          <!-- форму можно поставить в другое если на самовывоз понадобится отдельная -->
+          <form action="#">
+            <div class="deliverytabs__header">
+              <ul>
+                <li class='active'>Доставка</li>
+                <li>Самовывоз</li>
+              </ul>
+            </div><!-- /.deliverytabs__header -->
+            <div class="deliverytabs__main">
+              <div class="deliverytabs__item active">
+                <div class="deliverytabs__form">
+                  <div class="deliverytabs__inputrow">
+                    <div class="deliverytabs__inputcol">
+                      <div class="deliverytabs__input">
+                        <label for="">Город</label>
+                        <div class="selectbox">
+                          <select name="" id="">
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                          </select>
+                        </div><!-- /.selectbox -->
+                      </div><!-- /.deliverytabs__input -->
+                    </div><!-- /.deliverytabs__inputcol -->
+                  </div><!-- /.deliverytabs__inputrow -->
+                </div><!-- /.deliverytabs__form -->
+              </div><!-- /.deliverytabs__item -->
+              <div class="deliverytabs__item"></div><!-- /.deliverytabs__item -->
+            </div><!-- /.deliverytabs__main -->
+          </form>
+        </div><!-- /.deliverytabs -->
       </div>
       </div>
      
@@ -227,4 +240,5 @@
 <script src="js/hover-slider.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/jquery.dmenu.js"></script>
+<script src="js/selectbox.js"></script>
 <script src="js/index.js"></script>
