@@ -78,3 +78,18 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+
+  //dropdown-select
+    $(document).on('click', '.dropdown-select .dropdown-select__title', function(){
+      var _this = $(this),
+        menu = _this.parent().find('> .dropdown-select__list'),
+        bVisibleMeu = (menu.is(':visible')),
+        animate = (!bVisibleMeu ? 'transition.slideUpIn' : 'fadeOut');
+
+        menu.slideToggle()
+    })
+
+
+    
+    

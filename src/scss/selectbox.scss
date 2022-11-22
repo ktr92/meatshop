@@ -36,21 +36,6 @@ color: #3B435A;
 
 }
 
-/* Point the arrow upwards when the select box is open (active): */
-/* .select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-} */
-
-/* style the items (options), including the selected item: */
-/* .select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-} */
-
 /* Style items (options): */
 .select-items div {
   font-family: 'FuturaDemiC';
@@ -86,6 +71,71 @@ color: #3B435A;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+
+/*Dropdown select*/
+.dropdown-select{cursor: pointer;position: relative;}
+.dropdown-select__title{font-family: 'FuturaDemiC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #25344F;
+  /* identical to box height */
+  @include dropdown('../img/dropdown_big.svg');
+  padding-right: 18px;
+
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 3px;
+  }
+}
+.dropdown-select__title .svg{margin: 0px 0px 0px 4px;
+ 
+}
+.dropdown-select__list-item{}
+.dropdown-select__list-link{display: block;padding: 11px 15px 10px;white-space: nowrap;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #25344F;}
+
+.dropdown-select__list-link:hover, .dropdown-select__list-link--current{background: #f8f9fb;}
+.dropdown-select__list-link--current{cursor: default;}
+/**/
+
+
+.dropdown-menu-wrapper{position: absolute;top:100%;right: 0px;display: none;z-index: 107;}
+.open + .dropdown-menu-wrapper{display: block;}
+.dropdown-menu-wrapper .dropdown-menu-inner{background: #fff;text-align: left;box-shadow: 0 1px 12px 1px rgba(0,0,0,.12);overflow: hidden;}
+.dropdown-menu-wrapper {
+  min-width: 100%;
+}
+
+.dropdown-select--border {
+  padding: 9px 20px;
+  border: 1px solid rgba(37, 52, 79, 0.15);
+  border-radius: 12px;
+}
+.dropdown-value {
+  min-width: 36px;
+  text-align: right;
+  display: block;
+  padding-top: 4px;
+}
+.dropdown-caption {
+  font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+/* identical to box height */
+
+margin-right: 4px;
+color: rgba(37, 52, 79, 0.4);
+}
 
 @media (max-width: 1023px) {
   .select-selected {
