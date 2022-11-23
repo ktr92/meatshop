@@ -204,6 +204,11 @@ button.close {
   width: 100%;
 }
 
+.modal-dialog_product {
+  width: 1174px;
+}
+
+
 @include medium-screen {
   .modal-content {
     padding: 24px 16px 21px 16px;

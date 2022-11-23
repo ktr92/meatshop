@@ -1831,7 +1831,21 @@ h2 {
 	color: #04A3E9;
 	display: inline-block;
 }
-
+.btn_border--blue {
+  border: 2px solid #04A3E9;
+	border-radius: 8px;
+	font-family: 'FuturaDemiC';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	/* identical to box height */
+  background: #FFFFFF;
+	padding: 16px;
+	width: 100%;color: #25344F;
+	display: inline-block;
+}
 .footer__call {
 	margin-bottom: 27px;
 }
@@ -3580,6 +3594,199 @@ align-items: center;
 color: #25344F;
 }
 
+.modalproduct {
+  padding-top: 60px;
+  border-top: 1px solid #D9D9D9;
+}
+.modalproduct__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 60px 0;
+}
+.modalproduct__product {
+  width: calc(100% - 210px)
+
+}
+.minicard {
+}
+.minicard__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.minicard__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.minicard__image {
+  width: 167px;
+}
+.minicard__main {
+  margin-left: 76px;
+}
+.minicard__title {
+  font-family: 'FuturaDemiC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+  margin-bottom: 11px;
+
+  color: #25344F;
+}
+.minicard__buyblock {
+}
+.minicard__right {
+ 
+  text-align: right;
+
+}
+.minicard__pricetitle {
+  
+font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+color: #25344F;
+margin-bottom: 10px;
+}
+.minicard__price {
+}
+.productcard__prices {
+}
+.productcard__topprice {
+}
+.productcard__oldprice {
+}
+.productcard__badge {
+}
+.productcard__mainprice {
+}
+.productcard__price {
+}
+.productcard__pricevalue {
+}
+.productcard__priceunit {
+}
+.modalproduct__buttons {
+  min-width: 210px;
+  max-width: 210px;
+  margin-left: 34px;
+  a {
+    width: 100%;
+    display: block;
+    margin-bottom: 9px;
+    text-align: center;
+  }
+}
+
+.minicard__buyblock {
+  .detailbuy__options {
+    margin-bottom: 14px;
+  }
+}
+
+
+.modal-title_left {
+  text-align: left;
+}
+
+.imgcheckbox--disabled {
+  opacity: 0.7;
+  &:hover input~.imgcheckbox__content {
+    background: #f3f5f8;
+  }
+}
+.imgcheckbox--disabled {
+  opacity: 0.7;
+  &:hover input:checked~.imgcheckbox__content {
+    background: #d9f1fc;
+  }
+}
+
+.minicard__pricecount {
+  color: rgba(37, 52, 79, 0.5);
+  font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 21px;
+}
+.modal-dialog_product {
+  .modal-content {
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+}
+
+.wrap-modal-slider {
+  opacity: 0;
+}
+.productslider__modalslider {
+   .slick-list {
+    overflow: hidden;
+  }
+  .productcard__pricevalue {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .productslider__slide {
+    
+  }
+  .productcard__wrapper {
+    padding: 0;
+  }
+  .productcard__img {
+    height: 133px;
+    width: 125px;
+    margin-right: 25px;
+  }
+
+  .productcard__images {
+    padding: 0;
+  }
+
+  .productcard {
+    max-width: 340px;
+  }
+
+  .productcard__wrapper {
+    display: flex;
+    align-items: center;
+    background: none;
+  }
+.slick-active .productcard__wrapper {
+    box-shadow: none;
+  }
+  .productcard__left {
+
+  }
+  .productslider__slide {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+
+}
+.wrap-modal-slider.open {
+  opacity: 1;
+}
+
+.miniproductslider h2 {
+  font-family: 'FuturaDemiC';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  /* identical to box height, or 22px */
+  margin-bottom: 32px;
+  
+  color: #25344F;
+}
 
 	@include xlarge-screen {
 		.container {

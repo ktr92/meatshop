@@ -5,6 +5,8 @@ $(document).ready(function () {
   $('.mainmenuLevelTwo').css('height', $('.mainmenuLevelOne').outerHeight(true))
  */
 
+  
+
 
   // close select
   $("html, body").on('mousedown', function(e){
@@ -227,6 +229,35 @@ $('.js-mobilefilter').on('click', function(e) {
         breakpoint: 1530,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 1,
+        }
+      },
+    
+      {
+        breakpoint: 1023,
+        settings: {
+          variableWidth: true
+        }
+      },
+     
+    ]
+  })
+})
+  $('.productslider__modalslider').each(function() {
+    $(this).slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipe: false,
+    nextArrow: $(this).closest('.productslider').find('.sliderarrows__right'),
+    prevArrow: $(this).closest('.productslider').find('.sliderarrows__left'),
+    responsive: [
+      {
+        breakpoint: 1530,
+        settings: {
+          slidesToShow: 3,
           slidesToScroll: 1,
         }
       },
