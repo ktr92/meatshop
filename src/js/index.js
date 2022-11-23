@@ -97,8 +97,45 @@ $('.js-mobilefilter').on('click', function(e) {
   $('.detailinfo .cardrating').each(function () {
     $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 18);
   });
+  $('.reviews__rating .cardrating').each(function () {
+    $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 18);
+  });
 
   $("input[type=tel]").mask("+7 (999) 999 99 99");
+
+  function incrementValue(e) {
+	  e.preventDefault();
+	  var fieldName = $(e.target).data('field');
+	  var parent = $(e.target).closest('div');
+	  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+	  if (!isNaN(currentVal)) {
+		parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+	  } else {
+		parent.find('input[name=' + fieldName + ']').val(1);
+	  }
+	}
+
+	function decrementValue(e) {
+	  e.preventDefault();
+	  var fieldName = $(e.target).data('field');
+	  var parent = $(e.target).closest('div');
+	  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+	  if (!isNaN(currentVal) && currentVal > 1) {
+		parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+	  } else {
+		parent.find('input[name=' + fieldName + ']').val(1);
+	  }
+	}
+
+	$('.quantity').on('click', '.quantity-plus', function(e) {
+	  incrementValue(e);
+	});
+
+	$('.quantity').on('click', '.quantity-minus', function(e) {
+	  decrementValue(e);
+	});
 
   const swiper = new Swiper(".mainswiperpreview", {
     spaceBetween: 9,
@@ -311,3 +348,16 @@ $('.js-mobilefilter').on('click', function(e) {
   
   });
   })(jQuery);
+
+
+  (function($) {
+		$(function() {
+
+			$('.producttabs__header ul').on('click', 'li:not(.active)', function() {
+				$(this)
+					.addClass('active').siblings().removeClass('active')
+					.closest('div.producttabs').find('div.producttabs__content').removeClass('active').eq($(this).index()).addClass('active');
+			});
+
+		});
+		})(jQuery);
