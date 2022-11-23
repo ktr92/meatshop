@@ -2573,6 +2573,286 @@ line-height: 17px;
 }
 
 
+.detailslider {
+  margin-bottom: 55px; }
+  .detailslider .swiper {
+    width: 100%;
+    height: 100%; }
+  .detailslider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; }
+  .detailslider .swiper-slide img {
+    display: block;
+   /*  width: 100%;
+    height: 100%; */
+    object-fit: cover; }
+  .detailslider .swiper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+  .detailslider .swiper-slide {
+    background-size: cover;
+    background-position: center; }
+  .detailslider .detailswiper {
+    height: 477px;
+    width: 100%;}
+  .detailslider .detailswiper img {
+    /* width: 100%; */ }
+  .detailslider .detailswiperpreview {
+    height: 477px;
+    box-sizing: border-box;
+    width: 128px;
+    padding-right: 14px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px; }
+  .detailslider .swiper-scrollbar-drag {
+    background: #04A3E9;
+    border-radius: 0; }
+  .detailslider .swiper-scrollbar.swiper-scrollbar-vertical, .detailslider .swiper-vertical > .swiper-scrollbar {
+    width: 4px;
+    background: #F3F3F6; }
+  .detailslider .detailswiperpreview .swiper-slide {
+    height: 90px;
+    width: 90px;
+    overflow: hidden;
+    opacity: 0.5;
+    border-radius: 12px;
+    border: 2px solid #fff;
+    cursor: pointer; }
+  .detailslider .detailswiperpreview .swiper-slide-thumb-active {
+    opacity: 1;
+    outline: 3px solid #0084FE !important; }
+  .detailslider .swiper-slide a {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .detailslider .swiper-slide img {
+    display: block;
+ /*    width: 100%;
+    height: 100%; */
+    object-fit: cover;
+  }
+  .detailslider .detailswiperpreview .swiper-slide img {
+    max-height: 100%;
+    max-width: initial;
+    border-radius: 12px;
+  }
+  .detailslider .detailslider__wrapper {
+    display: flex; }
+
+
+    .productpage {
+    }
+    .detail {
+    }
+    .productpage__main {
+    }
+    
+    
+    .productpage__left {
+    }
+    .productpage__images {
+    }
+    .detailslider {
+     
+    }
+    .detailslider__wrapper {
+      width: calc(585px + 90px + 18px);
+    }
+    .detailslider-pagination {display: none;}
+    
+    .productpage__right {
+      width: calc(50% - 128px);
+    }
+    .productpage__info {
+    }
+    .cardrating_large {
+      .score-wrap {
+        width: 90px;
+        font-size: 16px;
+      }
+      .stars-inactive  {
+        color: rgba(37, 52, 79, 0.1);
+      }
+
+    }
+    .detailinfo__title {
+      h1 {
+        font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 37px;
+
+text-transform: capitalize;
+margin-top: 0;
+margin-bottom: 11px;
+color: #25344F;
+      }
+    }
+    .detailinfo__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .detailinfo__reviews {
+      margin-right: 22px;
+    }
+    .detailinfo__count a {
+      font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 1;
+margin-left: 5px;
+border-bottom: 1px solid #25344F;
+
+color: #25344F;
+    }
+
+    .wishlist__icon {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      border: 1px solid #D8D9DA;
+      border-radius: 5555px;
+    }
+
+    .wishlist__text {
+      margin-left: 12px;
+      display: block;
+      font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+
+
+color: #0EB6FF;
+    }
+
+.wishlist__link {
+  display: flex;
+  align-items: center;
+}
+
+.detailinfo__buyblock {
+}
+.detailbuy {
+}
+.detailbuy__options {
+  display: inline-flex;
+  align-items: center;
+  background: #F3F5F8;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 29px;
+
+}
+.detailbuy__checkbox {
+}
+.imgcheckbox {
+}
+.imgcheckbox__label {
+}
+.imgcheckbox__input {
+}
+.imgcheckbox__content {
+}
+.imgcheckbox__icon {
+  margin-right: 10px;
+}
+.imgcheckbox__title {
+  font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+
+
+color: #25344F;
+}
+
+/* Customize the label (the container) */
+.imgcheckbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .imgcheckbox__label {
+    @include clear;
+    margin-right: 5px;
+    &:last-child {
+      margin-right: 0;
+    }
+    cursor: pointer;
+  }
+}
+
+/* Hide the browser's default checkbox */
+.imgcheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.imgcheckbox__content {
+
+  background: #F3F5F8;
+  border-radius: 8px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  padding: 0 18px 0 11px;
+  transition: all 0.3s ease;
+}
+
+/* On mouse-over, add a grey background color */
+.imgcheckbox:hover input ~ .imgcheckbox__content {
+  background-color: #D9F1FC;
+}
+
+/* When the checkbox is checked, add a blue background */
+.imgcheckbox input:checked ~ .imgcheckbox__content {
+  background-color: #D9F1FC;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.imgcheckbox__content:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containimgcheckboxer input:checked ~ .imgcheckbox__content:after {
+  display: block;
+}
 
 
 @include xlarge-screen {

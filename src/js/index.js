@@ -91,9 +91,12 @@ $('.js-mobilefilter').on('click', function(e) {
       $('.mainmenu').toggleClass('active')
     })
     
-  $('.cardrating').each(function () {
-    $(this).find('span.stars-active').css('width', $(this).text() * 11.2);
-});
+  $('.productcard .cardrating').each(function () {
+    $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 11.2);
+  });
+  $('.detailinfo .cardrating').each(function () {
+    $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 18);
+  });
 
   $("input[type=tel]").mask("+7 (999) 999 99 99");
 
@@ -128,6 +131,50 @@ $('.js-mobilefilter').on('click', function(e) {
     },  
     
   });
+
+  function detailsliderInit() {
+    const swiper = new Swiper(".detailswiperpreview", {
+      spaceBetween: 9,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+      },
+      slidesPerView: "auto",
+      mousewheel: true,
+      direction: 'vertical',
+      freeMode: true,
+      watchSlidesProgress: true,
+     
+    });
+    const swiper2 = new Swiper(".detailswiper", {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+      pagination: {
+        el: ".detailslider-pagination",
+        clickable: true
+      },  
+      
+    });
+
+    $(function(){
+      $(".zoom-box").each(function() {
+        $(this).zoom();
+      })
+    })
+  }
+
+  detailsliderInit()
+
+
   $('.productslider__slider').each(function() {
     $(this).slick({
     dots: false,
