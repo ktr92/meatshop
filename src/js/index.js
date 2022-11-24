@@ -5,7 +5,8 @@ $(document).ready(function () {
   $('.mainmenuLevelTwo').css('height', $('.mainmenuLevelOne').outerHeight(true))
  */
 
-  
+  hoverSlider.init({});
+
 
 
   // close select
@@ -96,11 +97,16 @@ $('.js-mobilefilter').on('click', function(e) {
   $('.productcard .cardrating').each(function () {
     $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 11.2);
   });
-  $('.detailinfo .cardrating').each(function () {
-    $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 18);
+  $('.detailinfo__reviews .cardrating').each(function () {
+    $(this).find('span.stars-active').css(
+      'width', 
+      $(this).find('.cardrating__value').text() * ($(this).find('.fa-star').width() + 2)
+    );
   });
   $('.reviews__rating .cardrating').each(function () {
-    $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 18);
+    $(this).find('span.stars-active').css(
+      'width', 
+      $(this).find('.cardrating__value').text() * 18);
   });
 
   $("input[type=tel]").mask("+7 (999) 999 99 99");
@@ -186,10 +192,7 @@ $('.js-mobilefilter').on('click', function(e) {
      
     });
     const swiper2 = new Swiper(".detailswiper", {
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
+      
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -254,18 +257,17 @@ $('.js-mobilefilter').on('click', function(e) {
     nextArrow: $(this).closest('.productslider').find('.sliderarrows__right'),
     prevArrow: $(this).closest('.productslider').find('.sliderarrows__left'),
     responsive: [
+      
       {
-        breakpoint: 1530,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
+          slidesToShow: 2,
         }
       },
-    
       {
-        breakpoint: 1023,
+        breakpoint: 600,
         settings: {
-          variableWidth: true
+          slidesToShow: 1,
         }
       },
      

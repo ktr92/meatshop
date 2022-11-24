@@ -1,3 +1,5 @@
+
+$(document).ready(function () {
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "selectbox": */
 x = document.getElementsByClassName("selectbox");
@@ -91,5 +93,5 @@ document.addEventListener("click", closeAllSelect);
     })
 
 
-    
+  });
     

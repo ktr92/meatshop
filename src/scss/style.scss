@@ -1116,7 +1116,9 @@ h2 {
 	text-align: left;
 	font-size: 10px;
 }
-
+.infoicons {
+	flex-wrap: wrap;
+}
 .score .stars-active {
 	color: #FFD600;
 	position: relative;
@@ -1222,7 +1224,7 @@ h2 {
 
 .blockslider-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
 	text-align: center;
-	bottom: -15px;
+	bottom: -10px;
 	position: relative;
 }
 
@@ -2020,7 +2022,9 @@ small {
 	position: relative;
 }
 
-
+.swiper-slide.swiper-slide-next {
+	opacity: 0;
+}
 .mainmenu {
 	display: none;
 	position: absolute;
@@ -2028,7 +2032,7 @@ small {
 	top: calc(100% + 15px);
 	background: #FFFFFF;
 	border-radius: 10px;
-	z-index: 9;
+	z-index: 99999;
 	filter: drop-shadow(0px 0px 40px rgba(37, 52, 79, 0.15));
 
 	/*  overflow: hidden; */
@@ -2408,6 +2412,7 @@ li.mainmenuLevelOne__item {
 /* width */
 main ::-webkit-scrollbar {
 	width: 4px;
+	height: 4px;
 }
 
 /* Track */
@@ -2964,7 +2969,12 @@ button:hover {
 .productpage__main {}
 
 
-.productpage__left {}
+.productpage__left {
+	position: relative;
+	.productcard__stickers {
+		left: 130px
+	}
+}
 
 .productpage__images {}
 
@@ -3099,7 +3109,10 @@ button:hover {
 
 	color: #25344F;
 }
-
+.minicard__count {
+	display: flex;
+	align-items: center;
+}
 /* Customize the label (the container) */
 .imgcheckbox {
 	display: inline-block;
@@ -3788,6 +3801,20 @@ line-height: 21px;
   color: #25344F;
 }
 
+
+.productcard__price {
+	white-space: nowrap;
+}
+.tocart {
+	width: 130px;
+}
+
+.productsticker_red {
+	background: #ED1E26;
+	color:#fff;
+}
+
+
 	@include xlarge-screen {
 		.container {
 			padding: 0 10px;
@@ -3810,10 +3837,17 @@ line-height: 21px;
 		}
 	}
 
-	@include large-screen {
 
+	@include large-screen {
+		.detailslider__wrapper {
+			width: 500px;
+		}
 		.cataloglist__item {
 			width: 33.3333%;
+		}
+		.productpage__right {
+			width: calc(100% - 500px);
+			padding-left: 30px;
 		}
 
 		.headermenu {
@@ -4720,6 +4754,7 @@ line-height: 21px;
 
 		.productslider__slide {
 			width: 140px;
+			padding: 0 5px;
 		}
 
 		.buttonsrow__item a,
@@ -4974,6 +5009,346 @@ line-height: 21px;
 		.productsticker_green .productsticker__icon {
 			height: 13px;
 			line-height: 13px;
+		}
+
+		.detailslider-pagination {
+			display: block;
+		}
+		.detailslider .detailswiperpreview {
+			display: none;
+		}
+		.productpage__main.flex.content-between {
+			flex-wrap: wrap;
+		}
+		.productpage__right {
+			padding: 0;
+			width: 100%;
+		}
+		.detailslider__wrapper {
+			width: 100%;
+			display: block;
+		}
+		.detailslider .detailswiper {
+			height: auto;
+			width: 100%;
+	}
+	.productpage__left {
+    width: 100%;
+}
+		.producttabs__header li span.producttabs__title {
+			white-space: nowrap;
+		}
+		.producttabs__header {
+			overflow-x: auto;
+			width: 100%;
+		}
+		.breadcrumbs__items ul span {
+			font-size: 10px;
+			line-height: 12px;
+		}
+		.detailinfo__title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.detailinfo__h1 {
+			font-family: 'FuturaDemiC';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 100%;
+			margin-bottom: 7px;
+		}
+		.detailinfo__count a {
+			font-size: 12px;
+			line-height: 14px;
+		}
+		.detailswiper .zoom-box {
+			padding: 0 30px;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.detailslider-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+			text-align: center;
+		}
+		.detailbuy__options {
+			width: 100%;
+		}
+		.imgcheckbox {
+			width: 50%;
+		}
+		.imgcheckbox__content {
+			justify-content: center;
+		}
+
+		.detailinfo__reviews i.fa.fa-star {
+			font-size: 13px;
+		}
+		.cardrating_large .score-wrap {
+			width: 75px;
+		}
+		.productpage__left {
+			position: relative;
+			.productcard__stickers {
+				left: 0px
+			}
+		}
+		.detailinfo__header {
+			margin-bottom: 11px;
+		}
+		.detailslider {
+			margin-bottom: 26px;
+		}
+		.productcard__cart {
+			position: absolute;
+			top: calc(100% - 50px);
+			width: 100%;
+			left: 0;
+			right: 0;
+			.tocart {
+				width: 100%;
+			}
+		}
+		.producttabs__content {
+			margin-bottom: 26px;
+		}
+		.detailbuy .productcard__buy {
+			width: 100%;
+			position: relative;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			padding-bottom: 66px;
+		}
+		.quantity {
+			margin-right: 0;
+		}
+		.description__cols {
+			flex-wrap: wrap;
+			margin: 0;
+		}
+		.description__col {
+			padding: 0;
+			width: 100%;
+		}
+		.detailbuy__buyblock .productcard__pricevalue {
+			font-size: 26px;
+			line-height: 30px;
+		}
+		.detailbuy__buyblock .productcard__priceunit {
+			font-size: 18px;
+		}
+		.detailbuy__buyblock .productcard__badge {
+			width: 36px;
+			height: 17px;
+		}
+		.productcard__pricecaption {
+			font-size: 12px;
+line-height: 14px;
+		}
+		input.quantity-field {
+			height: 40px;
+		}
+		.detailtable__body .detailtable__col, .detailtable__col {
+			font-size: 14px;
+line-height: 140%;
+		}
+		.infomessage__wrapper {
+			padding: 8px 18px;
+		}
+		.infomessage__text {
+			font-size: 12px;
+line-height: 100%;
+		}
+		.infomessage__icon{
+			margin-right: 14px;
+		}
+		.infoicons .badge__text {
+			font-size: 12px;
+line-height: 130%;
+		}
+		.infoicons__item {
+			margin-bottom: 5px;
+		}
+		.detailinfo__buyblock {
+			margin-bottom: 13px;
+		}
+		.infomessage {
+			margin: 13px 0;
+		}
+		.detailtable {
+			margin-bottom: 21px;
+		}
+		.infoicons .badge img {
+			width: 20px;
+		}
+		.producttabs__header li {
+			height: 36px;
+		}
+		.producttabs__header li span.producttabs__title {
+			margin-right: -20px;
+			font-size: 16px;
+line-height: 19px;
+		}
+		.producttabs__header li {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+		.infoicons {
+			margin: 23px 0;
+		}
+		.producttabs__header {
+			margin-bottom: 26px;
+		}
+		.description p {
+			font-size: 14px;
+line-height: 140%;
+		}
+		.description h3 {
+			margin-top: 0;
+			font-size: 18px;
+line-height: 21px;
+		}
+		.mobiledetail{
+			position: fixed;
+			bottom: 0;
+			box-shadow: 0px 4px 30px rgba(37, 52, 79, 0.15);
+			width: 100%;
+			left: 0;
+			right: 0;
+			background: #fff;
+			padding: 6px 0;
+			z-index: 99;
+
+			.productcard__cart {
+				position: initial;
+			}
+			.productcard__cart .tocart {
+				width: 156px;
+				height: 40px;
+				font-size: 14px;
+			}
+			.productcard__pricevalue {
+				font-size: 18px;
+			}
+			.productcard__priceunit {
+				font-size: 14px;
+				padding-left: 2px;
+			}
+			.productcard__topprice {
+				margin: 0;
+			}
+			.productcard__badge {
+				font-size: 10px;
+				width: 27px;
+				height: 13px;
+			}
+		}
+		.modal-dialog_product {
+			.modal-content {
+				padding: 14px 18px;
+			}
+		}
+
+		.modalproduct__main {
+			flex-wrap: wrap;
+		}
+		.modalproduct {
+			padding-top: 16px;
+		}
+		.minicard__main {
+			padding-left: 20px;
+			margin-left: 0;
+			width: calc(100% - 72px);
+		}
+		.minicard__image {
+			width: 72px;
+		}
+	
+		.modalproduct__product {
+			width: 100%;
+		}
+		.minicard__wrapper {
+			flex-wrap: wrap;
+		}
+		.productslider__modalslider .productcard {
+			max-width: initial;
+		}
+		.productslider__modalslider .productcard__img {
+			width: 62px;margin-right: 23px;
+			padding: 0;
+			height: initial;
+		}
+		.modalproduct	.productcard__title {
+			margin-bottom: 9px;
+		}
+		.modalproduct__buttons {
+			max-width: 100%;
+			width: 100%;
+		margin: 25px 0 0 0;
+		}
+		.modalproduct__main {
+			margin-bottom: 24px;
+		}
+		.miniproductslider h2 {
+			font-size: 18px;
+line-height: 21px;
+margin-bottom: 0;
+
+		}
+		.modalproduct .blockheader  {
+			margin-bottom: 11px;
+		}
+		.modalproduct__buttons a {
+			height: 46px;
+			padding-top: 0;
+			padding-bottom: 0;
+			line-height: 42px;
+		}
+		.minicard__main {
+			width: 100%;
+			padding-left: 0;
+			margin-top: 12px;
+		}
+		.minicard__left {
+			flex-wrap: wrap;
+		}
+		.minicard__count {
+		
+			.buyblock__quantity {
+				width: 50%;
+			}
+			.minicard__amount {
+				width: 50%;
+				text-align: center;
+			}
+			input.quantity-field {
+				height: 30px;
+			}
+			.imgcheckbox__content {
+				height: 36px;
+			}
+		}
+		.minicard__info {
+			width: calc(100% - 72px);
+			padding-left: 20px;
+		}
+		.minicard__right {
+			text-align-last: left;
+		}
+		.minicard__title {
+			margin-bottom: 10px;
+			
+font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+display: flex;
+align-items: center;
+text-transform: capitalize;
+
+color: #25344F;
 		}
 	}
 
