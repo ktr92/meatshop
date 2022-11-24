@@ -2017,7 +2017,10 @@ small {
 
 
 }
-
+.dm-menu_submenu>ul>li>ul {
+	left: unset;
+	right: 0;
+}
 .headercontainer {
 	position: relative;
 }

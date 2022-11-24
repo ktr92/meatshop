@@ -95,3 +95,18 @@ document.addEventListener("click", closeAllSelect);
 
   });
     
+
+  $(document).ready(function () {
+
+  $("html, body").on('mousedown', function(e){
+    if(typeof e.target.className == 'string' && e.target.className.indexOf('adm') < 0)
+    {
+      e.stopPropagation();
+
+      if(!$(e.target).closest('.dropdown-select').length)
+      {
+        $('.dropdown-select .dropdown-select__title.opened').click();
+      }
+    }
+  })
+})
