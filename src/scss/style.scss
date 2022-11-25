@@ -4191,6 +4191,12 @@ border-radius: 6px;
 	}
 }
 
+.infobadge__accordeon {
+	display: none;
+}
+
+
+
 	@include xlarge-screen {
 		.container {
 			padding: 0 10px;
@@ -5829,6 +5835,27 @@ line-height: 100%;
 			font-size: 12px;
 line-height: 100%;
 margin-top: 11px;
+		}
+		.infobadge__accordeon {
+			display: none;
+		}
+		.infobadge__main {
+			padding-right: 22px;
+			position: relative;
+
+			&:after {
+				transition: all 0.3s ease;
+				content: url(../img/accordeon.svg);
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 0;
+			}
+
+			&.active:after {
+			
+				transform: rotate(180deg) translateY(8px);
+			}
 		}
 	}
 

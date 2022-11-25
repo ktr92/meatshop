@@ -9,6 +9,7 @@ $(document).ready(function() {
       imgSliderInit()
       recipeSliderInit()
       productSliderInit()
+      mobileAccordeon()
     }
 
   function cardImagesSlider() {
@@ -385,7 +386,14 @@ $(document).ready(function() {
   initFE()
 });
 
-
+function mobileAccordeon() {
+    if ($(window).width() < 1024) {
+        $('.infobadge__main').on('click', function() {
+            $(this).toggleClass('active')
+            $(this).closest('.infobadge').find('.infobadge__accordeon').slideToggle()
+        })
+    }
+}
 
 (function($) {
   $(function() {
