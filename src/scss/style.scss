@@ -4194,7 +4194,24 @@ border-radius: 6px;
 .infobadge__accordeon {
 	display: none;
 }
+.haederbanner {
+	position: relative;
+}
 
+.haederbanner__close {
+	background: #FFFFFF;
+border: 1.5px solid rgba(37, 52, 79, 0.1);
+width: 20px;
+height: 20px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
 
 
 	@include xlarge-screen {
@@ -5856,6 +5873,9 @@ margin-top: 11px;
 			
 				transform: rotate(180deg) translateY(8px);
 			}
+		}
+		.haederbanner  {
+			display: none;
 		}
 	}
 

@@ -95,6 +95,10 @@ $(document).ready(function() {
       $(this).toggleClass('active')
       $('.mainmenu').toggleClass('active')
   })
+  $('.haederbanner__close').on('click', function(e) {
+        e.preventDefault();
+      $(this).closest('.haederbanner').hide()
+  })
 
   $('.productcard .cardrating').each(function() {
       $(this).find('span.stars-active').css('width', $(this).find('.cardrating__value').text() * 11.2);
