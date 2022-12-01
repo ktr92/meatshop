@@ -29,6 +29,7 @@
   <script src="js/jquery-ui.js"></script>
   <script src="js/filter.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
+  <script src="js/autoFilling.js"></script>
   <script src="js/index.js"></script>
 
 </head>
@@ -42,10 +43,17 @@
     <img src="img/closebanner.svg" alt="">
   </a><!-- /.haederbanner__close -->
 </div><!-- /.haederbanner -->
+
+<!-- автозаполнение плейсхолдера поиска -->
+<script>
+  arObjectAutoFiling.json={'SELECTOR_INPUT':'#title-search-input_fixed','LIST_TITLE':['Сосиски Телячьи, весовые','Пастрами из свинины','Буженина запеченная','Бедро куриное','Паштет Гасконский'],'CACHE_TYPE':'A','~SELECTOR_INPUT':'#title-search-input_fixed','~LIST_TITLE':['Сосиски Телячьи, весовые','Пастрами из свинины','Буженина запеченная','Бедро куриное','Паштет Гасконский'],'~CACHE_TYPE':'A'};
+</script>
+
+
 <header id="header" class="header">
   <div class="header__topline">
     <div class="container">
-      <div class="headercontainer">
+      <div class="headercontainer" id='headercontainer'>
         <div class="mobilepanel"> 
           <div class="mobilepanel__left">
             <div class="mobilepanel__logo"><a href="#" class='logo'><img src="img/logo.png" alt=""></a></div>
@@ -216,9 +224,9 @@
                         </li>
                       </ul>
                       <div class="mainmenu__banner">
-                        <div class="mainmenu__img">
+                        <a href='#' class="mainmenu__img">
                           <img src="img/banner.jpg" alt="">
-                        </div>
+                        </a>
                       </div><!-- /.mainmenu__banner -->
                     </div>
                   </li>
@@ -315,8 +323,8 @@
             </div><!-- /.mainmenu__items -->
           </div><!-- /.mainmenu__wrapper -->
         </div><!-- /.mainmenu -->
- 
-      <div class="headermain">
+        <div id='headermain'>
+      <div class="headermain" >
         <div class="headermain__left">
           <div class="headermain__logo"><a href="#" class='logo'><img src="img/logo.png" alt=""></a></div>
           <div class="headermain__descr"><span>Доставляем по Москве и Одинцовскому ГО</span></div>
@@ -332,7 +340,8 @@
             <form action="">
               <div class="searchinput">
                 <button type="submit"><img src="img/Search.svg" alt=""></button>
-                <input type="text" placeholder='Я ищу...'>
+               <!--  <input type="text" placeholder='Я ищу...' id='title-search-input_fixed'> -->
+                <input type="text" placeholder='' id='title-search-input_fixed'>
               </div>
             </form>
           </div>
@@ -387,6 +396,7 @@
         <!-- /.headermain__right -->
       </div>
       <!-- /.headermain -->
+    </div>
     </div>
     <!-- /.headercontainer -->
    
@@ -703,19 +713,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -793,19 +803,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -883,19 +893,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -973,19 +983,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1063,19 +1073,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1153,19 +1163,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1310,19 +1320,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1400,19 +1410,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1490,19 +1500,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1580,19 +1590,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1670,19 +1680,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1760,19 +1770,19 @@
               <div class="productslider__item">
                 <div class="productcard">
                   <div class="productcard__wrapper">
-                    <div class="productcard__images onlyDesktop">
+                    <a href="#" class="productcard__images onlyDesktop">
                       <div class="productcard__img">
                         <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
                       </div>
-                    </div>
-                    <div class="productcard__images productcard__images_mobile onlyMobile">
+                    </a>
+                    <a href="#"  class="productcard__images productcard__images_mobile onlyMobile">
                       <div class="productcard__img">
                         <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                         <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                       </div>
-                    </div>
+                    </a>
                     <!-- /.productcard__images -->
                     <div class="productcard__rating">
                       <div class="cardrating">
@@ -1886,9 +1896,9 @@
               <div class="recipeslider__item">
                 <div class="recipecard">
                   <div class="recipecard__wrapper">
-                    <div class="recipecard__image">
+                    <a href="#" class="recipecard__image">
                       <div class="recipecard__img"><img src="img/recipe1.jpg" alt=""></div>
-                    </div>
+                    </a>
                     <!-- /.recipecard__image -->
                     <div class="recipecard__title">
                       <a href="">Лучший рецепт шашлыка из свинины, по мнению подписчиков</a>
@@ -1922,9 +1932,9 @@
               <div class="recipeslider__item">
                 <div class="recipecard">
                   <div class="recipecard__wrapper">
-                    <div class="recipecard__image">
+                    <a href="#" class="recipecard__image">
                       <div class="recipecard__img"><img src="img/recipe2.jpg" alt=""></div>
-                    </div>
+                    </a>
                     <!-- /.recipecard__image -->
                     <div class="recipecard__title">
                       <a href="">Лучший рецепт шашлыка из свинины, по мнению подписчиков</a>
@@ -1958,9 +1968,9 @@
               <div class="recipeslider__item">
                 <div class="recipecard">
                   <div class="recipecard__wrapper">
-                    <div class="recipecard__image">
+                    <a href="#" class="recipecard__image">
                       <div class="recipecard__img"><img src="img/recipe1.jpg" alt=""></div>
-                    </div>
+                    </a>
                     <!-- /.recipecard__image -->
                     <div class="recipecard__title">
                       <a href="">Лучший рецепт шашлыка из свинины, по мнению подписчиков</a>
@@ -1994,9 +2004,9 @@
               <div class="recipeslider__item">
                 <div class="recipecard">
                   <div class="recipecard__wrapper">
-                    <div class="recipecard__image">
+                    <a href="#" class="recipecard__image">
                       <div class="recipecard__img"><img src="img/recipe1.jpg" alt=""></div>
-                    </div>
+                    </a>
                     <!-- /.recipecard__image -->
                     <div class="recipecard__title">
                       <a href="">Лучший рецепт шашлыка из свинины, по мнению подписчиков</a>
@@ -2030,9 +2040,9 @@
               <div class="recipeslider__item">
                 <div class="recipecard">
                   <div class="recipecard__wrapper">
-                    <div class="recipecard__image">
+                    <a href="#" class="recipecard__image">
                       <div class="recipecard__img"><img src="img/recipe1.jpg" alt=""></div>
-                    </div>
+                    </a>
                     <!-- /.recipecard__image -->
                     <div class="recipecard__title">
                       <a href="">Лучший рецепт шашлыка из свинины, по мнению подписчиков</a>
@@ -2182,7 +2192,7 @@
         <div class="aboutblock__left">
           <div class="aboutblock__video">
             <div class="video-container">
-               <iframe width="" height="" src="https://www.youtube.com/embed/FAWjZPzKRSM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             <!--   <iframe width="" height="" src="https://www.youtube.com/embed/FAWjZPzKRSM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div>
             <!-- /.video-container -->
           </div>

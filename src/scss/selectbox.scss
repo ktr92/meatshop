@@ -107,7 +107,7 @@ color: #3B435A;
 /**/
 
 
-.dropdown-menu-wrapper{position: absolute;top:100%;right: 0px;display: none;z-index: 107;}
+.dropdown-menu-wrapper{position: absolute;top:100%;right: 0px;display: none;z-index: 9999;}
 .open + .dropdown-menu-wrapper{display: block;}
 .dropdown-menu-wrapper .dropdown-menu-inner{background: #fff;text-align: left;box-shadow: 0 1px 12px 1px rgba(0,0,0,.12);overflow: hidden;}
 .dropdown-menu-wrapper {

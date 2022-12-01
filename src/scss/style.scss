@@ -202,6 +202,40 @@ img {
 	justify-content: space-between;
 	margin: 9px 0;
 }
+#headermain.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0px 0px 40px rgba(37, 52, 79, 0.15);
+	z-index: 999999;
+}
+#headermain.fixed .headermain {
+	margin: 0 auto;
+	max-width: 1530px;
+	padding: 0 42px;
+	width: 100%;
+}
+#headermain.fixed .headermain__contacts {
+	display: none;
+}
+#headermain.fixed .headermain__right {
+	width: 228px;
+}
+#headermain.fixed .headermain__left{
+	width: calc(100% - 228px)
+}
+#headermain.fixed .headermain__search{
+	max-width: 653px;
+}
+
+.headercontainer.fixed {
+	position: fixed;
+	top: 0;
+	z-index: 999;
+}
 
 .headermain__left {
 	display: flex;
@@ -271,10 +305,12 @@ img {
 .headermain__right {
 	display: flex;
 	align-items: center;
-	width: 420px;
+	width: 444px;
 }
 
-.headermain__contacts {}
+.headermain__contacts {
+	margin-right: 15px;
+}
 
 .contacts {}
 
@@ -440,7 +476,7 @@ img {
 
 .logo {
 	display: block;
-	width: 122px;
+	width: 97px;
 }
 
 .headermenu__item_dropdown a {
@@ -1327,6 +1363,7 @@ h2 {
 
 .recipecard__image {
 	margin-bottom: 16px;
+	display: block;
 }
 
 .recipecard__img {
@@ -2035,7 +2072,7 @@ small {
 	top: calc(100% + 15px);
 	background: #FFFFFF;
 	border-radius: 10px;
-	z-index: 99999;
+	z-index: 9999999;
 	filter: drop-shadow(0px 0px 40px rgba(37, 52, 79, 0.15));
 
 	/*  overflow: hidden; */
@@ -2776,6 +2813,7 @@ button:hover {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	width: 100%;
 }
 
 .productcard__sticker {
@@ -3639,6 +3677,7 @@ color: #25344F;
 }
 .minicard__image {
   width: 167px;
+	display: block;
 }
 .minicard__main {
   margin-left: 76px;
@@ -3651,7 +3690,7 @@ color: #25344F;
   line-height: 21px;
   /* identical to box height */
   margin-bottom: 11px;
-
+display: block;
   color: #25344F;
 }
 .minicard__buyblock {
@@ -4379,7 +4418,9 @@ align-items: center;
 
 	/* mobile */
 	@include medium-screen {
-
+		a.productcard__images.productcard__images_mobile.onlyMobile {
+			display: block;
+		}
 
 		.headermenu {
 
@@ -5082,6 +5123,10 @@ align-items: center;
 			margin-bottom: 36px;
 		}
 
+		.footer__col.footer__col_contacts {
+			margin-bottom: 0;
+		}
+
 		.footer__col_b1 {
 			order: 3;
 		}
@@ -5149,6 +5194,11 @@ align-items: center;
 
 		.productcard_mslideimg img {
 			max-height: 100%;
+			width: 100%;
+			display: block;
+		}
+		.productcard_mslideimg  {
+			width: 100%;
 		}
 
 		.productslider__slide {
@@ -5608,6 +5658,7 @@ line-height: 140%;
 			font-size: 18px;
 line-height: 21px;
 		}
+		
 		.mobiledetail{
 			position: fixed;
 			bottom: 0;
@@ -5618,6 +5669,7 @@ line-height: 21px;
 			background: #fff;
 			padding: 6px 0;
 			z-index: 99;
+			display: none;
 
 			.productcard__cart {
 				position: initial;
@@ -5642,6 +5694,9 @@ line-height: 21px;
 				width: 27px;
 				height: 13px;
 			}
+		}
+		.mobiledetail.fixed {
+			display: block;
 		}
 		.modal-dialog_product {
 			.modal-content {

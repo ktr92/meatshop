@@ -10,6 +10,12 @@ $(document).ready(function() {
       recipeSliderInit()
       productSliderInit()
       mobileAccordeon()
+      closeByOutsideSelect()
+      closeByClickOutside('.mainmenu', '.mainmenubtn')
+      closeByClickOutside('.catalogpage__aside', '.js-mobilefilter')
+      fixMenu(false, 750, 'mobpriceFixed', 'fixed')
+      fixMenu(300, false, 'headermain', 'fixed')
+      fixMenu(300, false, 'headercontainer', 'fixed')
     }
 
   function cardImagesSlider() {
@@ -83,13 +89,45 @@ $(document).ready(function() {
 
   /**/
 
+
+
+  function closeByClickOutside(element, button) {
+    $(document).click(function(event) {
+        if (!$(event.target).closest(`${element},${button}`).length) {
+            $(button).removeClass('active')
+            $(element).removeClass('active')
+        }
+    });
+    
+    $(document).keyup(function(e) {
+        if (e.key === "Escape") { // escape key maps to keycode `27`
+            $(button).removeClass('active')
+            $(element).removeClass('active')
+        }
+    });
+  }
+  function closeByOutsideSelect() {
+    $(document).click(function(event) {
+        if (!$(event.target).closest(`.dropdown-select__list,.dropdown-select__title`).length) {
+            $('.dropdown-select__list').hide()
+           
+        }
+    });
+    
+    $(document).keyup(function(e) {
+        if (e.key === "Escape") { // escape key maps to keycode `27`
+            $('.dropdown-select__list').hide()
+        }
+    });
+  }
+
   $('.js-mobilefilter').on('click', function(e) {
       e.preventDefault()
       $(this).toggleClass('active')
       $('.catalogpage__aside').toggleClass('active')
   })
 
-
+  
 
   $('button.mainmenubtn').on('click', function(e) {
       $(this).toggleClass('active')
@@ -362,6 +400,37 @@ $(document).ready(function() {
               ]
           })
       })
+  }
+
+
+
+  function fixMenu(topDesktop, topMobile, elementId, className) {
+    if (window.innerWidth >= 767) {
+        if(topDesktop) {
+            window.addEventListener('scroll', (event) => {
+            scroll = window.scrollY
+            if (scroll >= topDesktop) {
+                document.getElementById(elementId).classList.add(className)
+            } else {
+                document.getElementById(elementId).classList.remove(className)
+            }
+        
+            });
+        }
+      } else {
+        if (topMobile) {
+            window.addEventListener('scroll', (event) => {
+                scroll = window.scrollY
+                if (scroll >= topMobile) {
+                  document.getElementById(elementId).classList.add(className)
+                } else {
+                  document.getElementById(elementId).classList.remove(className)
+                }
+          
+              });
+        }
+       
+      }
   }
 
   function blockSliderInit() {

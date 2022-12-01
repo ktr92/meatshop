@@ -29,6 +29,7 @@
   <script src="js/jquery-ui.js"></script>
   <script src="js/filter.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
+  <script src="js/autoFilling.js"></script>
   <script src="js/index.js"></script>
 
 </head>
@@ -42,10 +43,17 @@
     <img src="img/closebanner.svg" alt="">
   </a><!-- /.haederbanner__close -->
 </div><!-- /.haederbanner -->
+
+<!-- автозаполнение плейсхолдера поиска -->
+<script>
+  arObjectAutoFiling.json={'SELECTOR_INPUT':'#title-search-input_fixed','LIST_TITLE':['Сосиски Телячьи, весовые','Пастрами из свинины','Буженина запеченная','Бедро куриное','Паштет Гасконский'],'CACHE_TYPE':'A','~SELECTOR_INPUT':'#title-search-input_fixed','~LIST_TITLE':['Сосиски Телячьи, весовые','Пастрами из свинины','Буженина запеченная','Бедро куриное','Паштет Гасконский'],'~CACHE_TYPE':'A'};
+</script>
+
+
 <header id="header" class="header">
   <div class="header__topline">
     <div class="container">
-      <div class="headercontainer">
+      <div class="headercontainer" id='headercontainer'>
         <div class="mobilepanel"> 
           <div class="mobilepanel__left">
             <div class="mobilepanel__logo"><a href="#" class='logo'><img src="img/logo.png" alt=""></a></div>
@@ -216,9 +224,9 @@
                         </li>
                       </ul>
                       <div class="mainmenu__banner">
-                        <div class="mainmenu__img">
+                        <a href='#' class="mainmenu__img">
                           <img src="img/banner.jpg" alt="">
-                        </div>
+                        </a>
                       </div><!-- /.mainmenu__banner -->
                     </div>
                   </li>
@@ -315,8 +323,8 @@
             </div><!-- /.mainmenu__items -->
           </div><!-- /.mainmenu__wrapper -->
         </div><!-- /.mainmenu -->
- 
-      <div class="headermain">
+        <div id='headermain'>
+      <div class="headermain" >
         <div class="headermain__left">
           <div class="headermain__logo"><a href="#" class='logo'><img src="img/logo.png" alt=""></a></div>
           <div class="headermain__descr"><span>Доставляем по Москве и Одинцовскому ГО</span></div>
@@ -332,7 +340,8 @@
             <form action="">
               <div class="searchinput">
                 <button type="submit"><img src="img/Search.svg" alt=""></button>
-                <input type="text" placeholder='Я ищу...'>
+               <!--  <input type="text" placeholder='Я ищу...' id='title-search-input_fixed'> -->
+                <input type="text" placeholder='' id='title-search-input_fixed'>
               </div>
             </form>
           </div>
@@ -387,6 +396,7 @@
         <!-- /.headermain__right -->
       </div>
       <!-- /.headermain -->
+    </div>
     </div>
     <!-- /.headercontainer -->
    
@@ -556,11 +566,11 @@
                 <div class="minicard">
                   <div class="minicard__wrapper">
                     <div class="minicard__left">
-                      <div class="minicard__image">
+                      <a href='#' class="minicard__image">
                         <img src="img/product1.png" alt="">
-                      </div>
+                      </a>
                       <div class="minicard__info onlyMobile">
-                        <div class="minicard__title ">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title ">Колбаса сырокопченая “Прошутто”</a>
                         <div class="minicard__right ">
                           <div class="minicard__price">
                             <div class="productcard__prices">
@@ -583,13 +593,13 @@
                         </div>
                       </div><!-- /.minicard__info -->
                       <div class="minicard__main">
-                        <div class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</a>
                         <!-- /.minicard__title -->
                         <div class="minicard__buyblock">
                           <div class="detailbuy__options">
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option1-1" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option1-1' class='imgcheckbox__input' checked >
+                              <input type="radio" name='radio' id='option1-1' class='imgcheckbox__input' checked >
                               <span class='imgcheckbox__content'>
                               <img src="img/upakovka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Упаковка</span>
@@ -599,7 +609,7 @@
                             <!-- /.detailbuy__checkbox -->
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option1-2" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option1-2' class='imgcheckbox__input' >
+                              <input type="radio" name='radio' id='option1-2' class='imgcheckbox__input' >
                               <span class='imgcheckbox__content'>
                               <img src="img/narezka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Нарезка</span>
@@ -673,11 +683,11 @@
                 <div class="minicard">
                   <div class="minicard__wrapper">
                     <div class="minicard__left">
-                      <div class="minicard__image">
+                      <a href='#' class="minicard__image">
                         <img src="img/product1.png" alt="">
-                      </div>
+                      </a>
                       <div class="minicard__info onlyMobile">
-                        <div class="minicard__title ">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title ">Колбаса сырокопченая “Прошутто”</a>
                         <div class="minicard__right ">
                           <div class="minicard__price">
                             <div class="productcard__prices">
@@ -700,13 +710,13 @@
                         </div>
                       </div><!-- /.minicard__info -->
                       <div class="minicard__main">
-                        <div class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</a>
                         <!-- /.minicard__title -->
                         <div class="minicard__buyblock">
                           <div class="detailbuy__options">
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option2-1" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option2-1' class='imgcheckbox__input' checked >
+                              <input type="radio" name='radio1' id='option2-1' class='imgcheckbox__input' checked >
                               <span class='imgcheckbox__content'>
                               <img src="img/upakovka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Упаковка</span>
@@ -716,7 +726,7 @@
                             <!-- /.detailbuy__checkbox -->
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option2-2" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option2-2' class='imgcheckbox__input' >
+                              <input type="radio" name='radio1' id='option2-2' class='imgcheckbox__input' >
                               <span class='imgcheckbox__content'>
                               <img src="img/narezka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Нарезка</span>
@@ -790,11 +800,11 @@
                 <div class="minicard">
                   <div class="minicard__wrapper">
                     <div class="minicard__left">
-                      <div class="minicard__image">
+                      <a href='#' class="minicard__image">
                         <img src="img/product1.png" alt="">
-                      </div>
+                      </a>
                       <div class="minicard__info onlyMobile">
-                        <div class="minicard__title ">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title ">Колбаса сырокопченая “Прошутто”</a>
                         <div class="minicard__right ">
                           <div class="minicard__price">
                             <div class="productcard__prices">
@@ -817,13 +827,13 @@
                         </div>
                       </div><!-- /.minicard__info -->
                       <div class="minicard__main">
-                        <div class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</a>
                         <!-- /.minicard__title -->
                         <div class="minicard__buyblock">
                           <div class="detailbuy__options">
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option3-1" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option3-1' class='imgcheckbox__input' checked >
+                              <input type="radio" name="radio4" id='option3-1' class='imgcheckbox__input' checked >
                               <span class='imgcheckbox__content'>
                               <img src="img/upakovka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Упаковка</span>
@@ -833,7 +843,7 @@
                             <!-- /.detailbuy__checkbox -->
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option3-2" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option3-2' class='imgcheckbox__input' >
+                              <input type="radio" name="radio4" id='option3-2' class='imgcheckbox__input' >
                               <span class='imgcheckbox__content'>
                               <img src="img/narezka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Нарезка</span>
@@ -907,7 +917,7 @@
                 <div class="minicard minicard--disabled">
                   <div class="minicard__wrapper">
                     <div class="minicard__left">
-                      <div class="minicard__image">
+                      <div  class="minicard__image">
                         <a href="" class='btn_white minicard__back'>
                           <span> Вернуть в корзину</span>
                           <img src="img/Return.svg" alt="">
@@ -915,7 +925,7 @@
                         <img src="img/product1.png" alt="">
                       </div>
                       <div class="minicard__info onlyMobile">
-                        <div class="minicard__title ">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title ">Колбаса сырокопченая “Прошутто”</a>
                         <div class="minicard__right ">
                           <div class="minicard__price">
                             <div class="productcard__prices">
@@ -938,13 +948,13 @@
                         </div>
                       </div><!-- /.minicard__info -->
                       <div class="minicard__main">
-                        <div class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</div>
+                        <a href='#' class="minicard__title onlyDesktop">Колбаса сырокопченая “Прошутто”</a>
                         <!-- /.minicard__title -->
                         <div class="minicard__buyblock">
                           <div class="detailbuy__options">
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option4-1" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option4-1' class='imgcheckbox__input' checked >
+                              <input type="radio" name='radio2' id='option4-1' class='imgcheckbox__input' checked >
                               <span class='imgcheckbox__content'>
                               <img src="img/upakovka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Упаковка</span>
@@ -954,7 +964,7 @@
                             <!-- /.detailbuy__checkbox -->
                             <div class="detailbuy__checkbox imgcheckbox">
                               <label for="option4-2" class='imgcheckbox__label'>
-                              <input type="checkbox" id='option4-2' class='imgcheckbox__input' >
+                              <input type="radio" name='radio2' id='option4-2' class='imgcheckbox__input' >
                               <span class='imgcheckbox__content'>
                               <img src="img/narezka.svg" alt="" class='imgcheckbox__icon'>
                               <span class='imgcheckbox__title'>Нарезка</span>

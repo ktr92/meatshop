@@ -21,7 +21,7 @@
     </div>
     <!-- /.breadcrumbs -->
 
-    <div class="mobiledetail onlyMobile">
+    <div class="mobiledetail onlyMobile" id='mobpriceFixed'>
       <div class="container">
         <div class="detailbuy__buyblock">
           <div class="buyblock">
@@ -112,7 +112,23 @@
               <div class="productcard__sticker">
                 <div class="productsticker productsticker_red">
                   <span class="productsticker__text">Акция</span>
-                </div>
+                </div>                
+              </div>
+              <div class="productcard__sticker">
+                <div class="productsticker productsticker_yellow">
+                  <span class="productsticker__text">ХИТ</span>
+                </div>                    
+              </div>
+              <div class="productcard__sticker">
+                <div class="productsticker productsticker_blue">
+                  <span class="productsticker__text">Новинка</span>
+                </div>                                   
+              </div>
+              <div class="productcard__sticker">
+                <div class="productsticker productsticker_green">
+                  <span class="productsticker__text">Кешбек</span>
+                  <span class="productsticker__icon">-5%</span>
+                </div>              
               </div>
             </div>
             <div class="productpage__images detailslider">
@@ -234,7 +250,7 @@
                       <div class="detailbuy__options">
                         <div class="detailbuy__checkbox imgcheckbox">
                           <label for="option1" class='imgcheckbox__label'>
-                          <input type="checkbox" id='option1' class='imgcheckbox__input' checked>
+                          <input type="radio" name='radio1' id='option11' class='imgcheckbox__input' checked>
                           <span class='imgcheckbox__content'>
                           <img src="img/upakovka.svg" alt="" class='imgcheckbox__icon'>
                           <span class='imgcheckbox__title'>Упаковка</span>
@@ -244,7 +260,7 @@
                         <!-- /.detailbuy__checkbox -->
                         <div class="detailbuy__checkbox imgcheckbox">
                           <label for="option2" class='imgcheckbox__label'>
-                          <input type="checkbox" id='option2' class='imgcheckbox__input'>
+                          <input type="radio" name='radio1' id='option22' class='imgcheckbox__input'>
                           <span class='imgcheckbox__content'>
                           <img src="img/narezka.svg" alt="" class='imgcheckbox__icon'>
                           <span class='imgcheckbox__title'>Нарезка</span>
@@ -266,11 +282,11 @@
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
                                   <div class="productcard__pricevalue">674.94</div>
-                                  <div class="productcard__priceunit">₽/кг</div>
+                                  <div class="productcard__priceunit">₽</div>
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
-                              <div class="productcard__pricecaption">Цена за шт.</div>
+                              <div class="productcard__pricecaption">Цена за кг</div>
                               <!-- /.productcard__mainprice -->
                             </div>
                             <!-- /.productcard__prices -->
@@ -782,19 +798,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -872,19 +888,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -962,19 +978,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1052,19 +1068,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1142,19 +1158,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1232,19 +1248,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1357,19 +1373,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1447,19 +1463,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1537,19 +1553,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1627,19 +1643,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1717,19 +1733,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1807,19 +1823,19 @@
                     <div class="productslider__item">
                       <div class="productcard">
                         <div class="productcard__wrapper">
-                          <div class="productcard__images onlyDesktop">
-                            <div class="productcard__img">
-                              <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                            </div>
-                          </div>
-                          <div class="productcard__images productcard__images_mobile onlyMobile">
+                          <a href="#" class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </a>
+                          <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
                             <div class="productcard__img">
                               <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
                               <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
                             </div>
-                          </div>
+                          </a>
                           <!-- /.productcard__images -->
                           <div class="productcard__rating">
                             <div class="cardrating">
@@ -1957,7 +1973,7 @@
                         <div class="detailbuy__options">
                           <div class="detailbuy__checkbox imgcheckbox">
                             <label for="option1" class='imgcheckbox__label'>
-                            <input type="checkbox" id='option1' class='imgcheckbox__input' checked >
+                            <input type="radio" name='radio' id='option1' class='imgcheckbox__input' checked >
                             <span class='imgcheckbox__content'>
                             <img src="img/upakovka.svg" alt="" class='imgcheckbox__icon'>
                             <span class='imgcheckbox__title'>Упаковка</span>
@@ -1967,7 +1983,7 @@
                           <!-- /.detailbuy__checkbox -->
                           <div class="detailbuy__checkbox imgcheckbox">
                             <label for="option2" class='imgcheckbox__label'>
-                            <input type="checkbox" id='option2' class='imgcheckbox__input' >
+                            <input type="radio" name='radio' id='option2' class='imgcheckbox__input' >
                             <span class='imgcheckbox__content'>
                             <img src="img/narezka.svg" alt="" class='imgcheckbox__icon'>
                             <span class='imgcheckbox__title'>Нарезка</span>
@@ -2061,11 +2077,11 @@
                           <div class="productcard">
                             <div class="productcard__wrapper">
                               <div class="productcard__left">
-                                <div class="productcard__images ">
+                                <a href="#" class="productcard__images ">
                                   <div class="productcard__img">
                                     <img src="img/product.jpg" >
                                   </div>
-                                </div>
+                                </a>
                                 <!-- /.productcard__images -->
                               </div>
                               <!-- /.productcard__left -->
@@ -2110,11 +2126,11 @@
                           <div class="productcard">
                             <div class="productcard__wrapper">
                               <div class="productcard__left">
-                                <div class="productcard__images ">
+                                <a href="#" class="productcard__images ">
                                   <div class="productcard__img">
                                     <img src="img/product.jpg" >
                                   </div>
-                                </div>
+                                </a>
                                 <!-- /.productcard__images -->
                               </div>
                               <!-- /.productcard__left -->
@@ -2159,11 +2175,11 @@
                           <div class="productcard">
                             <div class="productcard__wrapper">
                               <div class="productcard__left">
-                                <div class="productcard__images ">
+                                <a href="#" class="productcard__images ">
                                   <div class="productcard__img">
                                     <img src="img/product.jpg" >
                                   </div>
-                                </div>
+                                </a>
                                 <!-- /.productcard__images -->
                               </div>
                               <!-- /.productcard__left -->
@@ -2208,11 +2224,11 @@
                           <div class="productcard">
                             <div class="productcard__wrapper">
                               <div class="productcard__left">
-                                <div class="productcard__images ">
+                                <a href="#" class="productcard__images ">
                                   <div class="productcard__img">
                                     <img src="img/product.jpg" >
                                   </div>
-                                </div>
+                                </a>
                                 <!-- /.productcard__images -->
                               </div>
                               <!-- /.productcard__left -->
