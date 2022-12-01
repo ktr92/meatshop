@@ -5,7 +5,6 @@ $(document).ready(function() {
       menuInit()
       mainSliderInit()
       detailsliderInit()
-      blockSliderInit()
       imgSliderInit()
       recipeSliderInit()
       productSliderInit()
@@ -16,6 +15,8 @@ $(document).ready(function() {
       fixMenu(false, 750, 'mobpriceFixed', 'fixed')
       fixMenu(300, false, 'headermain', 'fixed')
       fixMenu(300, false, 'headercontainer', 'fixed')
+      blockSliderInit()
+      productListImgLisder()
     }
 
   function cardImagesSlider() {
@@ -405,6 +406,7 @@ $(document).ready(function() {
 
 
   function fixMenu(topDesktop, topMobile, elementId, className) {
+    if (document.getElementById(elementId)) {
     if (window.innerWidth >= 767) {
         if(topDesktop) {
             window.addEventListener('scroll', (event) => {
@@ -431,6 +433,7 @@ $(document).ready(function() {
         }
        
       }
+    }
   }
 
   function blockSliderInit() {
@@ -446,19 +449,24 @@ $(document).ready(function() {
               },
           })
 
-      if ($(window).width() < 1024) {
-          $('.productcard__images_mobile .productcard__img').slick({
+     
+  }
+
+
+  function productListImgLisder() {
+    if ($(window).width() < 1024) {
+        $('.productcard__images_mobile .productcard__img').each(function(e) {
+          $(this).slick({
               dots: true,
               arrows: false,
               slidesToShow: 1,
               slidesToScroll: 1,
           })
-      }
+        })
+    }
   }
 
-  initFE()
-});
-
+  
 function mobileAccordeon() {
     if ($(window).width() < 1024) {
         $('.infobadge__main').on('click', function() {
@@ -492,3 +500,14 @@ function mobileAccordeon() {
 
   });
 })(jQuery);
+
+  initFE()
+
+});
+
+
+
+
+
+
+
