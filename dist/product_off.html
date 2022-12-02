@@ -906,7 +906,7 @@
       </div><!-- /.container -->
     </div><!-- /.mobilepanel -->
 
-    <div class="productpage detail">
+    <div class="productpage detail detail_off">
       <div class="container">
         <div class="productpage__main flex content-between">
           <div class="detailinfo__title onlyMobile">
@@ -1040,6 +1040,10 @@
           <!-- /.productpage__left -->
           <div class="productpage__right">
             <div class="productpage__info detailinfo">
+              <div class="detailinfo__outofstock">
+                <img src="img/unav.svg" alt="">
+                <span>Товар временно отсутствует</span>
+              </div>
               <div class="detailinfo__title onlyDesktop">
                 <h1>Колбаса сырокопченая “Прошутто”</h1>
               </div>
@@ -1095,38 +1099,13 @@
                 <div class="detailinfo__buyblock">
                   <div class="detailbuy">
                     <form action="#">
-                      <div class="detailbuy__options">
-                        <div class="detailbuy__checkbox imgcheckbox">
-                          <label for="option1" class='imgcheckbox__label'>
-                          <input type="radio" name='radio1' id='option11' class='imgcheckbox__input' checked>
-                          <span class='imgcheckbox__content'>
-                          <img src="img/upakovka.svg" alt="" class='imgcheckbox__icon'>
-                          <span class='imgcheckbox__title'>Упаковка</span>
-                          </span>
-                          </label>
-                        </div>
-                        <!-- /.detailbuy__checkbox -->
-                        <div class="detailbuy__checkbox imgcheckbox">
-                          <label for="option2" class='imgcheckbox__label'>
-                          <input type="radio" name='radio1' id='option22' class='imgcheckbox__input'>
-                          <span class='imgcheckbox__content'>
-                          <img src="img/narezka.svg" alt="" class='imgcheckbox__icon'>
-                          <span class='imgcheckbox__title'>Нарезка</span>
-                          </span>
-                          </label>
-                        </div>
-                        <!-- /.detailbuy__checkbox -->
-                      </div>
-                      <!-- /.detailbuy__options -->
+                      
                       <div class="detailbuy__buyblock">
                         <div class="buyblock">
                           <div class="productcard__buy">
                             <div class="productcard__prices">
-                              <div class="productcard__topprice">
-                                <div class="productcard__oldprice">762.92</div>
-                                <div class="productcard__badge">12%</div>
-                              </div>
-                              <!-- /.productcard__oldprice -->
+                              <div class="productcard__pricecaption">Цена за кг</div>
+
                               <div class="productcard__mainprice">
                                 <div class="productcard__price">
                                   <div class="productcard__pricevalue">674.94</div>
@@ -1134,24 +1113,11 @@
                                 </div>
                                 <!-- /.productcard__price -->
                               </div>
-                              <div class="productcard__pricecaption">Цена за кг</div>
                               <!-- /.productcard__mainprice -->
                             </div>
                             <!-- /.productcard__prices -->
                             <div class="buyblock__buttons flex items-center">
-                              <div class="buyblock__quantity">
-                                <div class="quantity">
-                                  <input type="button" value="–" class="quantity-minus" data-field="quantity">
-                                  <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-                                  <input type="button" value="+" class="quantity-plus" data-field="quantity">
-                                </div>
-                              </div>
-                              <div class="productcard__cart">
-                                <button class="tocart btn btn_main js-addmodal">
-                                <img src="img/addtocart.svg" alt="">
-                                <span>Купить</span>
-                                </button>
-                              </div>
+                              <a href="#" class="preorder btn_border">Привозите больше</a>
                             </div>
                             <!-- /.buyblock__buttons -->
                           </div>

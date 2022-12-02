@@ -12,6 +12,26 @@ $(document).ready(function() {
       $(this).toggleClass('active')
       $('.mainmenu').toggleClass('active')
   })
+  $('.jscatalog .js-toggler').on('click', function(e) {
+      $(this).closest('.jscatalog').toggleClass('active')
+      $(this).closest('.jscatalog').siblings('.mobilemenu__level2').toggleClass('active')
+  })
+  $('.mobilemenu__level2 .js-toggler').on('click', function(e) {
+      $(this).closest('.mobilemenu__content').toggleClass('active')
+      $(this).closest('.mobilemenu__item').find('.mobilemenu__level3').slideToggle()
+  })
+
+  $('.menubutton').on('click', function(e) {
+      $(this).toggleClass('active')
+      $('.mobilemenu').toggleClass('active')
+      $('.jsbackdrop').toggleClass('active')
+
+  })
+  $('.jsbackdrop').on('click', function(e) {
+      $(this).removeClass('active')
+      $('.mobilemenu').removeClass('active')
+      $('.menubutton').removeClass('active')
+  })
   $('.haederbanner__close').on('click', function(e) {
         e.preventDefault();
       $(this).closest('.haederbanner').hide()
@@ -115,6 +135,7 @@ function initFE() {
     fixMenu(false, 750, 'mobpriceFixed', 'fixed')
     fixMenu(300, false, 'headermain', 'fixed')
     fixMenu(300, false, 'headercontainer', 'fixed')
+    fixMenu(false, 300, 'mobilenav', 'fixed')
     blockSliderInit()
     productListImgLisder()
   }
