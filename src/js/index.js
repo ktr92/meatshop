@@ -25,12 +25,17 @@ $(document).ready(function() {
       $(this).toggleClass('active')
       $('.mobilemenu').toggleClass('active')
       $('.jsbackdrop').toggleClass('active')
+      $('.mobilemenu__level2').removeClass('active')
+      $('.mobilemenu__content').removeClass('active')
 
   })
   $('.jsbackdrop').on('click', function(e) {
       $(this).removeClass('active')
       $('.mobilemenu').removeClass('active')
       $('.menubutton').removeClass('active')
+      $('.mobilemenu__level2').removeClass('active')
+      $('.mobilemenu__content').removeClass('active')
+
   })
   $('.haederbanner__close').on('click', function(e) {
         e.preventDefault();
