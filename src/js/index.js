@@ -143,6 +143,7 @@ function initFE() {
     fixMenu(false, 300, 'mobilenav', 'fixed')
     blockSliderInit()
     productListImgLisder()
+    moreNewsSliderInit()
   }
 
 
@@ -305,7 +306,44 @@ function recipeSliderInit() {
                 {
                     breakpoint: 1200,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        })
+    })
+
+}
+function moreNewsSliderInit() {
+    $('.morenews__slider').each(function() {
+        $(this).slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            swipe: false,
+            nextArrow: $(this).closest('.morenewsslider').find('.sliderarrows__right'),
+            prevArrow: $(this).closest('.morenewsslider').find('.sliderarrows__left'),
+            responsive: [{
+                    breakpoint: 1530,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
                         slidesToScroll: 1
                     }
                 },
@@ -363,7 +401,7 @@ function imgSliderInit() {
 
 function fixMenu(topDesktop, topMobile, elementId, className) {
   if (document.getElementById(elementId)) {
-  if (window.innerWidth >= 767) {
+  if (window.innerWidth >= 1023) {
       if(topDesktop) {
           window.addEventListener('scroll', (event) => {
           scroll = window.scrollY

@@ -1386,7 +1386,7 @@ h2 {
 	@include imagecenter(65.7%, height)
 }
 .itemslistcard__caption {
-	margin: 16px 0;
+	margin: 16px 0 0 0;
 }
 .red {
 	color: $red;
@@ -4749,6 +4749,32 @@ line-height: 44px;
 	}
 }
 
+.itemslistcar_large {
+	max-width: 100%;
+	.itemslistcard__img {
+		@include imagecenter(63.89%, width)
+	}
+	
+	.itemslistcard__image {
+		margin-bottom: 29px;
+
+	}
+	.itemslistcard__title {
+		margin-bottom: 12px;
+
+	}
+	.itemslistcard__title a {
+			
+		font-size: 22px;
+		line-height: 100%;
+	}
+
+}
+
+.itemslistcard__params {
+	margin-bottom: 12px;
+}
+
 
 
 
@@ -4761,19 +4787,19 @@ line-height: 44px;
 }
 .recipedetail__wrapper {
 	display: flex;
+	margin-bottom: 56px;
 }
 .recipedetail__left {
-	width: 692px;
+	width: 47.857%;
 }
 .recipedetail__images {
-	margin-bottom: 56px;
+	
 }
 .recipedetail__img {
 }
 
 .recipedetail__right {
 	padding-left: 78px;
-	width: calc(100% - 692px);
 }
 
 .recipedetail__right {
@@ -4826,9 +4852,6 @@ line-height: 44px;
 		}
 	}
 
-	.recipetable_tdbuy {
-		text-align: right;
-	}
 
 	
 }
@@ -4847,6 +4870,8 @@ color: #25344F;
 font-weight: 400;
 font-size: 16px;
 line-height: 140%;
+white-space: nowrap;
+padding-right: 15px;
 }
 
 .recipetable__prices {
@@ -4858,7 +4883,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 16px;
 line-height: 19px;
-
+white-space: nowrap;
 
 color: #ED1E26;
 }
@@ -4869,6 +4894,7 @@ color: #ED1E26;
 font-weight: 600;
 font-size: 14px;
 line-height: 16px;
+white-space: nowrap;
 }
 .recipetable__buy {
 	.tocart {
@@ -4939,10 +4965,109 @@ line-height: 140%;
 color: #25344F;
 }
 
+.recipeparams__value,
+.recipeparams__caption {
+	white-space: nowrap;
+}
+
+.pageparams__item {
+	color: rgba(37, 52, 79, 0.4);
+	font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+}
+
+.pageheader__type2 {
+	margin-bottom: 15px;
+}
+.pageparams {
+	margin: 15px 0;
+}
+.pagecontent__image {
+	width: 33.333%;
+	max-width: 100%;
+	padding: 0 9px;
+
+}
+.pagecontent {
+	margin-top: 42px;
+}
+
+.pagecontent__img {
+	
+	border-radius: 8px;
+	overflow: hidden;
+	@include imagecenter(66.667%, width)
+
+}
+
+.pagecontent__images {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -9px;
+	margin-right: -9px;
+	margin-bottom: 49px;
+}
+
+.pageshortdescr {
+	background: #FFFFFF;
+box-shadow: 8px 8px 40px rgba(48, 54, 64, 0.1);
+border-radius: 8px;
+margin: 34px 0;
+padding: 28px 35px;
+}
+
+.pageshortdescr__text {
+	font-family: 'FuturaDemiC';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 100%;
+	color: #25344F;
+	position: relative;
+	padding-left: 26px;
+
+	&:before {
+		content: "";
+		background: #04A3E9;
+		border-radius: 555px;
+		width: 4px;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+.pagetext {
+	margin: 34px 0;
+
+	p {
+		font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+margin-bottom: 30px;
+
+color: #25344F;
+	}
+}
+.itemslistcard__anonce {
+	color: rgba(37, 52, 79, 0.5);
+}
 @include xlarge-screen {
 	/* .footer__col {
 		width: 20%;
 	} */
+	.recipeparams {
+		padding: 15px;
+	}
+	.recipedetail__right {
+		padding-left: 30px;
+	}
 	.footer__col.footer__catalog {
 		width: 50%;
 	}
@@ -6670,9 +6795,184 @@ margin-top: 11px;
 	padding: 0 9px;
 	margin-bottom: 36px;
 }
+
+		.recipedetail__right {
+			width: 100%;
+		}
+
+		.recipedetail__left{
+			width: 100%;
+		}
+		.recipedetail__wrapper {
+			flex-wrap: wrap;
+			margin-bottom: 26px;
+		}
+		.recipeparams__item {
+			margin-right: 0;
+		}
+		.recipeparams__items
+		{
+			flex-wrap: wrap;
+		}
+		.recipeparams__item {
+			width: 100%;
+		}
+		.recipedetail__right {
+			padding-left: 0;
+		}
+		.recipetable {
+			table, tr, td, tbody {
+				display: block;
+				border: none;
+				height: initial;
+				padding-left: 0;
+				padding-right: 0;
+				width: 100%;
+			}
+		.recipetable_tdname {
+				width: initial;
+			}
+			tr {
+				border-bottom: 2px solid rgba(37,52,79,.1);	
+				padding-bottom: 12px;
+				margin-bottom: 17px;
+
+			}
+			.recipetable__name {
+				padding: 0;
+			}
+			.recipetable__buyblock {
+				justify-content: flex-start;
+				text-align: left;
+
+			}
+		}
+		.breadcrumbs {
+			margin-bottom: 19px;
+		}
+		.recipedetail__images {
+			margin-bottom: 24px;
+		}
+		.recipedetail__title h1 {
+			font-size: 22px;
+line-height: 26px;
+margin-bottom: 10px;
+		}
+		.recipetable .recipetable_tdname span {
+			padding-right: 0;
+		}
+		.recipetable .recipetable_tdname span {
+			font-size: 14px;
+line-height: 140%;
+		}
+		.recipetable td {
+			padding:  0;
+		}
+		span.recipetable__count {
+			padding: 0;
+			margin-bottom: 5px;
+			font-size: 12px;
+line-height: 140%;
+		}
+
+		.recipeparams__text {
+			margin-left: 13px;
+			display: flex;
+			justify-content: space-between;
+			width: calc(100% - 20px);
+	}
+
+	.recipeparams__content {
+		width: 100%;
+	}
+	.recipeparams__item:last-child {
+		margin-right: 0;
+	}
+	.recipeparams__item{
+		margin-right: 0;
+		margin-bottom: 9px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.itemslistcard__caption, .recipeparams__value {
+		font-size: 14px;
+	}
+	.recipedetail__description {
+		h2 {
+			font-weight: 600;
+font-size: 18px;
+line-height: 100%;
+		}
+	}
+	.recipeparams {
+		padding: 16px;
+	}
+	.recipeparams__img {
+		min-width: 20px;
+		width: 20px;
+	}
+
+	.itemslistcard_step .itemslistcard__caption {
+		font-size: 12px;
+line-height: 140%;
+	}
+	.itemslist__title {
+		font-size: 16px;
+line-height: 19px;
+	}
+	.pagecontent__image {
+		width: 50%;
+		margin-bottom: 9px;
+	}
+	.pagecontent__images {
+		margin-bottom: 9px;
+	}
+	.pageshortdescr {
+		padding: 15px 19px;
+	}
+	.pageshortdescr__text{
+		padding-left: 0;
+		padding-top: 17px;
+		font-style: normal;
+font-weight: 600;
+font-size: 16px;
+
+&:before {
+width: 26px;
+height: 3px;
+
+}
+
+	}
+	.pageshortdescr {
+		margin: 17px 0;
+	}
+
+	.pagetext p {
+		font-size: 14px;
+line-height: 140%;
+margin-bottom: 20px;
+	}
+	.itemslistcar_large .itemslistcard__title a {
+		font-size: 14px;
+line-height: 100%;
+	}
+	.itemslistcar_large .itemslistcard__image {
+		margin-bottom: 14px;
+	}
+
+	.page {
+		padding-bottom: 32px;
+	}
+
 	}
 
 	@include small-screen {
+		.itemslistslider__slide {
+			padding: 0;
+		}
 		.itemslists__item {
 			width: 100%;
 			padding: 0 9px;
@@ -6695,10 +6995,9 @@ margin-top: 11px;
 		.cataloglist__item {
 			width: 50%;
 		}
-
-		/*   .productcard__img img {
-    height: 100px;
-    margin: auto;
-    width: initial;
-  } */
+		.pagecontent__image {
+			width: 100%;
+			margin-bottom: 9px;
+		}
+	
 	}
