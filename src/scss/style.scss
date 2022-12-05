@@ -1237,6 +1237,8 @@ h2 {
 
 }
 
+
+
 .blockslider-button-next {
 	position: absolute;
 	right: 0;
@@ -1329,7 +1331,7 @@ h2 {
 }
 
 
-.recipeslider {}
+.itemslistslider {}
 
 .items-center {}
 
@@ -1343,37 +1345,63 @@ h2 {
 
 .sliderarrows__right {}
 
-.recipeslider__wrapper {}
+.itemslistslider__wrapper {}
 
-.recipeslider__container {}
+.itemslistslider__container {}
 
-.recipeslider__slider {
+.itemslistslider__slider {
 	margin: 0 -9px;
 }
 
-.recipeslider__slide {
+.itemslistslider__slide {
 	padding: 0 9px;
 }
 
-.recipeslider__item {}
+.itemslistslider__item {}
 
-.recipecard {}
+.itemslistcard {}
 
-.recipecard__wrapper {}
+.itemslistcard__wrapper {}
 
-.recipecard__image {
+.itemslistcard__image {
 	margin-bottom: 16px;
 	display: block;
 }
 
-.recipecard__img {
+.itemslistcard__img {
 	border-radius: 10px;
 	overflow: hidden;
 
 	@include imagecenter(63.89%, height)
 }
 
-.recipecard__title {
+.itemslistcard_news .itemslistcard__img {
+	@include imagecenter(63.89%, width)
+}
+
+.itemslistcard_news .itemslistcard__img {
+	@include imagecenter(63.89%, width)
+}
+.itemslistcard_news .itemslistcard_step {
+	@include imagecenter(65.7%, height)
+}
+.itemslistcard__caption {
+	margin: 16px 0;
+}
+.red {
+	color: $red;
+}
+.itemslist__title {
+	font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 26px;
+margin-bottom: 16px;
+}
+
+
+.itemslistcard__title {
 	margin-bottom: 14px;
 
 	a {
@@ -1386,18 +1414,18 @@ h2 {
 	}
 }
 
-.recipecard__info {}
+.itemslistcard__info {}
 
-.recipecard__params {
+.itemslistcard__params {
 	display: flex;
 	align-items: center;
 }
 
-.recipecard__param {
+.itemslistcard__param {
 	margin-right: 11px;
 }
 
-.recipecard__text {
+.itemslistcard__text {
 	color: rgba(37, 52, 79, 0.4);
 	font-family: 'FuturaDemiC';
 	font-style: normal;
@@ -1407,8 +1435,11 @@ h2 {
 	display: inline-block;
 	vertical-align: middle;
 }
+.page {
+	padding-bottom: 65px;
+}
 
-.recipecard__icon {
+.itemslistcard__icon {
 	margin-right: 6px;
 	display: inline-block;
 	vertical-align: middle;
@@ -2643,8 +2674,14 @@ button:hover {
 	margin-bottom: 20px;
 }
 
-.catalognav {}
-
+.catalognav {
+	margin: 20px 0 0 0;
+}
+/* 
+.itemslists {
+	margin-bottom: 65px;
+}
+ */
 .catalognav__showmore {
 	margin-bottom: 39px;
 }
@@ -3557,11 +3594,11 @@ color: #25344F;
   margin-bottom: 70px;
 }
 
-.recipeslider__notslider {
+.itemslistslider__notslider {
   display: flex;
   flex-wrap: wrap;
 
-  .recipeslider__slide {
+  .itemslistslider__slide {
     width: 25%;
     margin-bottom: 25px;
   }
@@ -4301,161 +4338,6 @@ align-items: center;
 }
 
 
-	@include xlarge-screen {
-		.container {
-			padding: 0 10px;
-		}
-
-		.headermain__descr {
-			font-size: 14px;
-		}
-
-		.footer__col {
-			padding: 0 20px;
-		}
-
-		.footer__items {
-			margin: 0 -20px;
-		}
-
-		.productcard__wrapper {
-			padding: 15px 10px;
-		}
-	}
-
-
-	@include large-screen {
-		.detailslider__wrapper {
-			width: 500px;
-		}
-		.cataloglist__item {
-			width: 33.3333%;
-		}
-		.productpage__right {
-			width: calc(100% - 500px);
-			padding-left: 30px;
-		}
-
-		.headermenu {
-			width: 100%;
-			/*   overflow-x: auto;
-    overflow-y: initial;
-     */
-		}
-
-		/* .mainslider .swiper-slide a {
-    @include imagecenter(33%, height)
-  }
-  */
-		.container {
-			padding: 0 10px;
-		}
-
-		/* .mainslider .mainswiper {
-    height: 0;
-    padding-top: 33%;
-  } */
-		.footer__catalog ul {
-			column-count: 1;
-		}
-
-		.footer__col {
-			padding: 0 5px;
-		}
-
-		.footer__items {
-			margin: 0 -5px;
-			width: 100%;
-		}
-
-		.headermain__descr {
-			display: none;
-		}
-
-		.mainmenubtn {
-			width: 165px;
-
-			span {
-				font-size: 14px;
-			}
-		}
-
-		.contacts__text {
-			font-size: 13px;
-		}
-
-		.headermain__left {
-			padding-right: 15px;
-		}
-
-		.dm-menu>ul>li>a,
-		.dm-menu>ul>li>span {
-			padding-left: 10px;
-			padding-right: 10px;
-		}
-
-		.blockslider-button-next,
-		.blockslider-button-prev {
-			z-index: 999;
-		}
-
-		.footer__menu ul li a {
-			font-size: 14px;
-		}
-
-		.footer__copy {
-			width: initial;
-			max-width: 320px;
-		}
-
-		.searchinput {
-			padding: 0 15px;
-		}
-
-		.mainswiperpreview {
-			display: none;
-		}
-
-		.mainslider .mainswiper {
-			width: 100%;
-		}
-
-		.mainslider .mainswiper {
-			height: initial;
-		}
-
-		.mainslider-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-			display: block;
-			text-align: center;
-			position: relative;
-			bottom: -5px;
-		}
-
-		.headermenu__items {
-			margin: 15px 0;
-		}
-
-		.imgslider__container.slider-wrapper {
-			margin: 0;
-			padding: 0;
-			width: 100%;
-		}
-
-		.footer__bottom {
-			padding-left: 0;
-			padding-right: 0;
-		}
-
-		.footer__title {
-			font-size: 22px;
-			line-height: 1.2;
-		}
-
-		.footer__contacts .contacts__phone a {
-			font-size: 22px;
-		}
-	}
-
 	.arrowmenu {
 		display: none;
 	}
@@ -4752,8 +4634,486 @@ margin-top: 4px;
 color: #25344F;
 }
 
+.carttotal__count {
+	color: rgba(48, 54, 64, 0.4);
+}
+.minicard__right {
+	.productcard__cart {
+		margin-top: 9px;
+
+		.tocart {
+			width: 193px;
+		}
+	}
+	
+}
+
+.minicard__button.onlyMobile {
+	.tocart {
+		width: initial;
+		background: none;
+		height: initial;
+		padding: 0;
+
+		span {
+			color:rgba(48, 54, 64, 1);
+			font-weight: 600;
+font-size: 12px;
+margin-left: 5px;
+		}
+	}
+}
+
+.btn {
+	white-space: nowrap;
+}
+
+.carttotal__button {
+	.tocart {
+		display: block;
+		width: 100%;
+		margin: 0;
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.footer__menu {
+	li {
+		display: block;
+	}
+}
+
+.footer__catalog {
+	li {
+		display: inline-block;
+	}
+}
+.footer__title {
+	white-space: nowrap;
+}
+
+.itemslistcard {
+	max-width: 349px;
+}
+.catalogheader_large {
+	margin-bottom: 36px;
+}
+.catalogheader_large h1 {
+	font-style: normal;
+font-weight: 600;
+font-size: 38px;
+line-height: 44px;
+
+}
+/* .news {
+	margin-bottom: 65px;
+} */
+
+
+.itemslist__items {
+	display: flex;
+	margin: 0 -9px;
+	flex-wrap: wrap;
+}
+.itemslists__item {
+	width: 25%;
+	padding: 0 9px;
+	margin-bottom: 36px;
+}
+
+.itemslist__item_col3 {
+	width: 33.333%;
+	padding: 0 9px;
+	margin-bottom: 36px;
+
+	.itemslistcard {
+		max-width: 100%;
+	}
+
+
+	.itemslistcard__image {
+		margin-bottom: 29px;
+
+	}
+	.itemslistcard__title {
+		margin-bottom: 12px;
+
+	}
+	.itemslistcard__title a {
+			
+		font-size: 22px;
+		line-height: 100%;
+	}
+}
+
+
+
+
+.recipedetail__img div {
+	border-radius: 12px;
+	@include imagecenter(67%, width)
+}
+
+.recipedetail {
+}
+.recipedetail__wrapper {
+	display: flex;
+}
+.recipedetail__left {
+	width: 692px;
+}
+.recipedetail__images {
+	margin-bottom: 56px;
+}
+.recipedetail__img {
+}
+
+.recipedetail__right {
+	padding-left: 78px;
+	width: calc(100% - 692px);
+}
+
+.recipedetail__right {
+}
+.recipedetail__info {
+}
+.recipedetail__title {
+	h1 {
+		font-family: 'FuturaDemiC';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 32px;
+		line-height: 37px;
+		color: #25344F;
+		margin: 0 0 10px 0;
+	}
+}
+.recipedetail__table {
+}
+.recipetable {
+
+	table {
+		width: 100%;
+	}
+
+	td > * {
+		display: block;
+
+	}
+
+	.recipetable__buyblock {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+
+	td {
+		padding: 9px 0;
+		vertical-align: middle;
+		height: 52px;
+
+		border-bottom: 2px solid rgba(37, 52, 79, 0.1);
+	}
+
+	.recipetable_tdname {
+		width: 336px;
+
+		span {
+			padding-right: 36px;
+		}
+	}
+
+	.recipetable_tdbuy {
+		text-align: right;
+	}
+
+	
+}
+.recipetable__name {
+	font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+
+
+color: #25344F;
+}
+.recipetable__count {
+	color: rgba(37, 52, 79, 0.5);
+	font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+}
+
+.recipetable__prices {
+	margin-right: 14px;
+}
+.recipetable__price {
+	font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+
+
+color: #ED1E26;
+}
+.recipetable__amount {
+	font-family: 'FuturaDemiC';
+	color: rgba(37, 52, 79, 0.3);
+	font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+}
+.recipetable__buy {
+	.tocart {
+		width: 106px;
+		height: 36px;
+		line-height: 36;
+	}
+	
+}
+.recipedetail__table {
+	margin-bottom: 29px;
+}
+.recipedetail__params {
+}
+.recipeparams {
+	background: #FFFFFF;
+box-shadow: 8px 8px 40px rgba(48, 54, 64, 0.1);
+border-radius: 8px;
+padding: 15px 40px;
+}
+.recipeparams__items {
+	display: flex;
+	align-items: center;
+	
+}
+.recipeparams__item {
+	margin-right: 60px;
+	&:last-child {
+		margin-right: 20px;
+	}
+}
+.recipeparams__content {
+	display: flex;
+	align-items: center;
+}
+.recipeparams__img {
+	min-width: 30px;
+}
+.recipeparams__text {
+	margin-left: 13px;
+
+}
+.recipeparams__caption {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 140%;
+	color: rgba(37, 52, 79, 0.5);
+}
+.recipeparams__value {
+	font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+
+
+color: #25344F;
+}
+
+.itemslistcard__caption {
+	font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+
+color: #25344F;
+}
+
+@include xlarge-screen {
+	/* .footer__col {
+		width: 20%;
+	} */
+	.footer__col.footer__catalog {
+		width: 50%;
+	}
+	.container {
+		padding: 0 10px;
+	}
+
+	.headermain__descr {
+		font-size: 14px;
+	}
+
+	.footer__col {
+		padding: 0 20px;
+	}
+
+	.footer__items {
+		margin: 0 -20px;
+	}
+
+	.productcard__wrapper {
+		padding: 15px 10px;
+	}
+}
+
+
+@include large-screen {
+	.detailslider__wrapper {
+		width: 500px;
+	}
+	.cataloglist__item {
+		width: 33.3333%;
+	}
+	.productpage__right {
+		width: calc(100% - 500px);
+		padding-left: 30px;
+	}
+
+	.headermenu {
+		width: 100%;
+		/*   overflow-x: auto;
+	overflow-y: initial;
+	 */
+	}
+
+	/* .mainslider .swiper-slide a {
+	@include imagecenter(33%, height)
+}
+*/
+	.container {
+		padding: 0 10px;
+	}
+
+	/* .mainslider .mainswiper {
+	height: 0;
+	padding-top: 33%;
+} */
+	.footer__catalog ul {
+		column-count: 1;
+	}
+
+	.footer__col {
+		padding: 0 5px;
+	}
+
+	.footer__items {
+		margin: 0 -5px;
+		width: 100%;
+	}
+
+	.headermain__descr {
+		display: none;
+	}
+
+	.mainmenubtn {
+		width: 165px;
+
+		span {
+			font-size: 14px;
+		}
+	}
+
+	.contacts__text {
+		font-size: 13px;
+	}
+
+	.headermain__left {
+		padding-right: 15px;
+	}
+
+	.dm-menu>ul>li>a,
+	.dm-menu>ul>li>span {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.blockslider-button-next,
+	.blockslider-button-prev {
+		z-index: 999;
+	}
+
+	.footer__menu ul li a {
+		font-size: 14px;
+	}
+
+	.footer__copy {
+		width: initial;
+		max-width: 320px;
+	}
+
+	.searchinput {
+		padding: 0 15px;
+	}
+
+	.mainswiperpreview {
+		display: none;
+	}
+
+	.mainslider .mainswiper {
+		width: 100%;
+	}
+
+	.mainslider .mainswiper {
+		height: initial;
+	}
+
+	.mainslider-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+		display: block;
+		text-align: center;
+		position: relative;
+		bottom: -5px;
+	}
+
+	.headermenu__items {
+		margin: 15px 0;
+	}
+
+	.imgslider__container.slider-wrapper {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.footer__bottom {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.footer__title {
+		font-size: 22px;
+		line-height: 1.2;
+	}
+
+	.footer__contacts .contacts__phone a {
+		font-size: 22px;
+	}
+}
+
+
 	/* mobile */
 	@include medium-screen {
+
+		.itemslists__item {
+			width: 33.33%;
+			padding: 0 9px;
+			margin-bottom: 36px;
+		}
+
+
+		.minicard__button {
+			margin-right: 15px;
+		}
 		.mobilemenu.active {
 			display: block;
 		}
@@ -5205,16 +5565,16 @@ color: #25344F;
 			text-align: center;
 		}
 
-		.recipecard__title a {
+		.itemslistcard__title a {
 			font-size: 14px;
 			line-height: 100%;
 		}
 
-		.recipecard__title {
+		.itemslistcard__title {
 			margin-bottom: 7px;
 		}
 
-		.recipecard__text {
+		.itemslistcard__text {
 			font-size: 12px;
 			line-height: 100%;
 		}
@@ -5720,7 +6080,31 @@ color: #25344F;
 		.catalogheader {
 			margin-bottom: 15px;
 		}
+		.catalognav {
+			margin-top: 5px;
+		}
+		.catalogheader_large {
+			margin-bottom: 28px;
+			.dropdown-select.dropdown-select--type1 {
+				width: 100%;
+				max-width: 320px;
+			}
 
+		} 
+
+		.itemslists {
+			margin-bottom: 32px;
+		}
+
+		.catalogheader__title h1 {
+			margin-top: 19px;
+		}
+
+		.dropdownpanel {
+			width: 100%;
+	}
+
+	
 		.catalogbanner {
 			margin-bottom: 17px;
 		}
@@ -6280,9 +6664,28 @@ margin-top: 11px;
 		.haederbanner  {
 			display: none;
 		}
+		
+.itemslist__item_col3 {
+	width: 50%;
+	padding: 0 9px;
+	margin-bottom: 36px;
+}
 	}
 
 	@include small-screen {
+		.itemslists__item {
+			width: 100%;
+			padding: 0 9px;
+			margin-bottom: 19px;
+		}
+		.itemslist__item_col3 {
+			width: 100%;
+			padding: 0 9px;
+			margin-bottom: 19px;
+		}
+		.catalogheader__title h1 {
+			margin-bottom: 15px;
+		}
 
 		.indexcat__item_large,
 		.indexcat__item {
