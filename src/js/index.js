@@ -48,7 +48,7 @@ $(document).ready(function() {
   $('.detailinfo__reviews .cardrating').each(function() {
       $(this).find('span.stars-active').css(
           'width',
-          $(this).find('.cardrating__value').text() * ($(this).find('.fa-star').width() + 2)
+          $(this).find('.cardrating__value').text() * ($(this).find('.fa-star').width() + 2.1)
       );
   });
   $('.reviews__rating .cardrating').each(function() {
