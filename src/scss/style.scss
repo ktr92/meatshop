@@ -1,5 +1,69 @@
 
-@import './partials/fonts.scss';
+@font-face {
+  font-family: 'FuturaDemiC';
+  src: url('../fonts/FuturaDemiC.woff2') format('woff2'),
+      url('../fonts/FuturaDemiC.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Regular.woff2') format('woff2'),
+      url('../fonts/Circe-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Light.woff2') format('woff2'),
+      url('../fonts/Circe-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-ExtraBold.woff2') format('woff2'),
+      url('../fonts/Circe-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Thin.woff2') format('woff2'),
+      url('../fonts/Circe-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-ExtraLight.woff2') format('woff2'),
+      url('../fonts/Circe-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Bold.woff2') format('woff2'),
+      url('../fonts/Circe-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 @import './partials/params.scss';
 @import './partials/mixins.scss';
 @import './partials/animations.scss';
@@ -35,6 +99,7 @@ a {
 		-o-transition: all 0.3s ease;
 		transition: all 0.3s ease;
 		color: #04A3E9;
+		text-decoration: none;
 }
 a:hover, a:focus {
 		text-decoration: none;
@@ -268,8 +333,12 @@ img {
 		;
 		background: #04A3E9;
 		border-radius: 8px;
+		cursor: pointer;
 		.closeicon {
 				display: none;
+	 }
+	 img {
+		width: 20px;
 	 }
 		span {
 				font-family: 'FuturaDemiC';
@@ -280,6 +349,9 @@ img {
 				color: #FFFFFF;
 				padding-left: 13px;
 	 }
+	 .icon--blue {
+		display: none;
+	 }
 		&.active {
 				background: #0089C5;
 				.closeicon {
@@ -288,6 +360,31 @@ img {
 				.burgericon {
 						display: none;
 			 }
+	 }
+
+	 &:hover {
+		opacity: 1;
+		background-color: #2BBEFF;
+	 }
+/* 	 &:focus {
+		opacity: 1;
+		background-color: #0896D5;
+	 }
+	  */
+	 &.disabled, &:disabled {
+		opacity: 1;
+	
+		background-color: rgba(4, 163, 233, 0.2);
+		span {
+			color: #04A3E9;
+			opacity: 0.5;
+		}
+		.icon--blue {
+			display: initial;	
+		}
+		.icon--white {
+			display: none;	
+		}
 	 }
 }
 .headermain__search {
@@ -398,6 +495,17 @@ img {
 		line-height: 18px;
 		border-radius: 50%;
 		color: #FFFFFF;
+}
+
+.mobilenav__item {
+	.iconlinks__badge {
+		font-size: 11px;
+		top: -4px;
+		right: 8px;
+	}
+}
+.mobilenav__item_center {
+	position: static !important;
 }
 .searchinput {
 		background: #F3F3F7;
@@ -1065,6 +1173,15 @@ h2 {
 		width: 48px;
 		height: 48px;
 		padding: 0;
+		background-image: url(../img/addtocart.svg);
+		background-repeat: no-repeat;
+		background-position:  center;
+}
+.productcard__addtocart.active {
+
+		background-image: url(../img/selected_icon.svg);
+		background-repeat: no-repeat;
+		background-position:  center;
 }
 .btn_icon {
 		width: 48px;
@@ -2149,6 +2266,7 @@ li.mainmenuLevelOne__item {
 .slick-dots li button:before {
 		display: none;
 }
+
 .btn_main {
 		background: #04A3E9;
 		border-radius: 6px;
@@ -2163,9 +2281,32 @@ li.mainmenuLevelOne__item {
 		font-weight: 600;
 		font-size: 16px;
 		color: #FFFFFF;
-		&:hover, &:focus {
-				color: #fff;
-	 }
+		cursor: pointer;
+		&:hover {
+			opacity: 1;
+			background-color: #2BBEFF;
+			color: #fff;
+		 }
+		 &:focus {
+			opacity: 1;
+			background-color: #0896D5;
+		 }
+			
+		 &.disabled, &:disabled {
+			opacity: 1;
+		
+			background-color: rgba(4, 163, 233, 0.2);
+			span {
+				color: #04A3E9;
+				opacity: 0.5;
+			}
+			.icon--blue {
+				display: initial;	
+			}
+			.icon--white {
+				display: none;	
+			}
+		 }
 }
 .buttonsrow {
 		display: -webkit-box;
@@ -3121,10 +3262,37 @@ input.quantity-minus {
 				font-weight: 600;
 				font-size: 16px;
 				line-height: 19px;
-				margin-left: 8px;
 				color: #FFFFFF;
 	 }
 }
+.tocart {
+	span {
+		padding-left: 30px;
+
+		background-image: url(../img/addtocart.svg);
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+	
+}
+.tocart__after {
+	display: none;
+}
+.tocart.active {
+	span {
+		background-image: url(../img/selected_icon.svg);
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+	.tocart__before {
+		display: none;
+	}
+	.tocart__after {
+		display: inherit;
+	}
+}
+
+
 .productcard__pricecaption {
 		font-family: 'FuturaDemiC';
 		font-style: normal;
@@ -4351,6 +4519,7 @@ p {
 .mobilenav__item {
 		width: 52px;
 		text-align: center;
+		position: relative;
 }
 .mobilenav__link {
 		display: block;
@@ -5153,6 +5322,39 @@ p {
 			 }
 	 }
 }
+
+button:disabled {
+	cursor:not-allowed;
+}
+.productcard__images {
+	display: block;
+	img {
+		max-width: 100%;
+	}
+}
+.productcard_disabled {
+	.productcard__img,
+	.productcard__title,
+	.productcard__price {
+		opacity: 0.3;
+	}
+	.productcard__pricevalue,
+	.productcard__priceunit {
+		color: rgba(37, 52, 79, 1);
+	}
+	.productcard__infotext{
+		color: rgba(37, 52, 79, 0.4)
+	}
+	.productcard__button .btn_main {
+		border: 1px solid rgba(37, 52, 79, 0.15);
+		background: #fff;
+
+	}
+}
+
+
+
+
 @include xlarge-screen {
 		.errorpage__code {
 				font-size: 200px;
@@ -5654,6 +5856,7 @@ p {
 				line-height: 12px;
 	 }
 		.productcard__addtocart {
+			
 				width: 34px;
 				height: 34px;
 				padding: 0;
@@ -6106,6 +6309,7 @@ p {
 				position: absolute;
 				z-index: 9999;
 				left: 0;
+				min-height: 100vh;
 				top: 0;
 				background: #fff;
 				padding: 30px 5px 0 5px;
@@ -6427,7 +6631,7 @@ p {
 	 }
 		.mobiledetail{
 				position: fixed;
-				bottom: 0;
+				top: 0;
 				-webkit-box-shadow: 0px 4px 30px rgba(37, 52, 79, 0.15);
 				box-shadow: 0px 4px 30px rgba(37, 52, 79, 0.15);
 				width: 100%;

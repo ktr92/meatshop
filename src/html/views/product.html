@@ -45,10 +45,24 @@
               <!-- /.productcard__prices -->
               <div class="buyblock__buttons flex items-center">
                 <div class="productcard__cart">
-                  <button class="tocart btn btn_main js-addmodal">
-                    <img src="img/addtocart.svg" alt="" />
-                    <span>Купить</span>
-                  </button>
+                   <!-- <button class="tocart btn btn_main js-addmodal active">
+                      <div class="tocart__content tocart__after">
+                        <span>В корзине</span>
+                      </div>
+                    </button> -->
+                    <!-- <button class="tocart btn btn_main js-addmodal active">
+                      <div class="tocart__content tocart__before">
+                        <span>Купить</span>
+                      </div>
+                    </button> -->
+                    <button class="tocart btn btn_main js-addmodal">
+                      <div class="tocart__content tocart__before">
+                        <span>Купить</span>
+                      </div>
+                      <div class="tocart__content tocart__after">
+                        <span>В корзине</span>
+                      </div>
+                    </button>
                 </div>
               </div>
               <!-- /.buyblock__buttons -->
@@ -305,9 +319,23 @@
                                 </div>
                               </div>
                               <div class="productcard__cart">
+                                <!-- <button class="tocart btn btn_main js-addmodal active">
+                                  <div class="tocart__content tocart__after">
+                                    <span>В корзине</span>
+                                  </div>
+                                </button> -->
+                                <!-- <button class="tocart btn btn_main js-addmodal active">
+                                  <div class="tocart__content tocart__before">
+                                    <span>Купить</span>
+                                  </div>
+                                </button> -->
                                 <button class="tocart btn btn_main js-addmodal">
-                                  <img src="img/addtocart.svg" alt="" />
-                                  <span>Купить</span>
+                                  <div class="tocart__content tocart__before">
+                                    <span>Купить</span>
+                                  </div>
+                                  <div class="tocart__content tocart__after">
+                                    <span>В корзине</span>
+                                  </div>
                                 </button>
                               </div>
                             </div>
@@ -2146,9 +2174,7 @@
                                     </div>
                                     <!-- /.productcard__prices -->
                                     <div class="productcard__button">
-                                      <button class="productcard__addtocart btn btn_main">
-                                        <img src="img/addtocart.svg" alt="" />
-                                      </button>
+                                      <button class="productcard__addtocart btn "></button>
                                     </div>
                                   </div>
                                 </div>
@@ -2195,9 +2221,7 @@
                                     </div>
                                     <!-- /.productcard__prices -->
                                     <div class="productcard__button">
-                                      <button class="productcard__addtocart btn btn_main">
-                                        <img src="img/addtocart.svg" alt="" />
-                                      </button>
+                                      <button class="productcard__addtocart btn "></button>
                                     </div>
                                   </div>
                                 </div>
@@ -2244,9 +2268,7 @@
                                     </div>
                                     <!-- /.productcard__prices -->
                                     <div class="productcard__button">
-                                      <button class="productcard__addtocart btn btn_main">
-                                        <img src="img/addtocart.svg" alt="" />
-                                      </button>
+                                      <button class="productcard__addtocart btn "></button>
                                     </div>
                                   </div>
                                 </div>
@@ -2293,9 +2315,7 @@
                                     </div>
                                     <!-- /.productcard__prices -->
                                     <div class="productcard__button">
-                                      <button class="productcard__addtocart btn btn_main">
-                                        <img src="img/addtocart.svg" alt="" />
-                                      </button>
+                                      <button class="productcard__addtocart btn "></button>
                                     </div>
                                   </div>
                                 </div>
@@ -2329,6 +2349,7 @@
 <script>
   $(".js-addmodal").on("click", function (e) {
     e.preventDefault();
+    $(this).addClass('active')
     $("#popup_addproduct").modal("show");
   });
   $("#popup_addproduct").on("shown.bs.modal", function (e) {

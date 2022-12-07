@@ -6,7 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>MAIN</title>
 <!--   <link rel="shortcut icon" href="favicon/favicon.ico" />
- -->  <link rel="stylesheet" href="css/bootstrap.min.css">
+ -->  
+  <link rel="preload" href="fonts/FuturaDemiC.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaDemiC.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Thin.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Thin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraLight.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  
+
+ 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -30,6 +48,8 @@
   <script src="js/filter.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
   <script src="js/lightbox.min.js"></script>
+  <script src="js/jquery.lazy.min.js"></script>
+  <script src="js/jquery.lazy.youtube.min.js"></script>
   <script src="js/autoFilling.js"></script>
 
 </head>
@@ -68,7 +88,7 @@
           <div class="mobilenav__name">Войти</div>
         </a><!-- /.mobilenav__link -->
       </div>
-      <div class="mobilenav__item">
+      <div class="mobilenav__item mobilenav__item_center">
         <a href="#" class="mobilenav__link">
           <div class="mobilenav__icon mobilenav__icon_catalog">
             <img src="img/icnCatalog.svg" alt="">
@@ -78,6 +98,7 @@
       </div>
       <div class="mobilenav__item">
         <a href="#" class="mobilenav__link">
+          <span class="iconlinks__badge">5</span>
           <div class="mobilenav__icon">
             <img src="img/icnHeart.svg" alt="">
           </div>
@@ -86,6 +107,7 @@
       </div>
       <div class="mobilenav__item">
         <a href="#" class="mobilenav__link">
+          <span class="iconlinks__badge">10</span>
           <div class="mobilenav__icon">
             <img src="img/icnCart.svg" alt="">
           </div>
@@ -677,7 +699,8 @@
               <div class="headermain__descr"><span>Доставляем по Москве и Одинцовскому ГО</span></div>
               <div class="headermain__menu">
                 <button class='mainmenubtn'>
-                <img class="burgericon" src="img/burger.svg" alt="">
+                <img class="burgericon icon--white" src="img/burger.svg" alt="">
+                <img class="burgericon icon--blue" src="img/burger_blue.svg" alt="">
                 <img class="closeicon" src="img/closemenu.svg" alt="">
                 <span>Каталог товаров</span>
                 </button>
@@ -928,7 +951,8 @@
             <div class="aboutblock__left">
               <div class="aboutblock__video">
                 <div class="video-container">
-                  <!--   <iframe width="" height="" src="https://www.youtube.com/embed/FAWjZPzKRSM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                 
+                 <iframe data-loader="youtube" data-src="FAWjZPzKRSM" width="" height="" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <!-- /.video-container -->
               </div>

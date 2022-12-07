@@ -1,5 +1,30 @@
-$(document).ready(function() {
+function initFE() {
+    cardImagesSlider()
+    menuInit()
+    mainSliderInit()
+    detailsliderInit()
+    imgSliderInit()
+    recipeSliderInit()
+    productSliderInit()
+    mobileAccordeon()
+    closeByOutsideSelect()
+    closeByClickOutside('.mainmenu', '.mainmenubtn')
+    closeByClickOutside('.catalogpage__aside', '.js-mobilefilter')
+    fixMenu(false, 750, 'mobpriceFixed', 'fixed')
+    fixMenu(300, false, 'headermain', 'fixed')
+    fixMenu(300, false, 'headercontainer', 'fixed')
+    fixMenu(false, 0, 'mobilenav', 'fixed')
+    blockSliderInit()
+    productListImgLisder()
+    moreNewsSliderInit()
+  }
 
+$(document).ready(function() {
+    $(function() {
+        $("iframe[data-src]").each(function() {
+            $(this).Lazy();
+        })
+    });
   $('.js-mobilefilter').on('click', function(e) {
       e.preventDefault()
       $(this).toggleClass('active')
@@ -129,26 +154,7 @@ $(document).ready(function() {
 
 
 
-function initFE() {
-    cardImagesSlider()
-    menuInit()
-    mainSliderInit()
-    detailsliderInit()
-    imgSliderInit()
-    recipeSliderInit()
-    productSliderInit()
-    mobileAccordeon()
-    closeByOutsideSelect()
-    closeByClickOutside('.mainmenu', '.mainmenubtn')
-    closeByClickOutside('.catalogpage__aside', '.js-mobilefilter')
-    fixMenu(false, 750, 'mobpriceFixed', 'fixed')
-    fixMenu(300, false, 'headermain', 'fixed')
-    fixMenu(300, false, 'headercontainer', 'fixed')
-    fixMenu(false, 300, 'mobilenav', 'fixed')
-    blockSliderInit()
-    productListImgLisder()
-    moreNewsSliderInit()
-  }
+
 
 
   function mainSliderInit() {
@@ -236,6 +242,8 @@ function productSliderInit() {
             infinite: true,
             slidesToShow: 5,
             slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
             swipe: false,
             nextArrow: $(this).closest('.productslider').find('.sliderarrows__right'),
             prevArrow: $(this).closest('.productslider').find('.sliderarrows__left'),
@@ -264,6 +272,9 @@ function productSliderInit() {
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
+            
+            autoplay: true,
+            autoplaySpeed: 3000,
             swipe: false,
             nextArrow: $(this).closest('.productslider').find('.sliderarrows__right'),
             prevArrow: $(this).closest('.productslider').find('.sliderarrows__left'),
@@ -296,6 +307,9 @@ function recipeSliderInit() {
             arrows: true,
             slidesToShow: 4,
             slidesToScroll: 1,
+            
+            autoplay: true,
+            autoplaySpeed: 3000,
             infinite: true,
             swipe: false,
             nextArrow: $(this).closest('.recipeslider').find('.sliderarrows__right'),
@@ -333,6 +347,9 @@ function moreNewsSliderInit() {
             arrows: true,
             slidesToShow: 3,
             slidesToScroll: 1,
+            
+            autoplay: true,
+            autoplaySpeed: 3000,
             infinite: true,
             swipe: false,
             nextArrow: $(this).closest('.morenewsslider').find('.sliderarrows__right'),
@@ -371,6 +388,9 @@ function imgSliderInit() {
             arrows: true,
             slidesToShow: 6,
             slidesToScroll: 1,
+            
+            autoplay: true,
+            autoplaySpeed: 3000,
             infinite: true,
             nextArrow: $(this).closest('.imgslider').find('.beyond-button-next'),
             prevArrow: $(this).closest('.imgslider').find('.beyond-button-prev'),
@@ -406,29 +426,39 @@ function imgSliderInit() {
 function fixMenu(topDesktop, topMobile, elementId, className) {
   if (document.getElementById(elementId)) {
   if (window.innerWidth >= 1023) {
-      if(topDesktop) {
-          window.addEventListener('scroll', (event) => {
-          scroll = window.scrollY
-          if (scroll >= topDesktop) {
-              document.getElementById(elementId).classList.add(className)
-          } else {
-              document.getElementById(elementId).classList.remove(className)
-          }
-      
-          });
-      }
+    if (topDesktop === 0) {
+        document.getElementById(elementId).classList.add(className)
     } else {
-      if (topMobile) {
-          window.addEventListener('scroll', (event) => {
-              scroll = window.scrollY
-              if (scroll >= topMobile) {
+        if(topDesktop) {
+            window.addEventListener('scroll', (event) => {
+            scroll = window.scrollY
+            if (scroll >= topDesktop) {
                 document.getElementById(elementId).classList.add(className)
-              } else {
+            } else {
                 document.getElementById(elementId).classList.remove(className)
-              }
+            }
         
             });
-      }
+        }
+    }
+   
+    } else {
+        if (topMobile === 0) {
+           document.getElementById(elementId).classList.add(className)
+        } else {
+            if (topMobile) {
+                window.addEventListener('scroll', (event) => {
+                    scroll = window.scrollY
+                    if (scroll >= topMobile) {
+                      document.getElementById(elementId).classList.add(className)
+                    } else {
+                      document.getElementById(elementId).classList.remove(className)
+                    }
+              
+                  });
+            }
+        }
+    
      
     }
   }

@@ -1,5 +1,13 @@
 @import './params.scss';
 
+button {
+	cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
 .block {
   display: block;
 }

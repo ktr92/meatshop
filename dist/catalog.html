@@ -7,7 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>MAIN</title>
 <!--   <link rel="shortcut icon" href="favicon/favicon.ico" />
- -->  <link rel="stylesheet" href="css/bootstrap.min.css">
+ -->  
+  <link rel="preload" href="fonts/FuturaDemiC.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/FuturaDemiC.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraBold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Thin.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Thin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraLight.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Circe-Bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/Circe-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  
+
+ 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -31,6 +49,8 @@
   <script src="js/filter.js"></script>
   <script src="js/jquery.zoom.min.js"></script>
   <script src="js/lightbox.min.js"></script>
+  <script src="js/jquery.lazy.min.js"></script>
+  <script src="js/jquery.lazy.youtube.min.js"></script>
   <script src="js/autoFilling.js"></script>
 
 </head>
@@ -70,7 +90,7 @@
           <div class="mobilenav__name">Войти</div>
         </a><!-- /.mobilenav__link -->
       </div>
-      <div class="mobilenav__item">
+      <div class="mobilenav__item mobilenav__item_center">
         <a href="#" class="mobilenav__link">
           <div class="mobilenav__icon mobilenav__icon_catalog">
             <img src="img/icnCatalog.svg" alt="">
@@ -80,6 +100,7 @@
       </div>
       <div class="mobilenav__item">
         <a href="#" class="mobilenav__link">
+          <span class="iconlinks__badge">5</span>
           <div class="mobilenav__icon">
             <img src="img/icnHeart.svg" alt="">
           </div>
@@ -88,6 +109,7 @@
       </div>
       <div class="mobilenav__item">
         <a href="#" class="mobilenav__link">
+          <span class="iconlinks__badge">10</span>
           <div class="mobilenav__icon">
             <img src="img/icnCart.svg" alt="">
           </div>
@@ -679,7 +701,8 @@
               <div class="headermain__descr"><span>Доставляем по Москве и Одинцовскому ГО</span></div>
               <div class="headermain__menu">
                 <button class='mainmenubtn'>
-                <img class="burgericon" src="img/burger.svg" alt="">
+                <img class="burgericon icon--white" src="img/burger.svg" alt="">
+                <img class="burgericon icon--blue" src="img/burger_blue.svg" alt="">
                 <img class="closeicon" src="img/closemenu.svg" alt="">
                 <span>Каталог товаров</span>
                 </button>
@@ -1333,9 +1356,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -1428,9 +1449,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn active"></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -1524,9 +1543,164 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
+                          <button class="productcard__addtocart btn "></button>
+                        </div>
+                      </div>
+                      <!-- /.productcard__buy -->
+                      <div class="productcard__info">
+                        <div class="productcard__infoicon">
+                          <img src="img/productcard__info.svg" alt="">
+                        </div>
+                        <div class="productcard__infotext">Доставим сегодня</div>
+                      </div>
+                      <!-- /.productcard__info -->
+                    </div>
+                    <!-- /.productcard__wrapper -->
+                  </div>
+                </div>
+                <!-- /.cataloglist__item -->
+                <div class="cataloglist__item">
+                  <div class="productcard productcard_disabled">
+                    <div class="productcard__wrapper">
+                      <a href='#' class="productcard__images">
+                        <div class="productcard__img">
+                          <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
+                        </div>
+                      </a><!-- /.productcard__images -->
+                      <div class="productcard__rating">
+                        <div class="cardrating">
+                          <div class="cardrating__item">
+                            <div class="cardrating__form">
+                              <div class="cardrating__value">
+                                <span>3.5</span>
+                              </div>
+                              <span class="score">
+                                <div class="score-wrap">
+                                  <span class="rat-stars-active stars-active">
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  </span>
+                                  <span class="stars-inactive">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  </span>
+                                </div>
+                              </span>
+                            </div>
+                            <div class="productcard__count">453</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="productcard__title">
+                        <a href="">Шейка копчено-вареная Московская</a>
+                      </div>
+                      <div class="productcard__buy">
+                        <div class="productcard__prices">
+                        
+                          <div class="productcard__mainprice">
+                            <div class="productcard__price">
+                              <div class="productcard__pricevalue">674.94</div>
+                              <div class="productcard__priceunit">₽/кг</div>
+                            </div>
+                            <!-- /.productcard__price -->
+                          </div>
+                          <!-- /.productcard__mainprice -->
+                        </div>
+                        <!-- /.productcard__prices -->
+                        <div class="productcard__button">
+                          <button class="productcard__addtocart btn btn_main" disabled>
+                          <img src="img/ShoppingCart_off.svg" alt="">
                           </button>
+                        </div>
+                      </div>
+                      <!-- /.productcard__buy -->
+                      <div class="productcard__info">
+                        <div class="productcard__infoicon">
+                          <img src="img/outofstock.svg" alt="">
+                        </div>
+                        <div class="productcard__infotext">Нет в наличии</div>
+                      </div>
+                      <!-- /.productcard__info -->
+                    </div>
+                    <!-- /.productcard__wrapper -->
+                  </div>
+                </div>
+                <!-- /.cataloglist__item -->
+                <div class="cataloglist__item">
+                  <div class="productcard">
+                    <div class="productcard__wrapper">
+                      <div class="productcard__images onlyDesktop">
+                        <div class="productcard__img">
+                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
+                        </div>
+                      </div>
+                      <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
+                        <div class="productcard__img">
+                          <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
+                          <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
+                          <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
+                          <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
+                        </div>
+                      </a>
+                      <!-- /.productcard__images -->
+                      <div class="productcard__rating">
+                        <div class="cardrating">
+                          <div class="cardrating__item">
+                            <div class="cardrating__form">
+                              <div class="cardrating__value">
+                                <span>3.5</span>
+                              </div>
+                              <span class="score">
+                                <div class="score-wrap">
+                                  <span class="rat-stars-active stars-active">
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                  </span>
+                                  <span class="stars-inactive">
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                                  </span>
+                                </div>
+                              </span>
+                            </div>
+                            <div class="productcard__count">453</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="productcard__title">
+                        <a href="">Шейка копчено-вареная Московская</a>
+                      </div>
+                      <div class="productcard__buy">
+                        <div class="productcard__prices">
+                          <div class="productcard__topprice">
+                            <div class="productcard__oldprice">762.92</div>
+                            <div class="productcard__badge">12%</div>
+                          </div>
+                          <!-- /.productcard__oldprice -->
+                          <div class="productcard__mainprice">
+                            <div class="productcard__price">
+                              <div class="productcard__pricevalue">674.94</div>
+                              <div class="productcard__priceunit">₽/кг</div>
+                            </div>
+                            <!-- /.productcard__price -->
+                          </div>
+                          <!-- /.productcard__mainprice -->
+                        </div>
+                        <!-- /.productcard__prices -->
+                        <div class="productcard__button">
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -1610,9 +1784,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -1696,9 +1868,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -1782,9 +1952,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -1868,9 +2036,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -1954,9 +2120,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -2040,9 +2204,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
@@ -2126,181 +2288,7 @@
                         </div>
                         <!-- /.productcard__prices -->
                         <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
-                        </div>
-                      </div>
-                      <!-- /.productcard__buy -->
-                      <div class="productcard__info">
-                        <div class="productcard__infoicon">
-                          <img src="img/productcard__info.svg" alt="">
-                        </div>
-                        <div class="productcard__infotext">Доставим сегодня</div>
-                      </div>
-                      <!-- /.productcard__info -->
-                    </div>
-                    <!-- /.productcard__wrapper -->
-                  </div>
-                </div>
-                <!-- /.cataloglist__item -->
-                <div class="cataloglist__item">
-                  <div class="productcard">
-                    <div class="productcard__wrapper">
-                      <div class="productcard__images onlyDesktop">
-                        <div class="productcard__img">
-                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                        </div>
-                      </div>
-                      <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
-                        <div class="productcard__img">
-                          <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
-                          <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
-                          <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
-                          <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
-                        </div>
-                      </a>
-                      <!-- /.productcard__images -->
-                      <div class="productcard__rating">
-                        <div class="cardrating">
-                          <div class="cardrating__item">
-                            <div class="cardrating__form">
-                              <div class="cardrating__value">
-                                <span>3.5</span>
-                              </div>
-                              <span class="score">
-                                <div class="score-wrap">
-                                  <span class="rat-stars-active stars-active">
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  </span>
-                                  <span class="stars-inactive">
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  </span>
-                                </div>
-                              </span>
-                            </div>
-                            <div class="productcard__count">453</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="productcard__title">
-                        <a href="">Шейка копчено-вареная Московская</a>
-                      </div>
-                      <div class="productcard__buy">
-                        <div class="productcard__prices">
-                          <div class="productcard__topprice">
-                            <div class="productcard__oldprice">762.92</div>
-                            <div class="productcard__badge">12%</div>
-                          </div>
-                          <!-- /.productcard__oldprice -->
-                          <div class="productcard__mainprice">
-                            <div class="productcard__price">
-                              <div class="productcard__pricevalue">674.94</div>
-                              <div class="productcard__priceunit">₽/кг</div>
-                            </div>
-                            <!-- /.productcard__price -->
-                          </div>
-                          <!-- /.productcard__mainprice -->
-                        </div>
-                        <!-- /.productcard__prices -->
-                        <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
-                        </div>
-                      </div>
-                      <!-- /.productcard__buy -->
-                      <div class="productcard__info">
-                        <div class="productcard__infoicon">
-                          <img src="img/productcard__info.svg" alt="">
-                        </div>
-                        <div class="productcard__infotext">Доставим сегодня</div>
-                      </div>
-                      <!-- /.productcard__info -->
-                    </div>
-                    <!-- /.productcard__wrapper -->
-                  </div>
-                </div>
-                <!-- /.cataloglist__item -->
-                <div class="cataloglist__item">
-                  <div class="productcard">
-                    <div class="productcard__wrapper">
-                      <div class="productcard__images onlyDesktop">
-                        <div class="productcard__img">
-                          <img src="img/product.jpg" data-hover-slides="img/indexcat-2.png, img/indexcat-3.png, img/indexcat-4.png" alt="">
-                        </div>
-                      </div>
-                      <a href="#" class="productcard__images productcard__images_mobile onlyMobile">
-                        <div class="productcard__img">
-                          <div class="productcard_mslideimg"><img src="img/product.jpg"></div>
-                          <div class="productcard_mslideimg"><img src="img/indexcat-2.png"></div>
-                          <div class="productcard_mslideimg"><img src="img/indexcat-3.png"></div>
-                          <div class="productcard_mslideimg"><img src="img/indexcat-4.png"></div>
-                        </div>
-                      </a>
-                      <!-- /.productcard__images -->
-                      <div class="productcard__rating">
-                        <div class="cardrating">
-                          <div class="cardrating__item">
-                            <div class="cardrating__form">
-                              <div class="cardrating__value">
-                                <span>3.5</span>
-                              </div>
-                              <span class="score">
-                                <div class="score-wrap">
-                                  <span class="rat-stars-active stars-active">
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  <i class="fa fa-star" aria-hidden="true"></i>
-                                  </span>
-                                  <span class="stars-inactive">
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  <i class="fa fa-star-o" aria-hidden="true"></i>
-                                  </span>
-                                </div>
-                              </span>
-                            </div>
-                            <div class="productcard__count">453</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="productcard__title">
-                        <a href="">Шейка копчено-вареная Московская</a>
-                      </div>
-                      <div class="productcard__buy">
-                        <div class="productcard__prices">
-                          <div class="productcard__topprice">
-                            <div class="productcard__oldprice">762.92</div>
-                            <div class="productcard__badge">12%</div>
-                          </div>
-                          <!-- /.productcard__oldprice -->
-                          <div class="productcard__mainprice">
-                            <div class="productcard__price">
-                              <div class="productcard__pricevalue">674.94</div>
-                              <div class="productcard__priceunit">₽/кг</div>
-                            </div>
-                            <!-- /.productcard__price -->
-                          </div>
-                          <!-- /.productcard__mainprice -->
-                        </div>
-                        <!-- /.productcard__prices -->
-                        <div class="productcard__button">
-                          <button class="productcard__addtocart btn btn_main">
-                          <img src="img/addtocart.svg" alt="">
-                          </button>
+                          <button class="productcard__addtocart btn "></button>
                         </div>
                       </div>
                       <!-- /.productcard__buy -->
