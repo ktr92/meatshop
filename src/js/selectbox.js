@@ -84,6 +84,7 @@ document.addEventListener("click", closeAllSelect);
 
   //dropdown-select
     $(document).on('click', '.dropdown-select .dropdown-select__title', function(){
+      $(this).parent().toggleClass('active')
       var _this = $(this),
         menu = _this.parent().find('> .dropdown-select__list'),
         bVisibleMeu = (menu.is(':visible')),

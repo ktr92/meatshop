@@ -9,6 +9,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
+
 
 function generateHtmlPlugins(templateDir) {
   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
@@ -90,6 +92,7 @@ const config = {
        jQuery: 'jquery',
        'window.jQuery': 'jquery'
      }), */
+     new HtmlWebpackInlineSVGPlugin(),
     new MiniCssExtractPlugin({
       filename: "./css/style.bundle.css",
     }),

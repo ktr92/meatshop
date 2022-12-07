@@ -22,9 +22,15 @@ font-weight: 600;
 font-size: 16px;
 line-height: 19px;
 /* identical to box height */
-
+border: 2px solid #f3f3f7;
+position: relative;
+z-index: 999;
 
 color: #3B435A;
+}
+
+.select-selected.select-arrow-active {
+  border: 2px solid #04A3E9;
 }
 
 /* Style the arrow inside the select element: */
@@ -47,14 +53,23 @@ color: #3B435A;
   margin-bottom: 10px;
   display: block;
   cursor: pointer;
+
 }
+
 .select-items {
   position: absolute;
-  background: #f3f3f7;
+  background: #fff;
   top: calc(100% - 8px);
+  padding-top: 25px;
+  padding-bottom: 5px;
   left: 0;
   right: 0;
   z-index: 99;
+  max-height: 230px;
+  overflow-y: auto;
+  border: 2px solid #F3F5F8;
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
 
 /* identical to box height */
 
@@ -136,7 +151,10 @@ line-height: 19px;
 margin-right: 4px;
 color: rgba(37, 52, 79, 0.4);
 }
-
+/* 
+.dropdown-select.active {
+  border: 1px solid #04A3E9;
+} */
 @media (max-width: 1023px) {
   .select-selected {
     font-size: 14px;
