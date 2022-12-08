@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/slick-theme.min.css">
   <link rel="stylesheet" href="css/jquery.dmenu.css">
   <link rel="stylesheet" href="css/lightbox.min.css">
+  <link rel="stylesheet" href="css/flatpickr.min.css">
   <link rel="stylesheet" href="css/style.bundle.css" />
 
 
@@ -52,6 +53,7 @@
   <script src="js/jquery.lazy.youtube.min.js"></script>
   <script src="js/autoFilling.js"></script>
   <script src="js/fixedcart.js"></script>
+  <script src="js/flatpickr.js"></script>
 
 </head>
 
@@ -1075,7 +1077,7 @@
                                   <div class="orderadress__datetime">
                                     <div class="orderadress__date">
                                       <div class="orderform__label">Дата доставки</div>
-                                      <input type="text" class='inputdate' value='01.11.2022'>
+                                      <input type="text" class='inputdate' value='' id='js-flatpickr'>
                                     </div>
                                     <div class="orderadress__time">
                                       <div class="orderform__label">Время доставки</div>
@@ -1160,7 +1162,8 @@
                         <div class="orderform__inputcol orderform__inputcol_4 mobile-full">
                           <div class="orderform__label">Фамилия</div>
                           <div class="orderform__input">
-                            <input type="text" value=''>
+                            <input type="text" class='input-error' value='123'>
+                            <span class="input-errortext">Фамилия не может содержать символы: 123</span>
                           </div>
                         </div>
                         <div class="orderform__inputcol orderform__inputcol_4 mobile-full">
@@ -1240,7 +1243,7 @@
                                     <div class="minicard__count">
                                       <div class="buyblock__quantity">
                                         <div class="quantity">
-                                          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                          <input type="number" step="1" disabled  max="" value="1" name="quantity" class="quantity-field">
                                         </div>
                                       </div>
                                       <div class="minicard__amount">
@@ -1302,7 +1305,7 @@
                                     <div class="minicard__count">
                                       <div class="buyblock__quantity">
                                         <div class="quantity">
-                                          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                          <input type="number" step="1" disabled  max="" value="1" name="quantity" class="quantity-field">
                                         </div>
                                       </div>
                                       <div class="minicard__amount">
@@ -1364,7 +1367,7 @@
                                     <div class="minicard__count">
                                       <div class="buyblock__quantity">
                                         <div class="quantity">
-                                          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                          <input type="number" step="1" disabled  max="" value="1" name="quantity" class="quantity-field">
                                         </div>
                                       </div>
                                       <div class="minicard__amount">
@@ -1426,7 +1429,7 @@
                                     <div class="minicard__count">
                                       <div class="buyblock__quantity">
                                         <div class="quantity">
-                                          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                                          <input type="number" step="1" disabled  max="" value="1" name="quantity" class="quantity-field">
                                         </div>
                                       </div>
                                       <div class="minicard__amount">
