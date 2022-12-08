@@ -10,10 +10,10 @@ function initFE() {
     closeByOutsideSelect()
     closeByClickOutside('.mainmenu', '.mainmenubtn')
     closeByClickOutside('.catalogpage__aside', '.js-mobilefilter')
-    fixMenu(false, 750, 'mobpriceFixed', 'fixed')
-    fixMenu(300, false, 'headermain', 'fixed')
-    fixMenu(300, false, 'headercontainer', 'fixed')
-    fixMenu(false, 0, 'mobilenav', 'fixed')
+    fixElement(false, 750, 'mobpriceFixed', 'fixed')
+    fixElement(300, false, 'headermain', 'fixed')
+    fixElement(300, false, 'headercontainer', 'fixed')
+    fixElement(false, 0, 'mobilenav', 'fixed')
     blockSliderInit()
     productListImgLisder()
     moreNewsSliderInit()
@@ -428,7 +428,7 @@ function imgSliderInit() {
 
 
 
-function fixMenu(topDesktop, topMobile, elementId, className) {
+function fixElement(topDesktop, topMobile, elementId, className) {
   if (document.getElementById(elementId)) {
   if (window.innerWidth >= 1023) {
     if (topDesktop === 0) {

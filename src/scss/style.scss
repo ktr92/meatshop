@@ -110,6 +110,9 @@ img {
 		width: initial;
 		height: initial;
 }
+
+
+
 @media (min-width: 1024px) {
 		.onlyMobile {
 				display: none !important;
@@ -5809,11 +5812,36 @@ background-repeat: no-repeat !important;
 	}
 }
 
+.infocard.carttotal.fixed {
+	position: fixed;
+	top: 107px;
+	
+	z-index: 999;
+}
 
+.infocard.carttotal .sticky {
+	position: fixed;
+	top: 107px;
+	z-index: 999;
+	width: 401px;
+}
+.stop {
+	position: relative;
+	z-index: 101;
+}
+.orderform__block {
+	.sitetabs__header {
+		margin-bottom: 27px;
+	}
+}
 
 @include xlarge-screen {
 	.cartblock__aside {
 		min-width: 300px;
+	}
+	.infocard.carttotal.fixed {
+
+		width: 300px;
 	}
 	.inputtime {
 		max-width: 100%;
