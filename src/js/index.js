@@ -145,10 +145,10 @@ $(document).ready(function() {
 (function($) {
   $(function() {
 
-      $('.producttabs__header ul').on('click', 'li:not(.active)', function() {
+      $('.sitetabs__header ul').on('click', 'li:not(.active)', function() {
           $(this)
               .addClass('active').siblings().removeClass('active')
-              .closest('div.producttabs').find('div.producttabs__content').removeClass('active').eq($(this).index()).addClass('active');
+              .closest('div.sitetabs').find('div.sitetabs__content').removeClass('active').eq($(this).index()).addClass('active');
       });
 
   });
