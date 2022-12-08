@@ -955,29 +955,210 @@
         
       </div>
       <!-- /.pageheader -->
+      <div class="orderpage">
+        <form action="">
       <div class="cartblock">
         <div class="cartblock__main">
           <div class="ordermain">
             <div class="ordermain__blocks">
               <div class="ordermain__block">
                 <div class="infocard">
+                  <div class="infocard__title">Способ получения и время доставки</div>
                   <div class="ordermain__content">
                     <div class="sitetabs">
-                      <div class="sitetabs__header">
+                      <div class="sitetabs__header sitetabs__header_small">
                         <ul class="">
-                          <li class="active"><span class="sitetabs__title">О товаре</span></li>
-                          <li>
-                            <span class="sitetabs__title">Отзывы <span class="count">123</span></span>
+                          <li class="active">
+                           Доставка
                           </li>
                           <li>
-                            <span class="sitetabs__title">Рецепты <span class="count">5</span></span>
+                           Самовывоз
                           </li>
-                          <li><span class="sitetabs__title">Как приготовить?</span></li>
+                         
                         </ul>
                       </div>
                       <div class="sitetabs__wrapper">
-                        <div class="sitetabs__content active">
-                          <div class="sitetabs__main">
+                        <div class="sitetabs__content sitetabs__content_small active">
+                          <div class="sitetabs__main">  
+                            <div class="orderadress">
+                              <div class="orderadress__items">
+                                <div class="orderadress__item">
+                                  <div class="orderadress__input">
+                                    <label for="address_001" class='formcheckbox'>
+                                      <span class="orderinput">
+                                        <div class="orderinput__input">
+                                          <input type="radio" checked name='address' id='address_001'>
+                                          <span class="checkmark"></span>
+                                          <span class='orderinput__text'>г. Одинцово, ул. Татарская, д.15, стр.1, кв.101</span>
+                                          <span class="orderinput__border"></span>
+                                        </div>
+                                      </span><!-- /.orderinput -->         
+                                      <div class="orderadress__buttons">
+                                        <a href="" class="orderadress__button orderadress__edit">
+                                          <img src="img/edit.svg" alt="">
+                                        </a>
+                                        <a href="" class="orderadress__button orderadress__remove">
+                                          <img src="img/remove.svg" alt="">
+                                        </a>
+                                      </div><!-- /.orderadress__buttons -->                             
+                                    </label>
+                                    
+                                  </div><!-- /.orderadress__input -->
+                                  
+                                </div><!-- /.orderadress__item -->
+                                <div class="orderadress__item">
+                                  <div class="orderadress__input">
+                                    <label for="address_002" class='formcheckbox'>
+                                      <span class="orderinput">
+                                        <div class="orderinput__input">
+                                          <input type="radio" name='address' id='address_002'>
+                                          <span class="checkmark"></span>
+                                          <span class='orderinput__text'>г. Москва, ул. Тверская, д. 17</span>
+                                          <span class="orderinput__border"></span>
+                                        </div>
+                                      </span><!-- /.orderinput -->         
+                                      <div class="orderadress__buttons">
+                                        <a href="" class="orderadress__button orderadress__edit">
+                                          <img src="img/edit.svg" alt="">
+                                        </a>
+                                        <a href="" class="orderadress__button orderadress__remove">
+                                          <img src="img/remove.svg" alt="">
+                                        </a>
+                                      </div><!-- /.orderadress__buttons -->                             
+                                    </label>
+                                    
+                                  </div><!-- /.orderadress__input -->
+                                  
+                                </div><!-- /.orderadress__item -->
+                                <div class="orderadress__item">
+                                  <div class="orderadress__input">
+                                    <label for="address_003" class='formcheckbox'>
+                                      <span class="orderinput">
+                                        <div class="orderinput__input">
+                                          <input type="radio" name='address' id='address_003'>
+                                          <span class="checkmark"></span>
+                                          <span class='orderinput__text'>г. Москва, ул. Одинцвоская, д.179</span>
+                                          <span class="orderinput__border"></span>
+                                        </div>
+                                      </span><!-- /.orderinput -->         
+                                      <div class="orderadress__buttons">
+                                        <a href="" class="orderadress__button orderadress__edit">
+                                          <img src="img/edit.svg" alt="">
+                                        </a>
+                                        <a href="" class="orderadress__button orderadress__remove">
+                                          <img src="img/remove.svg" alt="">
+                                        </a>
+                                      </div><!-- /.orderadress__buttons -->                             
+                                    </label>
+                                    
+                                  </div><!-- /.orderadress__input -->
+                                  
+                                </div><!-- /.orderadress__item -->
+                              </div><!-- /.orderadress__items -->
+                              <div class="orderaddress__add">
+                                <!--  временное решение по клику для демонстрации макета (это не итоговый функционал) -->
+                                <span onclick='$("#editaddress").show(); $(this).closest(".orderaddress__add").hide()' class="btn btn_main btn_icontext btn_add"><span>Добавить адрес</span></span>
+                              </div><!-- /.orderaddress__add -->
+
+                              <div id="editaddress" class='editaddress'>
+                                <div class="orderadress__label">Адрес доставки</div>
+                                <div class="selectinput">
+                                  <div class="selectinput__select">
+                                    <div class="selectbox">
+                                      <select name="" id="">
+                                        <option value="">г. Москва</option>
+                                        <option value="">г. Москва</option>
+                                        <option value="">г. Москва</option>
+                                      </select>
+                                    </div>
+                                  </div><!-- /.selectinput__select -->
+                                  <div class="selectinput__input">
+                                    <input type="text" value='ул. Тверская, 293, д481'>
+                                  </div><!-- /.selectinput__input -->
+                                </div><!-- /.selectinput -->
+                                <div class="editaddress__buttons">
+                                  <a href='#' class='editaddress__reset'>
+                                    <img src="img/close_icon.svg" alt="">
+                                    <span>Сбросить</span>
+                                  </a>
+                                  <a href='#' class='editaddress__accept'>
+                                    <img src="img/accept_icon.svg" alt="">
+                                    <span>Сохранить</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <div class="orderadress__datetime">
+                                <div class="orderadress__date">
+                                  <div class="orderadress__label">Дата доставки</div>
+                                  <input type="text" class='inputdate' value='01.11.2022'>
+                                </div>
+                                <div class="orderadress__time">
+                                  <div class="orderadress__label">Время доставки</div>
+                                  <div class="selectbox inputtime">
+                                    <select name="" id="">
+                                      <option value="">с 10:00 до 12:00</option>
+                                      <option value="">с 10:00 до 12:00</option>
+                                      <option value="">с 10:00 до 12:00</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div><!-- /.orderadress__datetime -->
+                            </div><!-- /.orderadress -->
+                          </div>
+                        </div>
+
+                        <div class="sitetabs__content sitetabs__content_small ">
+                          <div class="sitetabs__main">  
+                            <div class="orderadress">
+                              <div class="orderadress__items">
+                                <div class="orderadress__item">
+                                  <div class="orderadress__input">
+                                    <label for="address_011" class='formcheckbox'>
+                                      <span class="orderinput">
+                                        <div class="orderinput__input">
+                                          <input type="radio" checked name='address' id='address_011'>
+                                          <span class="checkmark"></span>
+                                          <span class='orderinput__text'>г. Москва, ул. Тверская, д. 17</span>
+                                          <span class="orderinput__border"></span>
+                                        </div>
+                                      </span><!-- /.orderinput -->         
+                                      <div class="orderadress__buttons">
+                                        <a href="" class="orderadress__button orderadress__edit">
+                                          <img src="img/edit.svg" alt="">
+                                        </a>
+                                        <a href="" class="orderadress__button orderadress__remove">
+                                          <img src="img/remove.svg" alt="">
+                                        </a>
+                                      </div><!-- /.orderadress__buttons -->                             
+                                    </label>
+                                    
+                                  </div><!-- /.orderadress__input -->
+                                  
+                                </div><!-- /.orderadress__item -->
+                               
+                              </div><!-- /.orderadress__items -->
+                              <div class="orderaddress__add">
+                                <a href="#" onclick='' class="btn btn_main btn_icontext btn_add"><span>Добавить адрес</span></a>
+                              </div><!-- /.orderaddress__add -->
+
+                              <div class="orderadress__datetime">
+                                <div class="orderadress__date">
+                                  <div class="orderadress__label">Дата доставки</div>
+                                  <input type="text" class='inputdate active' value='01.11.2022'>
+                                </div>
+                                <div class="orderadress__time">
+                                  <div class="orderadress__label">Время доставки</div>
+                                  <div class="selectbox inputtime">
+                                    <select name="" id="">
+                                      <option value="">с 10:00 до 12:00</option>
+                                      <option value="">с 10:00 до 12:00</option>
+                                      <option value="">с 10:00 до 12:00</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div><!-- /.orderadress__datetime -->
+                            </div><!-- /.orderadress -->
                           </div>
                         </div>
                       </div>
@@ -1050,6 +1231,8 @@
         </div>
         <!-- /.cartblock__aside -->
       </div>
+    </form>
+  </div><!-- /.orderpage -->
       <!-- /.cartblock -->
     </div>
 </main><div class="subscribeblock">

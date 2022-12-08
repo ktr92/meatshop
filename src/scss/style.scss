@@ -536,6 +536,11 @@ img {
 				border: 2px solid #F3F3F7;
 				padding: 0;
 
+				&:focus {
+					border: 2px solid #F3F3F7;
+
+				}
+
 	 }
 		button {
 				border: none;
@@ -5461,6 +5466,240 @@ box-shadow: 5px 5px 60px rgba(36, 40, 43, 0.2);
 
 }
 
+
+.sitetabs__header_small {
+	li {
+		font-size: 16px;
+	}
+}
+
+.infocard__title {
+	font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 26px;
+margin-bottom: 18px;
+
+}
+
+a.orderadress__button {
+	opacity: 0.3;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+.sitetabs__content_small {
+	margin-bottom: 0;
+}
+.orderadress {
+}
+.orderadress__items {
+}
+.orderadress__item {
+	padding-bottom: 19px;
+
+}
+.orderinput {
+}
+.orderinput__input {
+}
+.orderinput__text{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	color: #343C4B;
+}
+.orderadress__buttons {
+	display: flex;
+	align-items: center;
+}
+.orderadress__button {
+	display: block;
+margin-left: 17px;
+}
+.orderadress__edit {
+}
+.orderadress__remove {
+}
+.formcheckbox {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	margin-bottom: 19px;
+}
+.formcheckbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.formcheckbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+	width: 22px;
+	height: 22px;
+	border: 2px solid #D6D6D6;
+	border-radius: 50%;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.formcheckbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.formcheckbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.orderinput__border{
+background: rgba(52, 60, 75, 0.1);
+position: absolute;
+width: 100%;
+left: 0;
+bottom: -19px;
+height: 2px;
+}
+.formcheckbox input:checked ~ .orderinput__border{
+	background: #04A3E9;
+}
+
+/* Style the checkmark/indicator */
+.formcheckbox .checkmark:after {
+  left: 3px;
+  top: 3px;
+  width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #04A3E9;
+}
+
+.btn_icontext span {
+	padding-left: 29px;
+}
+
+.orderaddress__add {
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+.btn_add  {
+	padding-left: 36px;
+	padding-right: 36px;
+}
+.btn_add span {
+	background-image: url(../img/plus.svg);
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+
+.orderadress__datetime {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+input.inputdate {
+	background-image: url(../img/Calendar.svg);
+	background-position: right 15px center;
+	background-repeat: no-repeat;
+}
+input.inputdate.active {
+	background-image: url(../img/Calendar_active.svg);
+	background-position: right 15px center;
+	background-repeat: no-repeat;
+}
+
+.orderadress__label {
+	font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+margin-bottom: 7px;
+
+color: #3B435A;
+}
+.inputtime {
+	width: 316px;
+}
+
+.orderadress__date {
+	margin-right: 18px;
+} 
+
+.editaddress {
+	display: none;
+}
+
+.selectinput {
+	background: #F3F5F8;
+border-radius: 8px;
+display: flex;
+align-items: center;
+margin-bottom: 28px;
+}
+.editaddress__buttons {
+	display: flex;
+	align-items: center;
+	a {
+		margin-right: 29px;
+	}
+}
+
+.editaddress__reset {
+	font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+opacity: 0.5;
+text-transform: uppercase;
+
+color: #3B435A;
+&:hover {
+	opacity: 1;
+}
+
+
+}
+
+.editaddress {
+	margin-bottom: 45px;
+}
+
+.editaddress__accept {
+	
+font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 100%;
+
+text-transform: uppercase;
+
+color: #0CBA7A;
+}
+
 @media (min-width: 1024px) {
 	.headermain__contacts:hover {
 		.contacts__dropdown {
@@ -5468,6 +5707,8 @@ box-shadow: 5px 5px 60px rgba(36, 40, 43, 0.2);
 		}
 	}
 }
+
+
 
 
 
