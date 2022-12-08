@@ -20,6 +20,11 @@ function initFE() {
   }
 
 $(document).ready(function() {
+    flatpickr("#js-flatpickr", {
+        minDate: "today",
+    });
+
+
     $(function() {
         $("iframe[data-src]").each(function() {
             $(this).Lazy();
