@@ -5629,7 +5629,7 @@ input.inputdate.active {
 	background-repeat: no-repeat;
 }
 
-.orderadress__label {
+.orderform__label {
 	font-style: normal;
 font-weight: 400;
 font-size: 16px;
@@ -5700,6 +5700,40 @@ text-transform: uppercase;
 color: #0CBA7A;
 }
 
+.selectinput__select .select-selected {
+	opacity: 0.4;
+}
+
+
+.orderform__form {
+}
+.orderform__inputrow {
+  display: flex;
+  margin: 0 -7px;
+  flex-wrap: wrap;
+	margin-bottom: 27px;
+}
+.orderform__inputcol {
+  padding: 0 7px;
+  width: 33.3333%;
+	margin-bottom: 27px;
+}
+.orderform__inputcol_4 {
+	width: 25%;
+}
+
+.orderform__inputcol_full {
+	width: 100%;
+}
+input.input_image {
+	padding-left: 72px;
+	font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+background-position: left 16px center;
+background-repeat: no-repeat !important;
+}
+
 @media (min-width: 1024px) {
 	.headermain__contacts:hover {
 		.contacts__dropdown {
@@ -5709,11 +5743,85 @@ color: #0CBA7A;
 }
 
 
+.check label {
+  cursor: pointer;
+  display: inline-block;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 110%;
+	
+	
+	color: #3B435A;
+  padding-left: 38px;
+  position: relative
+}
 
+.check input[type='checkbox'] {
+  display: none
+}
+
+
+.check label a {
+	color: $main;
+  text-decoration: underline
+}
+
+.check label a:hover {
+	text-decoration: none
+}
+
+.check label:before {
+	background-color: #ED1E26;
+	border-radius: 4px;
+  content: "";
+  height: 18px;
+  left: 0;
+  position: absolute;
+  width: 18px;
+	top: 50%;
+    transform: translateY(-50%);
+}
+
+.check input[type='checkbox']:checked+label:before {
+  background-image: url(../img/checkbox_checked.svg);
+	background-repeat: no-repeat;
+
+  background-position: center;
+}
+
+.blockheader__left {
+	.infocard__title  {
+		margin-bottom: 0;
+	}
+}
+
+.orderpage {
+	.minicard__image {
+		width: 111px;
+	}
+	.minicard__main {
+		margin-left: 27px;
+	}
+	.cartblock__item:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+}
 
 
 
 @include xlarge-screen {
+	.cartblock__aside {
+		min-width: 300px;
+	}
+	.inputtime {
+		max-width: 100%;
+	}
+	.cartblock__main {
+    margin-right: 24px;
+    width: calc(100% - 300px);
+}
 		.errorpage__code {
 				font-size: 200px;
 	 }
@@ -5870,6 +5978,14 @@ color: #0CBA7A;
 }
 /* mobile */
 @include medium-screen {
+	.orderform__inputcol {
+    padding: 0 3px;
+    margin-bottom: 9px;
+  }
+  .orderform__inputrow {
+    margin-bottom: 10px;
+  }
+
 		.itemslists__item {
 				width: 33.33%;
 				padding: 0 9px;
@@ -7589,6 +7705,126 @@ color: #0CBA7A;
 				width: 100%;
 				margin: 0;
 	 }
+	 .inputtime {
+		max-width: 100%;
+	 }
+	 .orderform__block {
+		.infocard {
+			box-shadow: none;
+			padding-left: 0;
+			padding-right: 0;
+			border-bottom: 1px solid rgba(37, 52, 79, 0.1);
+		}
+
+		.sitetabs__header_small li {
+			line-height: 36px;
+		 }
+		 .infocard__title {
+			margin-bottom: 19px;
+			font-size: 16px;
+	line-height: 19px;
+		 }
+		 .formcheckbox {
+			padding-left: 25px;
+		 }
+		 .orderinput {
+			width: calc(100% - 70px);
+	}
+	.formcheckbox {
+	
+margin-bottom: 12px;
+	}
+	.orderinput__text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 100%;
+	}
+	.sitetabs__header {
+		margin-bottom: 5px;
+	}
+	.formcheckbox .checkmark {
+		width: 22px;
+    transform: scale(.7);
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.orderaddress__add .btn {
+		width: 100%;
+	}
+	.orderadress__datetime {
+		margin: 0 -4px;
+	}
+	input {
+font-size: 14px;
+	}
+	.orderadress__date {
+		width: 50%;
+		margin: 0;
+		padding: 0 4px;
+		input {
+			padding-left: 13px;
+			font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+		}
+	}
+	.orderadress__time {
+		width: 50%;
+		margin: 0;
+		padding: 0 4px;
+
+		.select-selected {
+			height: 46px;
+			white-space: nowrap;
+		}
+		.orderform__block input {
+			height: 46px;
+			padding: 0 16px;
+		}
+	}
+	.check {
+		margin-top: 20px;
+	}
+	.check label {
+		font-size: 11px;
+line-height: 110%;
+	}
+	.orderform__block .blockheader  .infocard__title {
+		margin-bottom: 3px;
+	}
+	input.inputdate, input.inputdate.active {
+		background-position: right 13px center;
+		background-size: 15px;
+	}
+	.orderform__label {
+		font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+margin-bottom: 5px;
+	}
+	.orderform__inputrow {
+		margin: 0 -3px;
+	}
+
+	 }
+	 
+	 .orderpage {
+			.minicard__image {
+				width: 72px;
+			}
+			.minicard__buyblock {
+				display: none;
+			}
+			.cartblock__item {
+				padding-bottom: 17px;margin-bottom: 13px;
+			}
+	 }
+	 input.inputdate {
+		height: 46px;
+	 }
+
 }
 @include small-screen {
 		.indexcat__items_full .indexcat__item {

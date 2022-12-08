@@ -153,11 +153,40 @@ input[type="password"] {
   display: block;
   width: 100%;
   align-items: center;
-    background: #f3f3f7;
+    background-color: #f3f3f7;
     border-radius: 8px;
     display: flex;
     height: 56px;
     padding: 0 20px;
+    width: 100%;
+    border: none;
+    font-family: 'FuturaDemiC';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 19px;
+border: 2px solid #f3f3f7;
+/* identical to box height */
+
+color: #3B435A;
+
+&.input-error {
+  border: 2px solid #FF585F;
+}
+
+&:focus {
+  border: 2px solid #04A3E9;
+}
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  align-items: center;
+    background-color: #f3f3f7;
+    border-radius: 8px;
+    display: flex;
+    padding: 16px 20px;
     width: 100%;
     border: none;
     font-family: 'FuturaDemiC';

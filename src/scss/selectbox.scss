@@ -24,7 +24,7 @@ line-height: 19px;
 /* identical to box height */
 border: 2px solid #f3f3f7;
 position: relative;
-z-index: 9;
+z-index: 99;
 
 color: #3B435A;
 }
@@ -57,17 +57,24 @@ color: #3B435A;
 }
 .selectbox_arrow {
   position: relative;
+
+  .select-selected {
+    padding-right: 25px;
+  }
+
 }
 .selectbox_arrow:after {
   content: url(../img/dropdown_big.svg);
   display: inline-block;
   margin-left: 5px;
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   vertical-align: middle;
+  z-index: 99;
 }
+
 .select-items {
   position: absolute;
   background: #fff;
@@ -76,7 +83,7 @@ color: #3B435A;
   padding-bottom: 5px;
   left: 0;
   right: 0;
-  z-index: 8;
+  z-index: 88;
   max-height: 230px;
   overflow-y: auto;
   border: 2px solid #F3F5F8;
