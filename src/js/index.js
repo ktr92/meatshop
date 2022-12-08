@@ -30,6 +30,11 @@ $(document).ready(function() {
       $(this).toggleClass('active')
       $('.catalogpage__aside').toggleClass('active')
   })
+ /*  $('.headermain__contacts').on('click', function(e) {
+      e.preventDefault()
+      $(this).toggleClass('active')
+      $('.contacts__dropdown').slideToggle()
+  }) */
 
   
 
