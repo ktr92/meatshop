@@ -20,10 +20,24 @@ function initFE() {
   }
 
 $(document).ready(function() {
+   
+
     flatpickr("#js-flatpickr", {
         minDate: "today",
     });
 
+    document.querySelectorAll('[data-toggle="password"]').forEach(item => {
+        item.addEventListener('click', event => {
+            let inp = item.previousElementSibling
+            if (inp.type === "password") {
+                inp.type = "text";
+            } else {
+                inp.type = "password";
+            }
+        })
+      })
+
+   
 
     $(function() {
         $("iframe[data-src]").each(function() {
@@ -35,6 +49,7 @@ $(document).ready(function() {
       $(this).toggleClass('active')
       $('.catalogpage__aside').toggleClass('active')
   })
+ 
  /*  $('.headermain__contacts').on('click', function(e) {
       e.preventDefault()
       $(this).toggleClass('active')
@@ -141,6 +156,18 @@ $(document).ready(function() {
           $(this)
               .addClass('active').siblings().removeClass('active')
               .closest('div.js-tabs').find('div.js-tabscontent').removeClass('active').eq($(this).index()).addClass('active');
+      });
+
+  });
+})(jQuery);
+
+(function($) {
+  $(function() {
+
+      $('[data-headertabs]').on('click', 'li:not(.active)', function() {
+          $(this)
+              .addClass('active').siblings().removeClass('active')
+              .closest('[data-tabs]').find('[data-contenttabs]').removeClass('active').eq($(this).index()).addClass('active');
       });
 
   });
@@ -619,7 +646,8 @@ function productListImgLisder() {
     }
   }
 
-
+   
+   
 window.addEventListener('load', function () {
     initFE()
 });

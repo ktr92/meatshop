@@ -258,7 +258,63 @@ button.close {
 }
 
 
+
 @include medium-screen {
+  .pickuplist__addr {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .dtime__item {
+    font-size: 10px;
+    padding: 4px 9px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    b {
+      display: block;
+    }
+  }
+  .pickuplist__addr {
+    margin-bottom: 0;
+  }
+  .pickuptabs__search {
+    margin-bottom: 21px;
+  }
+  .pickuplist__item {
+    padding-bottom: 11px;
+    margin-bottom: 13px;
+  }
+  .pickuplist__address {
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    &:last-child {
+      margin-right: 0;
+    }
+    img {
+      width: 11px;
+    }
+    span {
+      padding-left: 4px;
+      font-size: 12px;
+line-height: 100%;
+    }
+  }
+  .deliverytabs__input input[type='email'], .deliverytabs__input input[type='password'], .deliverytabs__input input[type='tel'], .deliverytabs__input input[type='text'] {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  .input-errortext {
+    line-height: 1;
+    font-size: 11px;
+  }
+  .pickuplist__header {
+    font-size: 12px;
+line-height: 100%;
+margin-bottom: 10px;
+  }
   .modal-content {
     padding: 24px 16px 21px 16px;
   }
