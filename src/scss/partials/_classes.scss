@@ -1,5 +1,13 @@
 @import './params.scss';
 
+button {
+	cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
 .block {
   display: block;
 }
@@ -41,5 +49,7 @@
 }
 
 @media (max-width: 1023px) {
-
+  .mobile-full {
+    width: 100% !important;
+  }
 }
